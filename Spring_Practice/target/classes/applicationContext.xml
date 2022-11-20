@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mb" class="com.SpringPractice.MyBusinessClass" />
+    <bean id="aid" class="com.SpringPractice.A" >
+		<property name="b1" ref="bid"/>
+	</bean>
+	<bean id="bid" class="com.SpringPractice.B" >
+		<constructor-arg ref="aid"/>
+	</bean>
+	
+	
+	<bean id="dao" class="com.SpringPractice.daoApp.DAOBean"/>
+
+<bean id="service" class="com.SpringPractice.daoApp.ServiceBean" autowire="byName" />
+
+<bean id="pb" class="com.SpringPractice.daoApp.PresentationBean" autowire="byName" />
+
+	
+ 
+ 
+ 
+ <bean id="d1" class="com.SpringPractice.daoApp2.Demo3" autowire="constructor" />
+<bean id="a5" class="com.SpringPractice.daoApp2.A"/>
+<bean id="a6" class="com.SpringPractice.daoApp2.A" />
+<bean id="b5" class="com.SpringPractice.daoApp2.B" />
+
+
+<bean id="a1" class="com.SpringPractice.InitandDispo.A" init-method="mySetup">
+		<property name="message" value="Welcome to Spring.."/>
+	</bean>
+	
+	
+	<bean id="a16" class="com.SpringPractice.Destroy.A" init-method="mySetup" destroy-method="destroy">
+		<property name="message" value="Welcome to Spring.."/>
+	</bean>
+ 
+ 
+ <bean id="ai18" class="com.SpringPractice.Injecting_Collections.A">
+	
+		<property name="names">
+			
+			<list>
+			
+				<value>Delhi</value>
+				<value>Chennai</value>
+				<value>Kolkata</value>
+				<value>Mumbai</value>			
+
+			</list>
+	
+		</property>
+	
+	</bean>
+ 
+ 
+ <bean id="s1" class="com.SpringPractice.constructorInjection.Student">
+
+		<constructor-arg name="roll" value="100" />
+		<constructor-arg name="name" value="Ram" />
+		<constructor-arg name="marks" value="780" />
+
+	</bean>
+
+	<bean id="s2" class="com.SpringPractice.constructorInjection.Student">
+
+		<constructor-arg name="roll" value="101" />
+		<constructor-arg name="name" value="Ramesh" />
+		<constructor-arg name="marks" value="680" />
+
+	</bean>
+
+	<bean id="s3" class="com.SpringPractice.constructorInjection.Student">
+
+		<constructor-arg name="roll" value="102" />
+		<constructor-arg name="name" value="Sunil" />
+		<constructor-arg name="marks" value="880" />
+
+	</bean>
+
+
+	<bean id="cl1" class="com.SpringPractice.constructorInjection.Collage">
+		
+	<constructor-arg name="collageName" value="NIT"/>
+
+		<property name="students">
+
+			<list>
+
+				<ref bean="s1" />
+				<ref bean="s2" />
+				<ref bean="s3" />
+
+			</list>
+
+		</property>
+
+
+	</bean>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <bean id="s12" class="com.SpringPractice.constructorInjectionMap.Student">
+		<constructor-arg name="roll" value="100"/>
+		<constructor-arg name="name" value="Raj"/>
+		<constructor-arg name="marks" value="700"/>
+	</bean>
+
+	<bean id="s22" class="com.SpringPractice.constructorInjectionMap.Student">
+		<constructor-arg name="roll" value="102"/>
+		<constructor-arg name="name" value="Simran"/>
+		<constructor-arg name="marks" value="720"/>
+	</bean>
+	
+	<bean id="s33" class="com.SpringPractice.constructorInjectionMap.Student">
+		<constructor-arg name="roll" value="104"/>
+		<constructor-arg name="name" value="Rajesh"/>
+		<constructor-arg name="marks" value="750"/>
+	</bean>
+	
+	
+
+
+
+	<bean id="aid2" class="com.SpringPractice.constructorInjectionMap.A">
+	
+		<property name="theMap">
+		
+			<map>
+					<entry key-ref="s12" value="NIT"/>
+					<entry key-ref="s22" value="GIET"/>
+					<entry key-ref="s33" value="AMITY"/>
+					
+					
+		
+			</map>
+	
+		</property>
+	
+	
+	</bean>
+ 
+ 
+ 
+ 
+</beans>
