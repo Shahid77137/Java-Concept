@@ -1,0 +1,1 @@
+SELECT * FROM Students where Age<30 AND FirstName LIKE 'S%';
