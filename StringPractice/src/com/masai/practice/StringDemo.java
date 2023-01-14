@@ -17,6 +17,12 @@ public static void main(String[] args) {
 	System.out.println(Arrays.toString(brr));
 	char[] chararr = str1.toCharArray();
 	System.out.println(Arrays.toString(chararr));
+	String statement = "Shahid of age " + 16 + " Years has Scored " + 95.5 + "% in class 10th";
+	System.out.println(statement);
+	String state = "Shahid of age " + String.valueOf(16) + " years has Scored " + String.valueOf(95.5) + "% in class 10th";
+	System.out.println(state);
+	
+	
 	
 }
 }
