@@ -14,7 +14,7 @@ class Emp
 	
 	static    // when you load a class
 	{
-		ceo = "Larry";
+		ceo = "Shahid";
 		System.out.println("in static");
 	}
 	
@@ -32,20 +32,20 @@ public class StaticDemo
 	{
 		i = 9;
 		
-		Emp navin = new Emp();
-//		navin.eid = 8;
-//		navin.salary = 4000;
-//		Emp.ceo = "Mahesh";
+		Emp emp = new Emp();
+//		emp .eid = 8;
+//		emp .salary = 4000;
+//		Emp.ceo = "Fehmida";
 		
-		Emp rahul = new Emp();
-//		rahul.eid = 9;
-//		rahul.salary = 5000;
-//		Emp.ceo = "Mahesh";   // we dont need object
+		Emp employee = new Emp();
+//		employee.eid = 9;
+//		employee.salary = 5000;
+//		Emp.ceo = "Afridi";   // we dont need object
 //		
-//		Emp.ceo = "Nikita";
+//		Emp.ceo = "Femsha";
 		
-		navin.show();
-		rahul.show();
+		empnavin.show();
+		employee.show();
 	}
 
 }
