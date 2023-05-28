@@ -1,0 +1,215 @@
+
+Consider the following code-
+class A implements Comparable<A>{
+	int i, j;
+	
+	A(int i, int j){
+		this.i = i; this.j = j;
+	}
+
+	@Override
+	public int compareTo(A o) {
+		return i - o.i;
+	}
+}
+
+Q.1 What is output of following code
+Set<A> aSet = new TreeSet<>();
+aSet.add(new A(10, 20));
+aSet.add(new A(20, 10));
+aSet.add(new A(10, 10));
+aSet.add(new A(20, 20));
+System.out.println(aSet.size());
+
+(A) 2
+(B) 3
+(C) 4
+(D) None of these
+
+RIGHT ANSWER: (A)
+
+Q.2 What is output of following code
+Queue<A> aqueue = new PriorityQueue<>();
+aqueue.add(new A(10, 20));
+aqueue.add(new A(20, 10));
+aqueue.add(new A(10, 10));
+aqueue.add(new A(20, 20));
+
+System.out.println(aqueue.size());
+
+(A) 2
+(B) 3
+(C) 4
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+Q.3 What is output of following code
+Set<A> aSet = new HashSet<>();
+aSet.add(new A(10, 20));
+aSet.add(new A(20, 10));
+aSet.add(new A(10, 10));
+aSet.add(new A(20, 20));
+
+System.out.println(aSet.size());
+
+(A) 2
+(B) 3
+(C) 4
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+Q.4 Say we have added following method in the class A
+@Override
+public boolean equals(Object o) {
+	A a1 = (A)o;
+	return (i == a1.i) && (j == a1.j);
+}
+
+What is output of following code
+Set<A> aSet = new HashSet<>();
+aSet.add(new A(10, 20));
+aSet.add(new A(10, 20));
+aSet.add(new A(20, 10));
+aSet.add(new A(20, 20));
+
+System.out.println(aSet.size());
+
+(A) 2
+(B) 3
+(C) 4
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+Q.5 Which implementation of the List is synchronized?
+(A) ArrayList
+(B) LinkedList
+(C) Vector
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+Q.6 Which of the following statement is true-
+(A) Set is internally implemented using the HashMap and TreeMap
+(B) The complexity of removing an element from TreeSet is O(log(n))
+(C) The Comparable interface is to define the natural ordering but the Comparator interface is to define custom oredring.
+(D) The Iterator returned by PriorityQueue doesn't provide any ordering guarantee. Only guarantee PriorityQueue gives that head will always be the smallest or largest element
+
+RIGHT ANSWER: (All statements are true)
+
+Q.7 The default capacity of a ArrayList is:
+(A) 1
+(B) 10
+(C) 12
+(D) 16
+
+RIGHT ANSWER: (B)
+
+Q.8-10 Consider the following code
+_______________
+interface Mathematical{
+	public int add(int a, int b);
+}
+
+class A{
+	static _______________ methodTwo(){
+		return (a, b) -> a + b;
+	}
+}
+
+Q.8 What shall i write here to force compiler to check the interface is functional interface or not?
+(A) @Override
+(B) @SuppressWarnings
+(C) @FunctionalInterface
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+Q.9 What is suitable return type for the methodTwo()
+(A) Mathematical
+(B) BinaryOperator
+(C) both (a) & (b)
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+Q.10 Say We have a class named "PQR" that has a static method named sum that accepts two int parameters and return int value. Write code to create a reference to this method.
+(A) Mathematical math = (new PQR())::sum
+(B) Mathematical math = PQR::new
+(C) Mathematical math = PQR::sum
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+Q.11 Consider the following code-
+interface DemoObject{
+	_______________ 
+}
+
+class Door{
+	private double width;
+	private double height;
+	
+	Door(double width, double height){
+		this.width = width;
+		this.height = height;
+	}
+}
+Write appropriate method signature inside the interface DemoObject. For the code DemoObject d = Door::new;
+
+(A) Door methodName(double width, double height)
+(B) void methodName(double width, double height)
+(C) Both (a) & (b)
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+Q.12 Say s is a parameter of type String, write appropriate type for variable c1
+_______________ c1 = s -> System.out.println(s);
+RIGHT ANSWER: Consumer<String> [void accept(String str)]
+
+Q.13 Say s & i are parameters of type String & Integer, write appropriate type for variable c2
+_______________ c2 = (s, i) -> System.out.println(s.length() - i);
+RIGHT ANSWER: BiConsumer<String, Integer> [void accept(String s, Integer i)]
+
+Q.14 write appropriate type for variable c3
+_______________ c3 = () -> "Hello";
+RIGHT ANSWER: Supplier<String> [String get()]
+
+Q.15 Say l is a parameter of type List<String>, write appropriate type for variable c4
+_______________ c4 = l -> l.add("Aman");
+RIGHT ANSWER: Predicare<List<String>> [boolean test(List<String>)]
+
+Q.16 Say s is a parameter of type String, write appropriate type for variable c5
+_______________ c5 = s -> return s.charAt(0);
+RIGHT ANSWER: Function<String, Character> [Character apply(String s)]
+
+Q.17 Write appropriate type for variable c5
+_______________ c6 = Double::parseDouble;
+RIGHT ANSWER: Function<String, Double> [Double apply(String s)]
+
+Q.18 consider the following code-
+Function<String, StringBuilder> bif = StringBuilder::new;
+StringBuilder s1 = bif._______________;
+Write appropriate method call here such the value of parameter is "all is well"
+RIGHT ANSWER: bif.apply("all is well");
+
+Q.19-21 Consider the following list
+List<String> lappList = Arrays.asList("HP", "Dell", "Lenovo", "Sony", "Apple", "Acer");
+
+Q.19 Write suitable method according to parameter
+(A) stream.____________(s -> s.indexOf('e') == -1?false:true).forEach(System.out::println);
+(B) lappList.stream().____________(s -> s.length()).forEach(System.out::println);
+RIGHT ANSWER: [A: filter & B: map]
+
+Q.20 Write appropriate method name to get three sorted elements of the stream. Elements should be in the sorted in ascending order
+lappList.stream().____________.____________.forEach(System.out::println);
+RIGHT ANSWER: [A: sorted() & B: limit(3)]
+
+Q.21 Write appropriate method name to get last three sorted elements of the stream. Elements should be in the sorted in ascending order.
+lappList.stream().____________.____________.forEach(System.out::println);
+RIGHT ANSWER: [A: sorted() & B: skip(3)]
+MCQs_For_Revision_Batch_29_04_Core_Java.txt
+Displaying MCQs_For_Revision_Batch_29_04_Core_Java.txt.
