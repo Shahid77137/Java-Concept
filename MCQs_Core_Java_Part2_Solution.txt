@@ -1,0 +1,462 @@
+
+Q.1 What is output of following code-
+class A{
+  public void show(){
+     System.out.println("A");
+  }
+}
+
+class B extends A{
+  void show(){
+    System.out.println("B");
+  }
+
+  public static void main(String args[]){
+    A a = new B();
+    a.show();
+  }
+}
+
+A. Will print A
+B. Will print B
+C. Will print A & B
+D. None of these
+
+RIGHT ANSWER: (D)
+
+A.java:8: error: show() in B cannot override show() in A
+  void show(){
+       ^
+  attempting to assign weaker access privileges; was public
+  
+Explanation: At the time of overriding the subclass, we have to use save or less restrictive access modifier. We cannot us more restrictive access modifier.
+super class: public --> sub class: public
+super class: protected --> sub class: protected, public
+super class: default --> sub class: default, protected, public
+
+
+
+Q.2 What is output of following code
+class A{
+  private void foo(){
+    System.out.println("A");
+  }
+}
+
+class B extends A{
+  public void foo(){
+    System.out.println("B");
+  }
+
+  public static void main(String args[]){
+    A a = new B();
+    a.foo();
+  }
+}
+
+A. Will print A
+B. Will print B
+C. Will print A & B
+D. None of these
+
+RIGHT ANSWER: (D)
+Explanation
+A.java:14: error: foo() has private access in A
+    a.foo();
+     ^
+1 error
+
+
+
+Q.3 What is output of following code
+class A{
+  static void fun(){
+    System.out.println("A");
+  }
+}
+
+class B extends A{
+  static void fun(){
+    System.out.println("B");
+  }
+
+  public static void main(String args[]){
+    A a = new B();
+    a.fun();
+  }
+}
+
+A. Will print A
+B. Will print B
+C. Will print A & B
+D. None of these
+
+RIGHT ANSWER: (A)
+
+Explanation
+Calling of static method is resolved at the compile time so we can say that static methods are not overridden. The calling is takes place on the behalf of the reference variable.
+
+
+
+Q.4 What is output of following code-
+class P{}
+class Q extends P{}
+
+class A{
+  Q show(){
+    System.out.println("A");
+    return new Q();
+  }
+}
+
+class B extends A{
+  P show(){
+    System.out.println("B");
+    return new P();
+  }
+
+  public static void main(String args[]){
+    A a = new B();
+    a.show();
+  }
+}
+
+A. Will print A
+B. Will print B
+C. Will print A & B
+D. None of these
+
+RIGHT ANSWERL (D)
+A.java:12: error: show() in B cannot override show() in A
+  P show(){
+    ^
+  return type P is not compatible with Q
+1 error
+
+Covariant return type: In overridden method, one can return object of same type of object of subtype but cannot return object of super type.
+
+Q.5 What is output of following code-
+class P{}
+class Q extends P{}
+
+class A{
+  P show(){
+    System.out.println("A");
+    return new P();
+  }
+}
+
+class B extends A{
+  Q show(){
+    System.out.println("B");
+    return new Q();
+  }
+}
+
+class Demo{
+  public static void main(String args[]){
+    A a = new A();
+    P p = a.show();
+    a = new B();
+    P p1 = a.show();
+  }
+}
+
+A. Will print A
+B. Will print B
+C. Will print A & B
+D. None of these
+
+RIGHT ANSWER: (C)
+
+Q.6 What is output of this code?
+package com.masai;
+interface ABC{
+  default void fun() {
+    System.out.println("Inside fun of ABC");
+  }
+}
+
+interface PQR{
+  default void fun() {
+    System.out.println("Inside fun of PQR");
+  }
+}
+
+class XYZ implements ABC, PQR{
+  public static void main(String args[]){
+    XYZ x = new XYZ();
+    x.fun();
+  }
+}
+
+(A) Inside fun of ABC
+(B) Inside fun of PQR
+(C) Inside fun of ABC Inside fun of PQR
+(D) None of these
+
+RIGHT ANSWER: (D)
+
+Explanation
+A.java:13: error: types ABC and PQR are incompatible;
+class XYZ implements ABC, PQR{
+^
+  class XYZ inherits unrelated defaults for fun() from types ABC and PQR
+1 error
+
+Q.7 Write code to call fun() method of interface ABC in the blank space.
+interface ABC{
+  default void fun() {
+    System.out.println("Inside fun of ABC");
+  }
+}
+
+interface PQR{
+  default void fun() {
+    System.out.println("Inside fun of PQR");
+  }
+}
+
+public class A implements ABC, PQR {
+  public void fun() {
+    _______________
+  }
+
+  public static void main(String[] args) {
+    A a = new A();
+    a.fun();
+  }
+}
+
+(A) ABC.fun();
+(B) ABC.this.fun();
+(C) ABC.super.fun();
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+Q.8 Write code to call fun() method of interface ABC in the blank space.
+interface ABC{
+  static void fun() {
+    System.out.println("Inside fun of ABC");
+  }
+}
+
+interface PQR{
+  static void fun() {
+    System.out.println("Inside fun of PQR");
+  }
+}
+
+public class A implements ABC, PQR {
+  public void fun() {
+    _______________
+  }
+
+  public static void main(String[] args) {
+    A a = new A();
+    a.fun();
+  }
+}
+
+(A) ABC.fun();
+(B) ABC.this.fun();
+(C) ABC.super.fun();
+(D) None of these
+
+RIGHT ANSWER: (A)
+
+Q.9 What is the output of the following code?
+public class Test{
+  public static void main(String args[]){
+    try{
+      int i;
+      return;
+    }catch(Exception e){
+      System.out.print("inCatchBlock");
+    }finally{
+      System.out.println("inFinallyBlock");
+    }
+  }
+}
+(A) inCatchBlock
+(B) inCatchBlock inFinallyBlock
+(C) inFinallyBlock
+(D) The program will return without printing anything
+
+Q.10 What is the output of the following program code?
+public class Test{     
+  public static void main(String args[]){
+    try{
+      String arr[] = new String[10];
+      arr = null;
+      arr[0] = "one";
+      System.out.print(arr[0]);
+    }catch(NullPointerException nex){
+      System.out.print("Null Pointer Exception");
+    }   
+  }
+}
+(A) one
+(B) exception
+(C) Null pointer exception
+(D) Compilation fails due to arr = null statement
+
+RIGHT ANSWER: (C)
+
+Q.11 What is the output of the following program code?
+class A{
+  public void doA(){
+    B b = new B();
+    b.dobB();
+    System.out.print("doA");
+  }
+}
+class B{
+  public void dobB(){
+    if(true)
+      throw new NullPointerException();
+    System.out.print("doB");
+  }
+}
+public class Test{
+  public static void main(String args[]){
+    try{
+      A a = new A();
+      a.doA();
+	  System.out.print("doC");
+    }catch(Exception ex){
+      System.out.print("error");
+    }
+  }
+}
+(A) "doCdoBdoA" is printed
+(B) "doAdoBdoC" is printed
+(C) "doBdoAerror" is printed
+(D) "error" is printed
+
+RIGHT ANSWER: (D)
+
+Q.12 What is the output of the following program code?
+class Person{
+  public void talk() {}
+}
+public class Test{
+  public static void main(String args[]){
+    Person p = null;
+    try{
+      p.talk();
+    }catch(NullPointerException e){
+      System.out.print("There is a NullPointerException.");
+    }catch(Exception e){
+      System.out.print("There is an Exception. ");
+    }
+    System.out.print("Everything went fine.");
+  }
+}
+(A) There is a NullPointerException. Everything went fine.
+(B) There is a NullPointerException.
+(C) There is a NullPointerException. There is an Exception.
+(D) This code will not compile, because in Java there are no pointers.
+
+RIGHT ANSWER: (A)
+
+Q.13 What is the output of the following program code?
+import java.io.FileNotFoundException;
+class A{
+  public void printName() throws FileNotFoundException{
+    System.out.println("Value-A");
+  }
+}
+class B extends A{
+  public void printName() throws NullPointerException{
+    System.out.println("Name-B");
+  }
+}
+public class Test{
+  public static void main(String[] args) throws Exception{
+    A a = new B();
+    a.printName();
+  }
+}
+A. Value-A
+B. Compilation fails
+C. Name-B
+D. Compilation succeed but no output
+
+RIGHT ANSWER: (C)
+Explanation: If a method in the super class throws Checked Exception then the overridden version defined in subclass may choose not to throw any exception or it may throw unchecked exception.
+
+Q.14 What is the output of the following program code?
+import java.io.IOException;
+class A{
+  void show(){
+    System.out.println("Hello A");
+  }
+}
+class B extends A{
+  void show() throws IOException{
+    System.out.println("Hello B");
+  }
+}
+public class Test{
+  public static void main(String args[]){
+    A a = new B();
+    a.show();
+  }
+}
+(A) Hello B
+(B) Hello A
+(C) Run Time Error
+(D) Compile Time Error
+
+Q.15 What is the output of the following program code?
+import java.io.IOException;
+import java.io.FileNotFoundException;
+
+class A{	//
+  void show() throws FileNotFoundException{
+    System.out.println("Hello A");
+  }
+}
+class B extends A{
+  @Override
+  void show() throws IOException{
+    System.out.println("Hello B");
+  }
+}
+public class Test{
+  public static void main(String args[]){
+    A a = new B();
+    a.show();
+  }
+}
+(A) Hello B
+(B) Hello A
+(C) Run Time Error
+(D) Compile Time Error
+
+RIGHT ANSWER: (D)
+
+Explanation: If a method in the super class does throws an Exception then the overridden version defined in subclass may choose not to throw any exception or it may throw unchecked exception of it can throws subtype of what Exception super class method is throwing but it cannot throw supertype of what Exception super class method is throwing.
+
+Q.16 What is the output of the following program code?
+class Dummy{
+  static void f(Integer ii){
+    ii = 10;
+  }
+  public static void main(String args[]) {
+    Integer i = Integer.valueOf(2);
+    System.out.print(i);
+    f(i);
+    System.out.print(" " + i);
+  }
+}
+(A) 2 10
+(B) 10 10
+(C) 10 2
+(D) 2 2
+
+RIGHT ANSWER: (D)
+MCQs_For_Revision_Batch_26_05_Core_Java.txt
+Displaying MCQs_For_Revision_Batch_26_05_Core_Java.txt.
