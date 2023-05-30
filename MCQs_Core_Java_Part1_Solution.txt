@@ -1,0 +1,465 @@
+
+JVM architecture : A detailed video will be provided to you.
+
+Q.1 what is output of following code
+class A {
+	static void show(int i, int j) {
+		System.out.println((i + j));
+	}
+	
+	static void show(float i, float j) {
+		System.out.println((i + j) + 0.5f);
+	}
+	
+	public static void main(String[] args) {
+		show('A', ' ');
+	}
+}
+(A) 97
+(B) 'A '
+(C) Compile Time Error
+(D) Run time error
+
+RIGHT ANSWER: (A)
+show('A', ' ');	//char('A') --> int (65), char(' ')---> int(32)
+Unicode Scheme
+A-Z 65-90
+a-z 97-122
+0-9 48-57
+space 32
+
+Q.2 What is output of following code in java-
+class A {
+	void show(String s) {
+		System.out.println("S = " + s);
+	}
+	
+	void show(StringBuilder s) {
+		System.out.println("SB = " + s);
+	}
+	
+	public static void main(String[] args) {
+		A ad = new A();
+		ad.show("hello");
+		ad.show(null);
+	}
+}
+
+(A) S = hello SB = null
+(B) SB = hello SB = null
+(C) S = hello S = null
+(D) None of these
+
+RIGHT ANSWER: (D)
+
+Explantion
+error: reference to show is ambiguous
+                ad.show(null);
+                  ^
+  both method show(String) in A and method show(StringBuilder) in A match
+
+Q.3 What is output of following code in java-
+class A {
+	void show(String s) {
+		System.out.println("show(s) = " + s);
+	}
+	
+	void show(Object o) {
+		System.out.println("show(o) = " + o);
+	}
+	
+	public static void main(String[] args) {
+		A ad = new A();
+		ad.show("hello");
+		ad.show(null);
+	}
+}
+
+(A) show(s) = hello show(s) = null
+(B) show(o) = hello show(o) = null
+(C) show(s) = hello show(o) = null
+(D) None of these
+
+RIGHT ANSWER: (A)
+
+Explanation: String class is subclass of Object class.
+null is applicable for both super type (i.e. Object class) and for sub type (i.e. String class). In such condition sub type is always given the priority so both time version defined in the String class will be called.
+
+Q.4 What is output of following code
+class A{
+  int i;
+  A(int i){	//local variable i = 10
+    i = i;	//local variable is hiding the instance variable so value 10 will be assigned to local variable again so the instance variable 'i' will have the default value. that is 0
+  }
+  public static void main(String args[]){
+    A a = new A(10);
+    System.out.println(a.i);
+  }
+}
+
+(A) 10
+(B) 0
+(C) null
+(D) None of these
+
+RIGHT ANSWER: (B)
+
+Q.5 what is output of following code-
+class A {
+	int i;
+	int j;
+	
+	A(int i, int j){
+		this.i = i;
+		this.j = j;
+	}
+	
+	A get() {
+		i++;
+		j--;
+		return this;
+	}
+	
+	public static void main(String[] args) {
+		A a1 = new A(10, 20);
+		System.out.println(a1.i + ", " + a1.j);
+		A a2 = a1.get();
+		System.out.println(a2.i + ", " + a2.j);
+	}
+}
+
+(A) 10 20 10 20
+(B) 10 20 11 19
+(C) 11 19 11 19
+(D) None of these
+
+RIGHT ANSWER: (B)
+
+Explanation
+stack       heap
+|8787|      |_11_|_19_|
+--a1--		  i    j (hashcode: 8787)
+
+|8787|
+-a2-
+
+//for the statement a1.get();
+
+Q.6 what is output of following code
+class A {
+	int i;
+	int j;
+	A(){
+		i = 10;
+	}
+	
+	A(int j){
+		this();
+		this.j = j;
+	}
+	
+	public static void main(String[] args) {
+		A a = new A(-10);
+		System.out.println(a.i + " " + a.j);
+	}
+}
+(A) 0 -10
+(B) -10 -10
+(C) 10 -10
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+A a = new A(-10); //this will call the parametrized constructor
+this();	//will call the default constructor
+
+Q.7 (A) what is output of following code-
+class A {
+	final int a; //----(1)
+	int b ;
+	
+	A(){
+		b = 10;
+	}
+	
+	public static void main(String[] args) {
+		A ad = new A();	
+		System.out.println("a = " + ad.a + " b = " + ad.b);
+	}
+}
+
+Output: Error because final variable need to initialized either constructor or at the time of declaration.
+
+Q.7 (B) what is output of following code-
+class A {
+	final int a; ----(1)
+	int b ;
+	
+	A(){
+		b = 10;
+	}
+	
+	public static void main(String[] args) {
+		A ad = new A();	
+		System.out.println("a = " + ad.a + " b = " + ad.b);
+		
+		ad.a = 20; ----(2A)
+		ad.b = 10;
+		System.out.println("a = " + ad.a + " b = " + ad.b);
+	}
+}
+
+(A) a = 0 b = 10 a = 20 b = 10
+(B) a = 0 b = 10 a = 0 b = 10
+(C) Error in Line--(1)
+(D) Error in Line--(2A)
+
+RIGHT ANSWER: (D)
+
+
+Q.8 What is output of following code-
+class A {
+	int a; int b;
+	
+	A(int a, int b){ this.a = a; this.b = b;
+	}
+	
+	void set(int a, int b){ this.a = a; this.b = b; }
+	
+	void show() {
+		System.out.println("a = " + a + " b = " + b);
+	}
+	
+	public static void main(String[] args) {
+		final A ad = new A(10, 20);			
+		ad.set(100, 200); //---(1)
+		ad.show();
+		
+		ad = new A(15, 25);	//---(2)
+		ad.show();
+	}
+}
+(A) 100 200 15 25
+(B) Error in (1)
+(C) Error in (2)
+(D) None of these
+
+RIGHT ANSWER:(C)
+Here reference variable ad is final not the object so if we are calling the setter method to make the changes then no problem because object os not constant. But in line (2) we are trying to update the value of reference variable which is incorrect.
+
+Q.9 Point out error if any in given code
+Line 1: class A{
+Line 2:   void put(){ //some code
+Line 3:   }
+Line 4:   static void fun(){
+Line 5:     this.put();
+Line 6:     ....
+Line 7:   }
+Line 8:   public static void main(String args[]){
+Line 9:     A.fun();
+Line 10:   }
+Line 11: }
+
+(A) Error in Line-(9)
+(B) Error in Line-(5)
+(C) No Error
+(D) Error in Line-(2)
+
+Explanation: this keyword is not accessible in the static block
+
+Q.10 what is output of following code
+class A{
+  static{
+    System.out.print("1 ");
+  }
+}
+class B extends A{
+  public static void main(String args[]){
+    System.out.println("2");
+  }
+}
+
+(A) 2
+(B) 1 2
+(C) 2 1
+(D) None of these
+
+RIGHT ANSWER: (B)
+static block is executed before the main method
+
+Q.11 Point out the error in the code (if any) tell output if no error
+Line 1: class A{
+Line 2: 	static void fun() {
+Line 3: 		System.out.println("Hello World!");
+Line 4: 	}
+	
+Line 5: 	public static void main(String[] args){
+Line 6: 		A a = null;
+Line 7: 		a.fun();
+Line 8: 		System.out.println("Bye Bye!");
+Line 9: 	}
+Line 10:}
+
+(A) Error in Line - (2)
+(B) Hello World! Bye Bye
+(C) NullPointerException
+(D) Compile Time Error
+
+RIGHT ANSWER: (B)
+
+Explanation: A static method call be called using class-name as well as using ref-variable name. The ref-variable is not required to point an object i.e. calling of a static method can be done even using a null reference variable. Preferred way of calling the static method is to use the class-name.
+
+Q.12 In which memory area static variables are stored?
+(A) Heap
+(B) Stack
+(C) Metaspace (before JDK 1.8 static variables were stored in PermGen i.e. Permanent Generation)
+(D) None of these
+
+RIGHT ANSWER: (C)
+
+Q.13 What is the output of following code-
+class P {
+	static int i = 10;
+	static {
+		System.out.println("A");
+	}
+	public static void display(String message) {
+		System.out.println(message);
+	}
+}
+
+class Q {
+	public static int sampleVariable = 1;
+
+	static {
+			System.out.println("B");
+	}
+
+	public static void main(String[] args) {	//class B will be loaded here
+			sampleVariable++;
+			P p = null;
+			System.out.println("3");
+			p.display(sampleVariable + "");	//class A will be loaded here
+	}
+}
+
+Output: B3A2
+
+Explanation
+A static block is called at the time of class loading. The class loading actually takes place in following conditions (Whichver condition takes place first)
+1. Class.forName(FCQN) is used to load the class
+2. When object created (not reference variable)
+3. When static method of class is called or static variable of class is used (such that the static variable must not be final)
+
+Q.14 What is output of following code
+boolean b; int i = 0;
+b = ++i == 1 && i++ == 2;
+System.out.println(b + " " + i);
+
+(A) true 2
+(B) false 2
+(C) Error
+(D) Run time Error
+
+RIGHT ANSWER: (B)
+
+Explanation
+i = 0
+b = (++i == 1) && (i++ == 2);
+b = (1 == 1) && (1 == 2);	//i = 2
+b = (true) && (false)
+b = false //i = 2
+
+Q.15 Write down output of following code?
+class A{
+	public static void main(String args[]){
+		A a;
+		System.out.println(a);
+	}
+}
+(A) null
+(B) Compile time error
+(C) hascode (any int value)
+(D) Run time error
+RIGHT ANSWER: (B)
+Explanation: reference variable 'a' is a local variable & you cannot use the local variable without initializing
+
+Q.16 Write down output of following code?
+class A{
+	int i;
+	public static void main(String args[]){
+		A a = new A();
+		System.out.print(a.i + " ");
+		A b = a;
+		b.i = 10;
+		System.out.println(a.i);
+	}
+}
+Output: 0 10
+
+Q.17 Write down output of following code?
+class A{
+	int i;
+	public static void main(String args[]){
+		A a[] = new A[3];
+		System.out.println(a[0].i);
+	}
+}
+(A) 3
+(B) 0
+(C) Compile Time Error
+(D) Run Time Error
+
+Explanation: We have created just array of references not an object so NullPointerException for line a[0].i
+
+Q.18 Point out Error (if any) in that code
+Line 1: class A{
+Line 2: 	A(int i){
+Line 3: 		System.out.println("In A");
+Line 4: 	}
+Line 5: }
+Line 6: class B extends A{
+Line 7: 	B(){
+Line 8: 		System.out.println("In B");
+Line 9: 	}
+Line 10: }
+Output: Error, use super(any int value) in the class B constructor
+
+Q.19 Point out error if any in given code
+Line 1: class A{
+Line 2: 	void show(){
+Line 3: 		System.out.println("Hello Jaipur");
+Line 4: 	}
+Line 5: }
+Line 6: class B extends A{
+Line 7: 	void show(){
+Line 8: 		System.out.println("Hi Jaipur");
+Line 9: 		A a = this;
+Line 10: 	}
+Line 11: 	public static void main(String args[]){
+Line 12: 		new B().show();
+Line 13: 	}
+Line 14: }
+Answer: No Error, Hi Jaipur
+
+Explanation:
+For line new B().show(); the calling object is of class B so this keyword also points to object of class B
+A a = this; //no error because this point to object of class B and A is super class of class B; A super class reference variable can point to child class object
+
+Q.20 point out error (if any) in given program
+Line 1: package p1;
+Line 2: public class A{
+Line 3: 	protected A(){
+Line 4: 		System.out.println("In A");
+Line 5: 	}
+Line 6: }
+Line 7: package p2;
+Line 8: import p1.A;
+Line 9: class B{
+Line 10: 	public static void main(String ...ags){
+Line 11: 		A a = new A();
+Line 12: 	}
+Line 13: }
+Answer: Error in line 11 because constructor is protected i.e. accessible in sub class of different package but not in non sub class of different package.
+MCQs_For_Revision_Batch_24_04_Core_Java (1).txt
+Displaying MCQs_For_Revision_Batch_24_04_Core_Java (1).txt.
