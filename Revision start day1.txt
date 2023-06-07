@@ -237,7 +237,8 @@ contains a group of statements (or instructions) that are carried out when an ob
 is created. A method is a group of statements that work together to complete 
 a certain task.
 
-
+UPI -> Unified Payments Interface .
+TDD -> Test-Driven Development .	
 
 
 
