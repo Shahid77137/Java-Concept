@@ -10771,3 +10771,5 @@ mysql> select MAX(maths) , class, section from student_marks group by class, sec
 |         93 | 9     | D       |
 +------------+-------+---------+
 48 rows in set (0.01 sec)
+
+
