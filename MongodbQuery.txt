@@ -1,3 +1,5 @@
+Practicing Quary in both MySQL and MongoDB
+
 problem 1 : Understand creating tables in SQL / collections in MongoDB.
 Write Query : Create a Customers table / collection with the following fields: id (unique identifier), name, email, address, and phone_number.
 In MySQL
@@ -175,7 +177,6 @@ SELECT COUNT(*) as total_customers FROM Customers;
 IN MongoDB
 
 db.Customers.countDocuments();
-
 
 problem 12 : Understand how to skip rows / documents in SQL / MongoDB
 Write Query : Write a query to fetch all customers except the first two when ordered by id in ascending order.
