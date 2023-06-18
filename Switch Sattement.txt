@@ -3,9 +3,9 @@ public class hello {
 	public static void main(String[] args) {
 //		int n=1;
 //		if(n==1)
-//			System.out.println("Monday");
+//		System.out.println("Monday");
 //		else if(n==2)
-//			System.out.println("Tuesday");
+//		System.out.println("Tuesday");
 //		else if(n==3)
 //		System.out.println("Wednesday");
 //		else if(n==4)
@@ -46,3 +46,6 @@ public class hello {
 		
 	}
 }
+
+// Monday
+// Enter a valid number
