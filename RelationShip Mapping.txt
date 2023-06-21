@@ -1,0 +1,147 @@
+
+@ONE-TO-ONE RELATIONSHIP
+
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String username;
+    
+    // One-to-One relationship with Profile
+    @OneToOne(mappedBy = "user")
+    private Profile profile;
+
+    // getters and setters
+}
+
+@Entity
+@Table(name = "profiles")
+public class Profile {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String firstName;
+    
+    private String lastName;
+    
+    // One-to-One relationship with User
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    // getters and setters
+}
+
+@ONE-TO-MANY
+
+@Entity
+@Table(name = "authors")
+public class Author {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String name;
+    
+    // One-to-Many relationship with Book
+    @OneToMany(mappedBy = "author")
+    private List<Book> books;
+
+    // getters and setters
+}
+
+@Entity
+@Table(name = "books")
+public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String title;
+    
+    // Many-to-One relationship with Author
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private Author author;
+
+    / 
+}
+
+@MANY-TO-MANY
+
+@Entity
+@Table(name = "students")
+public class Student {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String name;
+    
+    // Many-to-Many relationship with Course
+    @ManyToMany
+    @JoinTable(
+        name = "student_course",
+        joinColumns = @JoinColumn(name = "student_id"),
+        inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
+    private List<Course> courses;
+
+    // getters and setters
+}
+
+@Entity
+@Table(name = "courses")
+public class Course {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    private String title;
+    
+    // Many-to-Many relationship with Student
+    @ManyToMany(mappedBy = "courses")
+    private List<Student> students;
+
+    // getters and setters
+}
+
+
+
+
+---------------------------------------------------------------------------------------------------
+
+Hibewrnate Mapping
+
+Granularity Mismatch
+Inheritence Mapping
+
+1. Single table 
+2. Joined table
+3. table per class
+4. Mapped supar class
+
+Association Mapping 
+1. One to One
+   Default Fetch type : Eagar
+2. One to Many
+   Default Fetch type : Lazy
+3. Many to One
+   Default Fetch type : Eagar
+4. Many to Many
+   Default Fetch type : Lazy
+   
+Bidirectional Mapping : member on both owning side inverse side
+Unidirectional Mapping : member on inverse side    
+
+One to Many and Many to One
+
+
+
+
+
+
