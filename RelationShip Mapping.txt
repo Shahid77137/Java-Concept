@@ -137,8 +137,179 @@ Association Mapping
    
 Bidirectional Mapping : member on both owning side inverse side
 Unidirectional Mapping : member on inverse side    
+ 
+Example Of a project Book My Way
 
-One to Many and Many to One
+User Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	username: String
+	email: String (Unique)
+	password: String (Hashed and Salted)
+	firstName: String
+	lastName: String
+	phoneNumber: String
+	address: String
+	role: Enum (e.g., USER, ADMIN)
+	registrationDate: LocalDateTime
+	lastLoginDate: LocalDateTime
+
+	Flight Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	flightNumber: String (Unique)
+	airline: String
+	departureAirport: String
+	arrivalAirport: String
+	departureDateTime: LocalDateTime
+	arrivalDateTime: LocalDateTime
+	price: BigDecimal
+	capacity: Integer
+	availableSeats: Integer
+
+	Hotel Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	name: String
+	address: String
+	city: String
+	state: String
+	country: String
+	rating: Double
+	pricePerNight: BigDecimal
+	totalRooms: Integer
+	availableRooms: Integer
+	amenities: Set<Amenity> (OneToMany relationship with Amenity Entity)
+
+	Booking Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	user: User (ManyToOne relationship with User)
+	flight: Flight (ManyToOne relationship with Flight)
+	hotel: Hotel (ManyToOne relationship with Hotel)
+	bookingDateTime: LocalDateTime
+	totalAmount: BigDecimal
+	status: Enum (e.g., CONFIRMED, PENDING, CANCELED)
+	passengers: List<Passenger> (OneToMany relationship with Passenger Entity)
+	payment: Payment (OneToOne relationship with Payment Entity)
+	coupon: Coupon (ManyToOne relationship with Coupon Entity)
+
+	Review Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	user: User (ManyToOne relationship with User)
+	hotel: Hotel (ManyToOne relationship with Hotel)
+	flight: Flight (ManyToOne relationship with Flight)
+	rating: Double
+	comment: String
+	reviewDateTime: LocalDateTime
+
+	Payment Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	booking: Booking (OneToOne relationship with Booking)
+	paymentDateTime: LocalDateTime
+	amount: BigDecimal
+	paymentStatus: Enum (e.g., SUCCESS, FAILED)
+	paymentMethod: Enum (e.g., CREDIT_CARD, PAYPAL, CASH)
+	paymentGateway: PaymentGateway (ManyToOne relationship with PaymentGateway Entity)
+
+	Deal Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	title: String
+	description: String
+	discountPercentage: Double
+	startDate: LocalDate
+	endDate: LocalDate
+	applicableFlights: List<Flight> (ManyToMany relationship with Flight Entity)
+	applicableHotels: List<Hotel> (ManyToMany relationship with Hotel Entity)
+
+	City Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	name: String
+	state: State (ManyToOne relationship with State Entity)
+	
+	Country Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	name: String
+	isoCode: String
+	states: List<State> (OneToMany relationship with State Entity)
+
+	State Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	name: String
+	country: Country (ManyToOne relationship with Country Entity)
+	cities: List<City> (OneToMany relationship with City Entity)
+
+	Amenity Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	name: String
+	description: String
+
+	RoomType Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	name: String
+	description: String
+
+	PaymentGateway Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	name: String
+	description: String
+	supportedCurrencies: Set<String>
+
+	Passenger Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	booking: Booking (ManyToOne relationship with Booking)
+	firstName: String
+	lastName: String
+	age: Integer
+	gender: Enum (e.g., MALE, FEMALE, OTHER)
+	seatNumber: String
+
+	FlightClass Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	name: String
+	description: String
+
+	Coupon Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	code: String
+	description: String
+	discountAmount: BigDecimal
+	expirationDate: LocalDate
+
+	NewsletterSubscriber Entity:
+
+	Fields:
+	id: Long (Primary Key)
+	email: String
+	subscribedDate: LocalDate
 
 
 
