@@ -1,0 +1,825 @@
+
+James Gosley invented java in 1995
+
+Difference
+
+JVM converts our source-code to bytecode it uses javac
+JRE provide runtime environment 
+JDK provides libraries which we can run the code
+
+
+Difference between 0 and null;
+
+null is defined by jdk
+0 is defined by user;
+
+int x = 12; 
+int y = 2;
+
+++x - y++ * x-- / y++ + x++ /x--
+
+13 - 2 * 13 / 3+ 12/13
+13 - 26 / 3 + 12/13
+13 - 8 + 0
+
+this refer to the instance variable of a class
+
+what is the between programming paradime and programming langauage?
+
+-> langauage is java and how to write the programming language is done by paradime
+
+why java is known as object oriented language?
+In java almost everything is an object so that is why we can say java is a OOPs language.
+
+Does constructor have any return type if not why?
+No , constructor always refer to class itself 
+
+
+What is the difference between abstract class and normal class?
+
+-> Abstract class must be implemented by classes as you cannot make object of abstract class 
+
+diff btwn static and final
+
+diff btwn method overloading and method overiding
+
+diff public,private,default
+
+
+platform independent
+object oriented langauge
+easy language
+robust language
+Security
+
+
+Heap storage stores objects
+Stack stores localvariables
+Metaspace stores Static objects,variables 
+
+
+
+What is Dynamic dispatch?
+
+Changing number of argument
+Changing return type
+changing sequence of datatype
+
+What is difference instance variable and local variable?
+
+instance variable are instance of class. which scope is any where in the class.
+
+local variable are declared inside a block . and the scope of local variable is limited to that particular block.
+
+
+What is the difference between program and process>?
+
+
+
+Types of sorting
+
+
+1.  Arrays.sort(arr,(a,b) -> b.points - a.points );
+   
+2.  Arrays.sort(arr,(a,b) -> Integer.compare(b.points , a.points) );
+	  
+3.  Arrays.sort(arr,new Comparator<Pair>() {
+           @Override
+           public int compare(Pair p1, Pair p2){
+               return  p2.points - p1.points;
+           }
+       } );
+	   
+	   
+	   
+	
+
+
+
+
+
+	
+	   
+Java Core 
+
+0.  Programming paradime ✅
+1.  JDK ✅
+2.  JVM ✅
+
+    JDK is Java Development Kit it provides Javac
+ 
+    Javac is Java Compiler which convert source code to bytecode then JVM(Java Virtual Machine) it converts the bytecode to machine executable code
+	JVM provides a virtual environment to converts bytecode into machine executable code
+    Source Code -> Javac -> JVM -> Machine Executable Code
+	
+
+
+3.  DataType ✅
+
+    int , boolean ,float , long , char , byte , short ,double these all are primitive datatype (these are non object type)
+	string , arrays , classes , interfaces these are non-primitive datatype (these are object type)
+
+4.  Input taking ✅
+
+    Scanner sc = new Scanner(System.in);
+
+5.  Java Operators ✅
+6.  Hierchery of operators ✅
+    
+	double a = 7/22*(3.4+2)*3/5
+	
+=-=-=-=-=-= OOPs =-=-=-=-=-=
+
+OOPs is a programming paradime that is based on concept of object.
+OOPs is used for the way of programming in real world entities
+  
+
+Class
+
+classes are the user defined blueprint consist of instance variable and methods
+  
+  
+7.  Garbage Collector ✅
+
+If a object is not referred by any instance variable or method then garbage collector will collect that object
+When reference count becomes 0 then that objectis eligible for garbage collection
+When explicity all the reference are assigned with the value null then will be eligible for garbage collection
+When your existing reference variable start pointing to new object then refernce count will become 0
+
+
+8.  Methods ✅
+
+Method is a block of code that perform a particular task . For calling method you need to create object of a class 
+
+
+9.  Polymorphism ✅ 
+
+Poly = Many
+Morphism = Forms
+
+it means ManyForms
+It is a feature which allow one interface to be used for general/Normal class of action and specific action is determined by nature of situation
+It can be defined by single interface multiple methods
+
+
+Methods overloading 
+
+We can make multiple method of same name  but it should have either different parameter or return type
+And which method will be called based on the no. of argument or return type which will be decided by compiler which method will be called
+
+
+Method overiding
+
+A method of a interface can be used in a class with different implemention by using @Override annotation at the top the method
+If we don't use override then also it will work but it is good to use override in order to avoid spelling mistake     
+
+
+10. Constructor ✅
+
+A constructor has same name as it of the class
+It should be defined in the class hence it can access instance member directly without using objects
+It is called automatically after object is created 
+A constructor is used for initiallzation and resource allocation to be done at at the time of object creation
+In Java, constructors do not have a return type. They are special methods within a class that are responsible for initializing the object's state. Constructors are called when you create an instance (object) of a class using the new keyword.
+As you can see, the constructor does not specify a return type, not even void. Its name matches the class name, and it is used solely for setting up the initial state of the object.
+
+11. Static & Non-static variable ✅
+
+Static is a part of memory space but has different memory segment that is meta-space
+Whenever we want to create a variable which is similar on all the object then we use static 
+A static variable can be called by object of a class or by class itself
+Java doesn't allow the local static variable means local variable cannot be static anymore
+No matter whether object is cerated or not , memory for the sttaic variable will be given
+
+12. Static & Non-static method ✅
+
+Static method can be called inside non static method as well 
+But Non - static method cannot be called inside a static method 
+
+
+Why main method is always static?
+
+-> If main method is not static then class will not load 
+
+
+13. Encapsulation ✅
+
+Encapsulation is all about binding the data and code into a single entity  
+We must use private keyword for instance variable
+
+Class should be public
+All feild should be private 
+For each feild should be corresponding public getter setter
+It should have a zero argument constructor or it may have a parameterized constructor 
+
+
+14. Deep knowledge about string in java - StringBuilder and StringBuffer
+
+
+Strings are immutuable , you cannot a add a value with a existing like arr.push but you can re-assign or make a new string
+To overcome the immututablity of string we refer stringBuilder or stringBuffer 
+
+stringBuilder or stringBuffer 
+
+Both provide mutable
+Both classes are final so they cannot inherited
+StringBuider is faster than StringBuffer
+
+
+StringBuilder & StringBuffer Example
+
+StringBuffer sb = new StringBuffer("FireExtinguishingTechnologies");
+        // sb.setCharAt(26,'i'); // changeing a particular character at any index
+        // sb.append("es"); // adding extra string at the end
+        // sb.deleteCharAt(4); // deleting a particular character at any index
+        // sb.insert(3,'e'); // adding a extra character at any index
+        // sb.delete(4,29); // deleting from start index to end index
+        // sb.reverse();
+        System.out.println("String = " + sb + " length = " + sb.length() + " Capacity = " + sb.capacity());
+
+
+
+
+15. Arrays ✅
+
+int[] arr = {1,2,3,4,5};
+//        arr[0] = 1;
+//        arr[1] = 2;
+//        arr[2] = 3;
+//        arr[3] = 4;
+//        arr[4] = 5;
+        int[] arr2 = new int[arr.length+5];
+        System.out.println(Arrays.toString(arr2));
+
+Limitation of arrays
+
+1. Array has fixed size in nature
+2. There are no predefined methods in array for ading,searching,sorting 
+3. There are no java package for array
+
+To overcome this limitations we need Collections
+
+
+
+16. Inheritence ✅
+
+Why we need Inheritence?
+
+-> A claas is there that name is human and human has few property and we have more tthre class student,teacher,offier
+
+
+Inheritence are unidirectional
+
+Everthing of the super class can be inherited to the sub class except the constructor
+
+
+class A{
+
+    String name;
+    String color;
+
+    public A(String name,String color){
+        this.name = name;
+        this.color = color;
+    }
+
+    public void printName(){
+        System.out.println(name);
+    }public void printColor(){
+        System.out.println(color);
+    }
+}
+
+
+class B extends A{
+
+    int seats;
+    int bhp;
+
+    public B(String name,String color,int seats,int bhp){
+        super(name,color);
+        this.seats = seats;
+        this.bhp = bhp;
+    }
+
+    public void printAll(){
+        System.out.println(name+" "+color+" "+seats+" "+bhp);
+    }
+
+}
+
+
+
+public class Inheritence_Example {
+
+    public static void main(String[] args) {
+
+        B b = new B("Ferrari","Rosso Scuderia",2,986);
+        b.printName();
+        b.printColor();
+        b.printAll();
+    }
+
+}
+
+
+Private method or instance variable are inherited but cannot be accessible into the sub class due to private keyword but it inherits 
+
+
+
+17. Method Overloading & Method Overriding ✅
+
+
+18. Interface ✅
+
+In interface all attributes are final and static by default
+
+Multiple implementation is possible 
+
+19. Abstraction ✅
+
+if we are abstract class then abstarct keyword is mandatory to use without using abstract keyword we can't called as abstract class
+
+Inside the abstract class the abstract method of this class must be implement to the respected subclass
+
+For the abstarct class we cannot use new keyword to create an object of the super class instaed of that we take refernce of subclass object
+
+If we make abstract class then it mandatory to extend 
+
+Subclasses that extend an abstract class must provide concrete implementations for all the abstract methods.
+
+Abstarct class cannot be final
+
+All abstrcts method,attributes can only be made inside abstract class 
+
+Abstract class shows tight coupling and that is overcome by interface
+
+20. Exception Handling 
+
+
+=-=-=-=-=-= Collections =-=-=-=-=-=
+
+
+Collection is interface Object
+Collections is a class Object
+
+
+What is Collections?
+
+-> Collection is simply an object has group of multiple elements into a single unit
+
+Collections are used to store,retrive,manipulate,communicate agregate data
+
+Collection framework contains 
+1. Interface
+2. Implemenataion
+3. Algorithmn 
+
+
+
+There are two sections in the collection framework
+
+1. Normal Collection (Multiple objects are handled individually)
+2. Map (Multiple objects are handled in the form of key pair value)
+
+it is inside java.util.Collection
+
+
+Java doesn't give direct implementation of collection interface but it provide implementation of more specific sub interface like set,list etc
+
+it comes under java.lang.iterables
+
+
+Hierchey of collection -> https://static.javatpoint.com/images/java-collection-hierarchy.png
+
+
+------------ List ------------
+
+
+important points
+
+1. List is a subinterface of collection interface
+2. List interface provide an order collection (elements are arranged in the list according to their insertion) that allow to access element from a acertain   location using integer index .
+3. List is 0 based indexing similar to array having staring index 0. 
+4. Null value can also be inserted even for multiple times
+5. List interface can define all the methods that are defined in collection interface  
+6. Duplicate element are allowd for multiple times
+
+
+Notes
+
+Wrapper class
+
+None of the collection classes work with the primitive datatype they work only for object and when a primitive added to a collection then it is automatically converted to object of corresponding wrapper class
+
+The automatic convertion of the primitive datatype to object is known as AutoBoxing and vice versa is called AutoUnboxing
+
+
+ArrayList
+------------
+
+
+package Collection_framework;
+
+import java.util.ArrayList;
+//import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+
+public class ArrayList_example {
+    public static void main(String[] args) {
+
+
+//        Collection<Integer> list = new ArrayList<>(); // We don't Collections because it is very less generic
+
+        List<Integer> list = new ArrayList<>();  // We mostly use this List because it is moderatly generic
+
+//        ArrayList<Integer> list = new ArrayList<>();  // We don't use ArrayList because it is most generic
+
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(null);
+        list.add(1);
+        list.add(null);
+
+        System.out.println("Printing list = " + list);
+        System.out.println("Size of list = " + list.size());
+        System.out.println("index of element of list = " + list.indexOf(1));
+        System.out.println("last index of element of list = " + list.lastIndexOf(1));
+        System.out.println("value of the index of list = " + list.get(1));
+        System.out.println("removing index of list = " + list.remove(1));
+        System.out.println("use of contain method of list = " + list.contains(3));
+        System.out.println("Adding a element at a specific position");
+        list.add(2,5);
+        list.set(3,10); // it is used to update a particular value in the list
+//        list.clear(); // it is used to clear the full list
+
+        System.out.println(list);
+        list.remove(1); // it is used to delete element by index
+        list.remove(Integer.valueOf(3)); // it is used to delete a particular value
+
+        System.out.println(list);
+
+//        Itertating the list
+
+        System.out.println("Doing with normal for loop");
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + " ");
+        }
+
+        System.out.println();
+        System.out.println("Doing with iterator");
+
+        Iterator<Integer> itr = list.iterator();
+
+        while (itr.hasNext()) {
+            Integer curr = itr.next();
+            if (curr == null) {
+                itr.remove(); // Safely removes the current element from the list
+            }else{
+                System.out.print(curr+" ");
+            }
+        }
+
+        System.out.println();
+        System.out.println(list);
+
+    }
+}
+
+
+
+
+
+
+LinkedList
+------------
+
+
+In case of linkedlist element doesn't in continiou location so linkedlist doesn't support random
+
+
+
+How to choose which one to use ArrayList or LinkedList?
+
+-> If you want to do more reading operation then linkedlist is not a good choice , then use ArrayList
+   If you want to do more writing operation then ArrayList is not a good choice , then use LinkedList
+
+
+
+------------ Set ------------
+
+1. It accepts null value but not more than one
+2. It doesn't follow indexing so we cannot use .get() method which is based on index and also cannot use for loop
+3. It stores data in ordered format depending upon the implementation
+4. It will show the order format of the data according to their implementation of the set
+5. Duplication elements are not allowed
+
+
+If a element is alreday present in the set already then we will add the same element as we will get false because it is already present
+It has all methods of collections interface but it don't have its own method
+
+
+
+package Collection_framework;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Set_Examples {
+
+    public static void main(String[] args) {
+
+        Set<Integer> set = new HashSet<>();
+
+        set.add(1);
+        set.add(2);
+        set.add(3);
+
+        System.out.println(set);
+        System.out.println(set.add(2));
+        System.out.println(set.add(4));
+        System.out.println(set);
+//        set.clear(); // it clears the set
+        System.out.println("Printing set = " + set);
+        System.out.println("Size of set = " + set.size());
+        System.out.println("removing index of set = " + set.remove(1)); // it is removing the element of the set
+        System.out.println("use of contain method of set = " + set.contains(3));
+        System.out.println("Adding a element at a specific position");
+
+
+
+        Iterator<Integer> itr = set.iterator();
+
+        while(itr.hasNext()){
+
+            Integer curr = itr.next();
+            if(curr < 3){
+                itr.remove();
+            }
+            System.out.print(curr+" ");
+
+        }
+
+        System.out.println();
+        System.out.println(set);
+
+
+
+    }
+
+}
+
+
+HashSet
+--------
+
+HashSet doesn't follow order and it never allows duplicate element
+It is a class object , it don't have any own method
+
+
+        Set<Integer> set = new HashSet<>();
+
+        set.add(1);
+        set.add(2);
+        set.add(3);
+
+        System.out.println(set);
+        System.out.println(set.add(2));
+        System.out.println(set.add(4));
+        System.out.println(set);
+//        set.clear(); // it clears the set
+        System.out.println("Printing set = " + set);
+        System.out.println("Size of set = " + set.size());
+        System.out.println("removing index of set = " + set.remove(1)); // it is removing the element of the set
+        System.out.println("use of contain method of set = " + set.contains(3));
+
+
+
+TreeSet
+--------
+
+If we apply treeset it will sort in ascending order by default
+TreeSet doesn't allow insertion of null , if we add null value in our treeset as we know treeset added element in ascending order so what will be the position of null so because of that treeset doesn't allow null insertion  
+
+
+
+Stack
+--------
+
+package Collection_framework;
+
+import java.util.Stack;
+
+public class Stack_Example {
+
+    public static void main(String[] args) {
+
+        Stack<Integer> stk = new Stack<>();
+
+        stk.push(1);
+        stk.push(2);
+        stk.push(3);
+        stk.push(4);
+
+        stk.add(5);
+        System.out.println(stk);
+        System.out.println("Removing last element "+stk.pop());
+        System.out.println(stk);
+        System.out.println("Viewing last element "+stk.peek());
+
+        System.out.println("Printing stack = " + stk);
+        System.out.println("Size of stack = " + stk.size());
+        System.out.println("removing index of stack = " + stk.remove(1)); // it is removing the element of the set
+        System.out.println("use of contain method of stack = " + stk.contains(3));
+        System.out.println(stk);
+    }
+
+}
+
+
+
+Queue
+--------
+
+package Collection_framework;
+
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class Queue_Example {
+
+    public static void main(String[] args) {
+
+        Queue<Integer> Q = new LinkedList<>();
+
+        Q.add(1);
+        Q.add(2);
+        Q.add(3);
+        Q.offer(4);
+
+        // Queue follows firdt in first out (FIFO)
+
+        System.out.println(Q);
+        System.out.println(Q.poll()); // it removes the first element
+        System.out.println(Q);
+        System.out.println(Q.peek()); // it gets the first element
+
+        System.out.println("Printing queue = " + Q);
+        System.out.println("Size of queue = " + Q.size());
+        System.out.println("removing index of queue = " + Q.remove(4)); // it is removing the element of the set
+        System.out.println("use of contain method of queue = " + Q.contains(3));
+        System.out.println(Q);
+
+
+        // if we apply priority queue then elements are arranged in descending order
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+
+        pq.add(20);
+        pq.add(10);
+        pq.add(40);
+        pq.add(30);
+
+// it arranges only the smallest value at the top or first place and other elements remain random
+
+
+        System.out.println(pq);
+
+
+    }
+
+}
+
+
+
+
+DeQueue
+--------
+
+
+package Collection_framework;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class DeQueue_Example {
+
+    public static void main(String[] args) {
+
+        Deque<Integer> dq = new ArrayDeque<>();
+
+        dq.add(1);
+        dq.add(2);
+        dq.add(3);
+        dq.add(4);
+        dq.offer(5);
+
+        System.out.println(dq);
+
+        System.out.println(dq);
+        System.out.println(dq.poll()); // it removes the first element
+        System.out.println(dq);
+        System.out.println(dq.peek()); // it gets the first element
+
+        System.out.println("Printing Dequeue = " + dq);
+        System.out.println("Size of Dequeue = " + dq.size());
+        System.out.println("removing index of Dequeue = " + dq.remove(4)); // it is removing the element of the set
+        System.out.println("use of contain method of Dequeue = " + dq.contains(3));
+        System.out.println("Using first peek = "+dq.peekFirst());
+        System.out.println("Using last peek = "+dq.peekLast());
+        System.out.println("Using first poll = "+dq.pollFirst());
+        System.out.println("Using last poll = "+dq.pollLast());
+        System.out.println(dq);
+
+    }
+
+}
+
+
+
+
+
+----------------  Map  ----------------
+
+
+Map follows the set mechanism internally
+
+
+
+HashMap
+-----------
+
+It takes Key and Value pair 
+Key should  always be unique
+It doesn't follow any order or sequence for adding data
+It is an non-synchronised 
+
+
+LinkedHashMap
+---------------
+
+It takes Key and Value pair 
+Key should  always be unique
+It does follow sequence for adding data 
+
+
+TreeMap
+-----------
+
+It takes Key and Value pair 
+Key should  always be unique
+TreeMap always sort's key in ascending order 
+
+
+
+
+HashTable
+-----------
+
+
+Points to remember:
+
+1. A Hashtable is an array of a list. Each list is known as a bucket. The position of the bucket is identified by calling the hashcode() method. A Hashtable contains values based on the key.
+2. Java Hashtable class contains unique elements.
+3. Java Hashtable class doesn't allow null key or value.
+4. Java Hashtable class is synchronized.
+
+
+
+
+
+
+
+
+
+
+
+Why we need collections?
+
+-> Array is not a good choice to store our data having limited size in nature to overcome this problem we have a better implementation this is provided by collection framework 
+
+
+What is the difference between HashSet and TreeSet?
+
+-> In TreeSet null is not accepted and in hashSet only one null value is acepted
+In Treeset arranges the data in order and hashset doesn't arrange data in order
+
+
+
+
+
+
+
+Why primitive datatype are not dynamic?
+-> Java is Ob
+
+
+Today's target
+
+We will complete colletions before dinner
