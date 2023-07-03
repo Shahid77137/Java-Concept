@@ -1,0 +1,333 @@
+====================================================================================================================================================================================
+
+	Object Class - 
+	Parents of all class in java by default.
+	
+	1 - int hashCode();
+	2 - String toString();
+	3 - boolean equals(object)
+	4-  void wait();
+	5 - void notify();
+	6 - void finalize();
+	7- Object clone();
+
+public class A{
+int id;
+String name;
+
+public A(int id, String name){
+this.id = id;
+this.name = name;
+}
+
+@Override
+public String toString(){
+return "Id of A is : "+id+" Name is : "+name;
+}
+
+}
+
+class main{
+
+public static void main(String...args){
+A a = new A(1, "soumit");
+
+List <>list = new ArrayList<>();
+a.toString();  Object a - hashcode...............@ghak2l    if we do not override the toString() method.
+
+a.toString(); - Id of A is 1 Name is Soumit. // if we override toString() method.
+
+System.out.println(a.getID()+" "+a.getName());
+
+for(A a: list){
+print(a.toString());
+}
+
+}
+}
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+ public static void main(String[] args) {
+	
+	 List<Student> list = new ArrayList<>();
+	 
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 list.add(new Student(1,"ankit"));
+	 
+	 for(Student st: list) {
+		 System.out.println(st.toString());
+	 }
+	
+	 
+}
+
+== equals
+
+String str1 = new String("hello");
+STring str2 = new String("hello");
+String str3 = "hello";
+String str4 = "hello";
+
+str1==str2 // false . - two different memory location. using new keyword. 
+str3 ==str4 // true; //reference same memory location.
+
+when ever you want to override equals method you must override hashCode().
+@Override
+public int hashCode(){
+
+
+}
+
+class Student{
+int id;
+String name;
+//getter //setter
+
+@Override
+public int hashCode(){
+return id.hashCode();
+}
+
+@Override
+public boolean equals(Object second){
+if(second==null){
+return false;
+}
+
+if(this ==second){
+return true;
+}
+
+if(this.getClass()!=second.getClass()){
+return false;
+}
+
+Student stu2 = (Student)second;
+
+return stu2.id.equals(this.id);
+
+}
+
+}
+
+class Main{
+
+main(){
+List<Student> list = new ArrayList<>();
+Student s1 = new Student(1,"ank");
+list.add(s1);
+
+
+
+Student s2 = new Student(1,"snm");
+if(s2.equlas(s1)){
+print("duplicate are not allowed");
+}else{
+list.add(s2);
+}
+////////////////////
+Student s;
+for(int i =0;i<10;i++){
+Scanner sc = new Scanner(System.in);
+int id = sc.nextInt();
+String name = sc.nextLine();
+
+ s = new Student(id,name);
+
+
+
+if(list.get(i).equals(list.get(i+1)||list.get(i).equals(list.get(i-1)){
+duplicate..............
+}else{
+list.add(
+
+
+
+
+}
+}
+
+
+}
+}
+Packages... in java
+
+ppackages in java is used to group related class. we use to avoid the ambiguity/conflict
+java package provides access protection 
+java package removes naming collision
+
+it implements data encapsulation(data-hiding)
+
+  Access         private   protected   default    public 
+
+1-Sameclass	  Yes	  Yes	       Yes       Yes
+
+2-Same package	  No	  Yes	       Yes       Yes
+   subclass	
+
+3- Same package   No	 Yes 	       Yes 	Yes
+different class
+
+4- Other package  No     No	       Yes       Yes
+   sub class
+
+5 -Other package  No 	NO             No        Yes
+ diff class	 
+
+
+Abstract class - 
+
+Abstract class is one which may or may not have abstract method. //// only signature no body.
+
+Abstract class fields can use any access modifiers..
+
+Abstract class object can not be created but we can create reference for that class.
+
+Abstract class can not be final.
+
+abstact class must be extend by other class.
+
+abstract class A{
+
+abstract void print();
+
+
+void display(){
+
+print("hahahahah");
+}
+abstract class z{
+method1 
+method2
+method3
+method4
+mehtod5
+}
+}
+
+class B extends Z{
+
+@Override
+public void print(){
+ print(" hello java");
+
+}
+
+	
+}
+
+class C extends A{
+
+@Override
+public void print(){
+print(" hello python");
+}
+
+}
+
+class D extends Z{
+
+}
+
+class main{
+main(){
+
+	A a ;
+
+a = new B();
+
+a.print();
+a.display();
+A b;
+b = new C();
+
+b.print();
+}
+
+}
+
+make a program  in which there are two class  Student, Employee   .. method  print details....   use abstraction. id, name;
+
+Disadvantage  of abstraction tight coupling.
+
+Why we need interface...
+
+interface A{
+
+public void studata();
+
+}
+
+interface B {
+
+publc void empdata();
+}
+
+interface C{
+public String show();
+public int calcualte();
+}
+
+class S implements A{
+@Override 
+public void studata(){}
+public void print(){}
+}
+
+class E implements B,C{
+
+@Override
+public void empdata(){
+
+}
+
+}
+
+class PartTimeEmployee implements B,A{
+@Override
+public void empdata(){
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
