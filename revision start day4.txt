@@ -1,0 +1,585 @@
+
+
+Enumeration::: ----------------------------------
+
+
+	java.lang.  
+	selection limitation. ( stop random input from user );\
+	Enum is always static or final.
+	According java convetion enum fields must be capitalised.
+	Enum can be written inside the class or outside the class. but not inside the method.
+	Enum fields can be used with if and switch statements..
+	Java compiler will create a method .values() automatically for each enum.
+	
+Enum category{
+  FIRST(1), SECOND(2) ,THIRD(3)
+
+}
+public class A{
+
+int id;
+
+
+
+public A(int id, category cat){
+
+
+ 
+}
+}
+
+
+public main{
+
+
+
+main(){
+String category = sc.next();
+category cat = category.valueOf(category);
+
+
+A a =  new A(1, "");
+
+public void select(String value){
+
+for(Category cat : Category.values()){
+	
+	if(cat ==value){
+	execute........statement........
+}else{
+throw new InvalidInputException("please enter valid value");
+}
+
+}
+}
+
+
+Sorting........................
+
+
+public class Student{
+
+ int id;
+String name;
+boolean flag;
+//getter //setter
+
+}
+
+public StudentManagement{
+int size;
+Student []arr; 
+public Studentmanagement(Student[]arr){
+this.arr = arr;
+}
+//constructor.
+//getter //setter.
+
+	void sortById(){
+	
+	for(int i =0;i<n;i++){
+	for(int j =i+1;j<n;j++){
+	if(arr[i].id > arr[j].id){
+	Student t = arr[i];
+	arr[i] = arr[j];
+	arr[j] = t;
+	}
+	}
+	}
+ 
+
+         }
+
+	void sortbyflag(){
+	for(int i =0;i<n;i++){
+	for(int j =i+1;j<n;j++){
+	 if(arr[i].flag==false && arr[j].flag ==true){
+	   Student t = arr[i];
+	      arr[i] = arr[j];
+	      arr[j] = t;
+	}       
+ 	}
+       }
+		
+
+	} ///false value should be followed by true......
+
+int arr[] = {3,4,5,4,23,32,1,23};
+void sortarr(){
+	for(int i =0;i<n;i++){
+	for(int j =i+1;j<n;j++){
+	 if(arr[i]>arr[j+1]){
+	    int  t = arr[j];
+	      arr[j] = arr[j+1];
+	      arr[j+1] = t;
+	}       
+ 	}
+       }
+}
+
+}
+
+
+void sortbyname(){  
+for(int i =0;i<n;i++){
+	for(int j =i+1;j<n;j++){
+	if(arr[i].name.compareTo(arr[j].name)>0){   
+	Student t = arr[i];
+	arr[i] = arr[j];
+	arr[j] = t;
+	}
+	}
+	}
+}
+
+
+Interface...... --- 
+	
+ Interface  is used to define a generic template which can be implemented by various classes such that classes may be 
+related or unrelated.
+
+All methods of interface are abstract by default. so we do not need to write abstract keyword.
+
+All methods of interface are public by default. so while overriding these methods you must use public access modifiers.
+
+To implement an interface we must use implements keyword.
+
+interface A{
+void print();
+}
+
+class B implements A{
+
+@Override
+public void print(){
+///statements...
+}
+
+}
+
+
+class Base  
+{  
+    void method(int a)  
+    {  
+        System.out.println("Base class method called with integer a = "+a);  
+    }  
+       
+    void method(double d)  
+    {  
+        System.out.println("Base class method called with double d ="+d);  
+    }  
+}  
+   
+class Derived extends Base  
+{  
+    @Override  
+    void method(double d)  
+    {  
+        System.out.println("Derived class method called with double d ="+d);  
+    }  
+}  
+   
+public class Main  
+{      
+    public static void main(String[] args)  
+    {  
+        new Derived().method(10);  
+    }  
+}  
+
+output// -- a - Base class method called with integer a = 10 //madhu //correct
+b -Base class method called with double d =10
+c-Derived class method called with double d =10
+d- compilation error //soumit //shahid
+e - runtime error
+
+
+
+class Base   
+{  
+    public void baseMethod()  
+    {  
+        System.out.println("BaseMethod called ...");  
+    }  
+}  
+class Derived extends Base   
+{  
+	
+    public void baseMethod()  
+    {  
+        System.out.println("Derived method called ...");  
+    }  
+}  
+public class Test   
+{  
+    public static void main (String args[])  
+    {  
+        Base b = new Derived();  
+        b.baseMethod();  
+    }  
+}  
+
+output.. ---- a - basemethod called
+  		b - derived method called    //madhu correct
+		c - error
+		d - compilation error //shahid 
+		e - runtime error   //soumit
+		f - none of the above
+
+
+class Bike9{  
+ final int speedlimit=90;
+ void run(){  
+  speedlimit=400;  
+ }  
+ public static void main(String args[]){  
+ Bike9 obj=new  Bike9();  
+ obj.run();  
+ }  
+}
+
+output -RunTime Error     //soumit
+	speedlimit= 400;  
+	speedlimt = 90;
+	Compilation error //shahid correct.
+	none of the above
+
+int arr[] = new int[5];
+
+arr[0] = 5;
+arr[5]= 10; // throw runtime arrayoutofindexbound
+
+public class A{
+
+int id;
+String name;
+public A(int id, String name){
+this.id = id;
+this.name =name;
+}
+
+
+
+}
+class Main{
+	A a = new A("shahid", 10); //compilation error.... 
+print(a.getID());//compilation error  no method found.....
+
+}
+
+
+
+
+
+
+
+final class Bike{}  
+  
+class Honda1 extends Bike{  
+  void run(){System.out.println("running safely with 100kmph");}  
+    
+  public static void main(String args[]){  
+  Honda1 honda= new Honda1();  
+  honda.run();  
+  }  
+}  
+
+    output ---   a - runtime error 
+		b - running safely with 100kmph //soumit 
+		c - compile error//shahid correct  //final class can not be extend.
+		d - none of the above.
+
+
+
+
+class Main {  
+ public static void main(String args[]){  
+   final int i; //declaration.  
+      i = 20;  	//assignment   
+ 
+   System.out.println(i);  
+
+ }  
+}  
+
+output - a - 0; //shahid  
+	b - 20; //madhu correct ... // Initialization is different thing and assignment is different thing.....
+	c - compilerror //soumit 
+	d -runtimeerror
+
+
+class Base   
+{  
+    protected final void getInfo()  
+    {  
+        System.out.println("method of Base class");  
+    }  
+}  
+   
+public class Derived extends Base  
+{  
+    protected final void getInfo()  
+    {  
+        System.out.println("method of Derived class");  
+    }  
+    public static void main(String[] args)  
+    {  
+        Base obj = new Base();  
+        obj.getInfo();  
+    }  
+}  
+
+ouput ---    ("method of Base class  // soumit
+	compile  // shahid  //correct
+
+
+
+
+ find all errors... and fix them......
+class A{  //parent
+
+int 2id;  /// error   and fix - int id;
+String name;
+//getter //setter //constructor
+}
+
+class B extends A {  //subclass
+
+int roll;
+String minus;
+
+//getter //setter //super constructor..
+}
+
+class Main{
+
+//error . there is no main method...
+public static void main(String...args){ //
+
+
+
+A a = new A(1,"somit");
+
+B b = new A( 1,"shahid"); //error.....    .....// sub class can not refer to parent classs.
+
+print a.toString();
+print b.toString();
+}
+}
+
+
+class variable_scope 
+    {
+        public static void main(String args[]) 
+        {
+            int x;
+            x = 5;
+		
+            {
+	       int  y = 6;
+	        System.out.print(x + " " + y);
+            }
+            System.out.println(x + " " + y);
+        } 
+    }
+
+output - ..... 1 -  5 6	  //soumit
+		    5 6
+	
+	       2 -  5 6 5 6   //shahid
+
+	       3 - 5 6
+		   5
+		   6
+
+	   4 - compile errror  //madhu...//correct
+	   5 - runtime error
+
+
+
+
+class output {
+        public static void main(String args[]) 
+        {
+            double a, b,c;
+            a = 3.0/0;
+            b = 0/4.0;
+            c=0/0.0;      
+ 	
+	    System.out.println(a); //infinity Shahid.... ||error//soumit.......  throw AirthmaticException.................
+            System.out.println(b); //0.0		 || 0.0				
+            System.out.println(c); //0.0		 || NAN....
+        } 
+    }
+
+
+
+
+
+ class overload 
+   {
+        int x;
+ 	double y;
+        void add(int x , int b) 
+        {
+            x = x + b;
+        }
+        void add(double c , double y)
+        {
+            y = c + y;
+        }
+        overload() 
+        {
+            this.x = 0;
+            this.y = 0;
+        }        
+    }    
+    class Overload_methods 
+    {
+        public static void main(String args[])
+        {
+            overload obj = new overload();   
+            int a = 2;
+            double b = 3.2;
+            obj.add(a, a);
+            obj.add(b, b);
+            System.out.println(obj.x + " " + obj.y);     
+        }
+   }
+
+a) 4  6.4  //shahid   //soumit ..............................   now its wrong
+b) 6.4  6
+c) 6.4  6.4
+d) 6  6
+e) 0 6.4
+f) 4 0
+g) 0 0   //wrong   .... there is no answer in options  
+h) 0 0.0  is the correct answer.
+
+
+
+
+5. Which of this statement is incorrect?
+a) All object of a class are allotted memory for the all the variables defined in the class
+b) If a function is defined public it can be accessed by object of other class by inheritation // shahid
+c) main() method must be made public
+d) All object of a class are allotted memory for the methods defined in the class   //soumit // correct
+
+
+
+10. Method overriding is combination of inheritance and polymorphism?
+a) True   correct
+b) false
+
+
+
+
+class bool_operator 
+    {
+        public static void main(String args[]) 
+        {    
+             boolean a = true;
+             boolean b = !true;
+             boolean c = a | b;
+ 	     boolean d = a & b;
+             boolean e = d ? b : c;
+             System.out.println(d + " " + e);
+        } 
+    }
+
+a) false false  //sh
+b) true ture
+c) true false
+d) false true    ///sm  //correct
+
+
+
+ class Output 
+    {
+        public static void main(String args[]) 
+        {    
+             int x , y = 1;
+             x = 10;
+             if (x != 10 && x / 0 == 0)
+                 System.out.println(y);
+             else
+                 System.out.println(++y);
+        } 
+    }
+
+a) 1  
+b) 2  //shahid  expl.. correct
+c) Runtime error owing to division by zero in if condition //soumit
+d) Unpredictable behavior of program  
+
+
+
+
+6. Which of the below is invalid identifier with the main method?
+a) public
+b) static
+c) private  //soumt   correct 
+d) final    //shahid  
+
+
+
+ What is the extension of compiled java classes?
+a) .class correct
+b) .java //shahid  soumit  ........
+c) .txt
+d) .js
+
+What is the extension of java code files?
+a) .class   //shahid ///soumit
+b) .java   correct
+c) .txt
+d) .js
+
+
+ class main_class 
+    {
+        public static void main(String args[])
+        {
+            int x = 9;
+            if (x == 9) 
+            { 
+                int x = 8;
+                System.out.println(x);
+            }
+        } 
+    }
+
+a) 9
+b) 8
+c) Compilation error
+d) Runtime error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
