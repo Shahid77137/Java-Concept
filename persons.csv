@@ -1,0 +1,3878 @@
+
+Create table persons(
+id int primary key,
+name varchar(25) not null,
+gender varchar(5) not null,
+age int not null,
+country varchar(30) not null
+);
+
+
+id,name,gender,age,country
+
+(1,"Olivia","F",65,"India")
+INSERT INTO persons (id, name, gender, age, country)
+VALUES
+  (1,'Olivia','F',65,'India'),
+  (2, 'Liam', 'M', 70, 'Ireland'),
+  (3, 'Noah', 'M', 82, 'Chile'),
+  (4, 'Oliver', 'M', 60, 'Ireland'),
+  (5, 'Emma', 'F', 86, 'Spain'),
+  (6, 'Charlotte', 'F', 26, 'Italy'),
+  (7, 'Elijah', 'M', 21, 'Spain'),
+  (8, 'James', 'M', 92, 'Brazil'),
+  (9, 'Elizabeth', 'F', 60, 'India'),
+  (10, 'Eleanor', 'F', 48, 'Italy'),
+  (11, 'Ella', 'F', 87, 'Australia'),
+  (12, 'William', 'M', 90, 'Ireland'),
+  (13, 'Harper', 'F', 65, 'Chile'),
+  (14, 'Luna', 'F', 40, 'Australia'),
+  (15, 'Camila', 'F', 73, 'Spain'),
+  (16, 'Gianna', 'F', 95, 'India'),
+  (17, 'Benjamin', 'M', 35, 'Ireland'),
+  (18, 'Lucas', 'M', 75, 'USA'),
+  (19, 'Henry', 'M', 41, 'Ireland'),
+  (20, 'Abigail', 'F', 69, 'Sri Lanka'),
+  (21, 'Sofia', 'F', 81, 'Spain'),
+  (22, 'Avery', 'F', 46, 'Italy'),
+  (23, 'Scarlett', 'F', 77, 'Sri Lanka'),
+  (24, 'Emily', 'F', 13, 'India'),
+  (25, 'Aria', 'F', 88, 'India'),
+  (26, 'Theodore', 'M', 38, 'Ireland'),
+  (27, 'Jack', 'M', 94, 'USA'),
+  (28, 'Levi', 'M', 64, 'Italy'),
+  (29, 'Alexander', 'M', 91, 'Chile'),
+  (30, 'Nora', 'F', 77, 'Ireland'),
+  (31, 'Hazel', 'F', 18, 'Italy'),
+  (32, 'Madison', 'F', 74, 'Italy'),
+  (33, 'Ellie', 'F', 75, 'Brazil'),
+  (34, 'Lily', 'F', 98, 'Spain'),
+  (35, 'Jacob', 'M', 26, 'Sri Lanka'),
+  (36, 'Asher', 'M', 58, 'India'),
+  (37, 'Aiden', 'M', 56, 'Chile'),
+  (38, 'Violet', 'F', 19, 'India'),
+  (39, 'Aurora', 'F', 71, 'Sri Lanka'),
+  (40, 'Joseph', 'M', 81, 'Australia'),
+  (41, 'Wyatt', 'M', 78, 'Spain'),
+  (42, 'David', 'M', 62, 'Sri Lanka'),
+  (43, 'Leo', 'M', 23, 'Italy'),
+  (44, 'Luke', 'M', 35, 'USA'),
+  (45, 'Michael', 'M', 83, 'Ireland'),
+  (46, 'Daniel', 'M', 63, 'Chile'),
+  (47, 'Grace', 'F', 50, 'Australia'),
+  (48, 'Carter', 'M', 25, 'Spain'),
+  (49, 'Samuel', 'M', 57, 'USA'),
+  (50, 'Josephine', 'F', 30, 'Brazil');
+
+INSERT INTO persons (id, name, gender, age, country)
+VALUES
+  (51, 'Maverick', 'M', 61, 'Sri Lanka'),
+  (52, 'Ivy', 'F', 21, 'Spain'),
+  (53, 'Everly', 'F', 83, 'Chile'),
+  (54, 'Lillian', 'F', 72, 'Australia'),
+  (55, 'Paisley', 'F', 79, 'Brazil'),
+  (56, 'Elena', 'F', 27, 'Chile'),
+  (57, 'Naomi', 'F', 55, 'Chile'),
+  (58, 'Isaiah', 'M', 80, 'Italy'),
+  (59, 'Andrew', 'M', 10, 'Italy'),
+  (60, 'Joshua', 'M', 49, 'Spain'),
+  (61, 'Nathan', 'M', 79, 'Spain'),
+  (62, 'Nolan', 'M', 99, 'Chile'),
+  (63, 'Adrian', 'M', 65, 'Brazil'),
+  (64, 'Aaliyah', 'F', 67, 'Australia'),
+  (65, 'Ruby', 'F', 25, 'Brazil'),
+  (66, 'Brooklyn', 'F', 38, 'India'),
+  (67, 'Alice', 'F', 39, 'Australia'),
+  (68, 'Cameron', 'M', 47, 'Italy'),
+  (69, 'Santiago', 'M', 46, 'Ireland'),
+  (70, 'Eli', 'M', 50, 'Australia'),
+  (71, 'Aaron', 'M', 71, 'Brazil'),
+  (72, 'Ryan', 'M', 84, 'India'),
+  (73, 'Angel', 'M', 68, 'USA'),
+  (74, 'Madelyn', 'F', 53, 'USA'),
+  (75, 'Josephine', 'F', 17, 'India'),
+  (76, 'Bella', 'F', 37, 'Australia'),
+  (77, 'Skylar', 'F', 56, 'Australia'),
+  (78, 'Cooper', 'M', 51, 'Ireland'),
+  (79, 'Waylon', 'M', 55, 'Sri Lanka'),
+  (80, 'Easton', 'M', 28, 'Spain'),
+  (81, 'Kai', 'M', 49, 'Ireland'),
+  (82, 'Natalia', 'F', 97, 'Ireland'),
+  (83, 'Quinn', 'F', 78, 'Australia'),
+  (84, 'Caroline', 'F', 19, 'Spain'),
+  (85, 'Allison', 'F', 93, 'Ireland'),
+  (86, 'Gabriella', 'F', 78, 'Sri Lanka'),
+  (87, 'Christian', 'M', 91, 'Ireland'),
+  (88, 'Landon', 'M', 35, 'USA'),
+  (89, 'Colton', 'M', 54, 'Australia'),
+  (90, 'Roman', 'M', 33, 'Italy'),
+  (91, 'Ariana', 'F', 34, 'USA'),
+  (92, 'Emery', 'F', 85, 'Spain'),
+  (93, 'Lydia', 'F', 79, 'Spain'),
+  (94, 'Axel', 'M', 83, 'Australia'),
+  (95, 'Brooks', 'M', 34, 'Italy'),
+  (96, 'Eva', 'F', 22, 'Chile'),
+  (97, 'Adeline', 'F', 43, 'India'),
+  (98, 'Jose', 'M', 11, 'Italy'),
+  (99, 'Bennett', 'M', 18, 'Brazil'),
+  (100, 'Silas', 'M', 82, 'India');
+
+INSERT INTO persons (id, name, gender, age, country)
+VALUES
+  (101, 'Nicholas', 'M', 82, 'Sri Lanka'),
+  (102, 'Parker', 'M', 41, 'Australia'),
+  (103, 'Beau', 'M', 28, 'Australia'),
+  (104, 'Vivian', 'F', 26, 'Italy'),
+  (105, 'Clara', 'F', 98, 'USA'),
+  (106, 'Weston', 'M', 72, 'Ireland'),
+  (107, 'Austin', 'M', 68, 'India'),
+  (108, 'Connor', 'M', 32, 'Ireland'),
+  (109, 'Maria', 'F', 31, 'Ireland'),
+  (110, 'Iris', 'F', 16, 'Ireland'),
+  (111, 'Ayla', 'F', 88, 'Sri Lanka'),
+  (112, 'Carson', 'M', 38, 'Chile'),
+  (113, 'Dominic', 'M', 71, 'India'),
+  (114, 'Xavier', 'M', 95, 'Brazil'),
+  (115, 'Jaxson', 'M', 63, 'Australia'),
+  (116, 'Melody', 'F', 21, 'USA'),
+  (117, 'Julia', 'F', 75, 'Australia'),
+  (118, 'Jonathan', 'M', 42, 'Sri Lanka'),
+  (119, 'Robert', 'M', 71, 'Ireland'),
+  (120, 'Jameson', 'M', 85, 'Spain'),
+  (121, 'Ian', 'M', 89, 'Australia'),
+  (122, 'Everett', 'M', 64, 'India'),
+  (123, 'Arya', 'F', 43, 'Chile'),
+  (124, 'Eden', 'F', 74, 'Spain'),
+  (125, 'Remi', 'F', 72, 'Sri Lanka'),
+  (126, 'Vincent', 'M', 81, 'Brazil'),
+  (127, 'Legend', 'M', 90, 'Ireland'),
+  (128, 'Myles', 'M', 54, 'Italy'),
+  (129, 'Harrison', 'M', 18, 'India'),
+  (130, 'Charlie', 'F', 62, 'USA'),
+  (131, 'Alaia', 'F', 57, 'India'),
+  (132, 'Melanie', 'F', 24, 'Italy'),
+  (133, 'Walker', 'M', 54, 'Chile'),
+  (134, 'Jason', 'M', 16, 'Ireland'),
+  (135, 'Brayden', 'M', 21, 'Italy'),
+  (136, 'Cole', 'M', 40, 'Chile'),
+  (137, 'Nathaniel', 'M', 87, 'USA'),
+  (138, 'Alina', 'F', 40, 'Chile'),
+  (139, 'Lucia', 'F', 56, 'Ireland'),
+  (140, 'Ximena', 'F', 83, 'Spain'),
+  (141, 'George', 'M', 23, 'Brazil'),
+  (142, 'Lorenzo', 'M', 31, 'Italy'),
+  (143, 'Zion', 'M', 59, 'Italy'),
+  (144, 'Luis', 'M', 27, 'Australia'),
+  (145, 'Adalyn', 'F', 60, 'Brazil'),
+  (146, 'Archer', 'M', 91, 'Italy'),
+  (147, 'Enzo', 'M', 80, 'India'),
+  (148, 'Jonah', 'M', 59, 'Brazil'),
+  (149, 'Isabel', 'F', 13, 'Spain'),
+  (150, 'Reese', 'F', 48, 'Ireland');
+
+INSERT INTO persons (id, name, gender, age, country)
+VALUES
+  (151, 'Emersyn', 'F', 58, 'Italy'),
+  (152, 'Thiago', 'M', 75, 'India'),
+  (153, 'Theo', 'M', 68, 'Chile'),
+  (154, 'River', 'F', 61, 'Sri Lanka'),
+  (155, 'Ayden', 'M', 18, 'Chile'),
+  (156, 'Zachary', 'M', 62, 'USA'),
+  (157, 'Calvin', 'M', 78, 'Sri Lanka'),
+  (158, 'Braxton', 'M', 16, 'Italy'),
+  (159, 'Esther', 'F', 69, 'Italy'),
+  (160, 'Valeria', 'F', 38, 'Brazil'),
+  (161, 'Ashton', 'M', 35, 'India'),
+  (162, 'Rhett', 'M', 98, 'Chile'),
+  (163, 'Atlas', 'M', 21, 'Italy'),
+  (164, 'Jude', 'M', 81, 'Spain'),
+  (165, 'Bailey', 'F', 72, 'Italy'),
+  (166, 'Ember', 'F', 28, 'USA'),
+  (167, 'Bentley', 'M', 62, 'Brazil'),
+  (168, 'Carlos', 'M', 38, 'USA'),
+  (169, 'Ryker', 'M', 97, 'Italy'),
+  (170, 'Adriel', 'M', 19, 'Chile'),
+  (171, 'Alexandra', 'F', 100, 'USA'),
+  (172, 'Faith', 'F', 42, 'Sri Lanka'),
+  (173, 'Arthur', 'M', 63, 'Spain'),
+  (174, 'Ace', 'M', 94, 'Ireland'),
+  (175, 'Tyler', 'M', 100, 'Sri Lanka'),
+  (176, 'Jayce', 'M', 28, 'Australia'),
+  (177, 'Millie', 'F', 100, 'Ireland'),
+  (178, 'June', 'F', 98, 'Ireland'),
+  (179, 'Kaiden', 'M', 91, 'Sri Lanka'),
+  (180, 'Maxwell', 'M', 89, 'Italy'),
+  (181, 'Juan', 'M', 88, 'Spain'),
+  (182, 'Dean', 'M', 79, 'Chile'),
+  (183, 'Ada', 'F', 32, 'Italy'),
+  (184, 'Anastasia', 'F', 32, 'Sri Lanka'),
+  (185, 'Olive', 'F', 99, 'Spain'),
+  (186, 'Matteo', 'M', 66, 'Italy'),
+  (187, 'Malachi', 'M', 64, 'Australia'),
+  (188, 'Ivan', 'M', 16, 'Chile'),
+  (189, 'Elliott', 'M', 43, 'Spain'),
+  (190, 'Jesus', 'M', 98, 'Brazil'),
+  (191, 'Amy', 'F', 69, 'Spain'),
+  (192, 'Ruth', 'F', 45, 'Sri Lanka'),
+  (193, 'Aubree', 'F', 83, 'Australia'),
+  (194, 'Max', 'M', 28, 'Chile'),
+  (195, 'Elliot', 'M', 39, 'Italy'),
+  (196, 'Graham', 'M', 68, 'USA'),
+  (197, 'Arabella', 'F', 94, 'Chile'),
+  (198, 'Sara', 'F', 69, 'Brazil'),
+  (199, 'Journee', 'F', 81, 'Brazil'),
+  (200, 'Beckett', 'M', 73, 'USA');
+
+INSERT INTO persons (id, name, gender, age, country)
+VALUES
+  (201, 'Amari', 'M', 65, 'Spain'),
+  (202, 'Karter', 'M', 21, 'Chile'),
+  (203, 'Timothy', 'M', 79, 'Italy'),
+  (204, 'Abraham', 'M', 79, 'Brazil'),
+  (205, 'Jesse', 'M', 20, 'Australia'),
+  (206, 'Selena', 'F', 83, 'Chile'),
+  (207, 'Oaklynn', 'F', 71, 'Brazil'),
+  (208, 'Morgan', 'F', 42, 'Italy'),
+  (209, 'Zayden', 'M', 71, 'Sri Lanka'),
+  (210, 'Blake', 'M', 42, 'USA'),
+  (211, 'Alejandro', 'M', 32, 'Chile'),
+  (212, 'Dawson', 'M', 42, 'Brazil'),
+  (213, 'Juliana', 'F', 36, 'Italy'),
+  (214, 'Finley', 'F', 46, 'India'),
+  (215, 'Presley', 'F', 21, 'Italy'),
+  (216, 'Tristan', 'M', 66, 'Sri Lanka'),
+  (217, 'Victor', 'M', 66, 'USA'),
+  (218, 'Avery', 'M', 92, 'Sri Lanka'),
+  (219, 'Joel', 'M', 53, 'Sri Lanka'),
+  (220, 'Grant', 'M', 94, 'Sri Lanka'),
+  (221, 'Eric', 'M', 14, 'USA'),
+  (222, 'London', 'F', 75, 'Italy'),
+  (223, 'Kimberly', 'F', 65, 'Brazil'),
+  (224, 'Elsie', 'F', 63, 'Ireland'),
+  (225, 'Patrick', 'M', 27, 'Ireland'),
+  (226, 'Peter', 'M', 87, 'Chile'),
+  (227, 'Richard', 'M', 65, 'Brazil'),
+  (228, 'Edward', 'M', 78, 'USA'),
+  (229, 'Andres', 'M', 69, 'Sri Lanka'),
+  (230, 'Nyla', 'F', 96, 'Chile'),
+  (231, 'Vera', 'F', 90, 'Chile'),
+  (232, 'Hope', 'F', 51, 'Chile'),
+  (233, 'Annie', 'F', 50, 'Australia'),
+  (234, 'Kaia', 'F', 41, 'Ireland'),
+  (235, 'Myla', 'F', 54, 'Ireland'),
+  (236, 'Adonis', 'M', 12, 'Australia'),
+  (237, 'Kyrie', 'M', 75, 'Italy'),
+  (238, 'Matias', 'M', 75, 'USA'),
+  (239, 'Oscar', 'M', 74, 'India'),
+  (240, 'Lukas', 'M', 93, 'Spain'),
+  (241, 'Harlow', 'F', 86, 'Italy'),
+  (242, 'Rachel', 'F', 58, 'India'),
+  (243, 'Gracie', 'F', 80, 'Italy'),
+  (244, 'Rowan', 'F', 93, 'Italy'),
+  (245, 'Rafael', 'M', 37, 'Brazil'),
+  (246, 'Zane', 'M', 81, 'Brazil'),
+  (247, 'Jeremy', 'M', 49, 'Brazil'),
+  (248, 'Lilah', 'F', 100, 'Spain'),
+  (249, 'Adelyn', 'F', 42, 'Brazil'),
+  (250, 'Phoebe', 'F', 67, 'Australia');
+
+INSERT INTO persons (id, name, gender, age, country)
+VALUES
+  (251, 'Octavia', 'F', 34, 'Italy'),
+  (252, 'Kash', 'M', 22, 'Chile'),
+  (253, 'Preston', 'M', 79, 'Australia'),
+  (254, 'Kyler', 'M', 94, 'Australia'),
+  (255, 'Jax', 'M', 66, 'Brazil'),
+  (256, 'Jett', 'M', 80, 'Australia'),
+  (257, 'Kaleb', 'M', 24, 'Italy'),
+  (258, 'Kayla', 'F', 92, 'India'),
+  (259, 'Malia', 'F', 77, 'India'),
+  (260, 'Elaina', 'F', 27, 'Sri Lanka'),
+  (261, 'Saylor', 'F', 58, 'Spain'),
+  (262, 'Brooke', 'F', 17, 'Sri Lanka'),
+  (263, 'Riley', 'M', 82, 'India'),
+  (264, 'Simon', 'M', 26, 'India'),
+  (265, 'Phoenix', 'M', 87, 'Ireland'),
+  (266, 'Adelaide', 'F', 91, 'India'),
+  (267, 'Daniela', 'F', 82, 'Ireland'),
+  (268, 'Kenneth', 'M', 86, 'Chile'),
+  (269, 'Nico', 'M', 98, 'Spain'),
+  (270, 'Kaden', 'M', 75, 'Italy'),
+  (271, 'Lane', 'M', 82, 'Ireland'),
+  (272, 'Delaney', 'F', 58, 'USA'),
+  (273, 'Dakota', 'F', 95, 'Brazil'),
+  (274, 'Mya', 'F', 37, 'USA'),
+  (275, 'Kairo', 'M', 77, 'Chile'),
+  (276, 'Maximus', 'M', 21, 'Brazil'),
+  (277, 'Omar', 'M', 13, 'Spain'),
+  (278, 'Finley', 'M', 14, 'Australia'),
+  (279, 'Lucille', 'F', 85, 'Chile'),
+  (280, 'Trinity', 'F', 10, 'USA'),
+  (281, 'Gia', 'F', 69, 'Spain'),
+  (282, 'Tatum', 'F', 69, 'Brazil'),
+  (283, 'Atticus', 'M', 81, 'Brazil'),
+  (284, 'Crew', 'M', 46, 'Ireland'),
+  (285, 'Brantley', 'M', 10, 'Italy'),
+  (286, 'Kali', 'F', 14, 'Brazil'),
+  (287, 'Stevie', 'F', 78, 'Ireland'),
+  (288, 'Maggie', 'F', 73, 'Spain'),
+  (289, 'Colin', 'M', 37, 'USA'),
+  (290, 'Dallas', 'M', 73, 'Sri Lanka'),
+  (291, 'Walter', 'M', 91, 'Australia'),
+  (292, 'Brady', 'M', 23, 'Ireland'),
+  (293, 'Hayden', 'F', 53, 'Ireland'),
+  (294, 'Joanna', 'F', 64, 'India'),
+  (295, 'Jocelyn', 'F', 97, 'USA'),
+  (296, 'Bryan', 'M', 54, 'Brazil'),
+  (297, 'Aidan', 'M', 94, 'Australia'),
+  (298, 'Cohen', 'M', 28, 'Brazil'),
+  (299, 'Brian', 'M', 83, 'Spain'),
+  (300, 'Cayden', 'M', 42, 'Chile');
+
+INSERT INTO persons (id, name, gender, age, country)
+VALUES
+  (301, 'Andre', 'M', 17, 'Sri Lanka'),
+  (302, 'Leia', 'F', 68, 'Ireland'),
+  (303, 'Paige', 'F', 82, 'Brazil'),
+  (304, 'Niko', 'M', 54, 'Sri Lanka'),
+  (305, 'Maximiliano', 'M', 87, 'Sri Lanka'),
+  (306, 'Zander', 'M', 42, 'Chile'),
+  (307, 'Khalil', 'M', 48, 'Brazil'),
+  (308, 'Rory', 'M', 93, 'Sri Lanka'),
+  (309, 'Harley', 'F', 12, 'Chile'),
+  (310, 'Lia', 'F', 50, 'Brazil'),
+  (311, 'Phoenix', 'F', 36, 'Australia'),
+  (312, 'Francisco', 'M', 50, 'Brazil'),
+  (313, 'Cruz', 'M', 11, 'Sri Lanka'),
+  (314, 'Kobe', 'M', 11, 'Chile'),
+  (315, 'Thea', 'F', 28, 'Ireland'),
+  (316, 'Jayla', 'F', 16, 'Chile'),
+  (317, 'Reid', 'M', 19, 'USA'),
+  (318, 'Daxton', 'M', 90, 'Chile'),
+  (319, 'Vivienne', 'F', 73, 'Ireland'),
+  (320, 'Hallie', 'F', 86, 'Sri Lanka'),
+  (321, 'Madilyn', 'F', 33, 'USA'),
+  (322, 'Orion', 'M', 38, 'USA'),
+  (323, 'Spencer', 'M', 65, 'USA'),
+  (324, 'Ophelia', 'F', 58, 'USA'),
+  (325, 'Celeste', 'F', 59, 'USA'),
+  (326, 'Alayah', 'F', 99, 'USA'),
+  (327, 'Colson', 'M', 10, 'USA'),
+  (328, 'Cairo', 'M', 83, 'Spain'),
+  (329, 'Gunner', 'M', 39, 'Brazil'),
+  (330, 'Nina', 'F', 91, 'Spain'),
+  (331, 'Briella', 'F', 75, 'Sri Lanka'),
+  (332, 'Wade', 'M', 79, 'Brazil'),
+  (333, 'Chance', 'M', 39, 'Italy'),
+  (334, 'Odin', 'M', 56, 'Ireland'),
+  (335, 'Anderson', 'M', 41, 'India'),
+  (336, 'Amari', 'F', 96, 'Australia'),
+  (337, 'Adriana', 'F', 35, 'Spain'),
+  (338, 'Kane', 'M', 15, 'Sri Lanka'),
+  (339, 'Raymond', 'M', 78, 'India'),
+  (340, 'Cristian', 'M', 84, 'Spain'),
+  (341, 'Kalani', 'F', 49, 'Sri Lanka'),
+  (342, 'Aniyah', 'F', 92, 'USA'),
+  (343, 'Aziel', 'M', 49, 'USA'),
+  (344, 'Prince', 'M', 62, 'India'),
+  (345, 'Ezequiel', 'M', 80, 'Sri Lanka'),
+  (346, 'Jake', 'M', 32, 'Spain'),
+  (347, 'Otto', 'M', 19, 'Australia'),
+  (348, 'Amina', 'F', 18, 'USA'),
+  (349, 'Ariyah', 'F', 73, 'Spain'),
+  (350, 'Adelynn', 'F', 44, 'Italy'),
+  (351, 'Remington', 'F', 38, 'USA'),
+  (352, 'Reign', 'F', 22, 'Italy'),
+  (353, 'Eduardo', 'M', 21, 'Brazil'),
+  (354, 'Rylan', 'M', 16, 'Chile'),
+  (355, 'Ali', 'M', 76, 'Brazil'),
+  (356, 'Willa', 'F', 50, 'India'),
+  (357, 'Avianna', 'F', 30, 'Italy'),
+  (358, 'Makayla', 'F', 30, 'Ireland'),
+  (359, 'Gracelyn', 'F', 35, 'Ireland'),
+  (360, 'Elle', 'F', 28, 'Australia'),
+  (361, 'Amiyah', 'F', 74, 'Spain'),
+  (362, 'Arielle', 'F', 59, 'Italy'),
+  (363, 'Elianna', 'F', 61, 'Sri Lanka'),
+  (364, 'Giselle', 'F', 77, 'Chile');
+
+Enter password: *************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.32 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use Revision_Practice;
+Database changed
+mysql> Show tables;
++-----------------------------+
+| Tables_in_revision_practice |
++-----------------------------+
+| persons                     |
+| student_marks               |
++-----------------------------+
+2 rows in set (0.15 sec)
+
+mysql> desc persons;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| id      | int         | NO   | PRI | NULL    |       |
+| name    | varchar(25) | NO   |     | NULL    |       |
+| gender  | varchar(5)  | NO   |     | NULL    |       |
+| age     | int         | NO   |     | NULL    |       |
+| country | varchar(30) | NO   |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.03 sec)
+
+mysql> select * from persons;
++-----+-------------+--------+-----+-----------+
+| id  | name        | gender | age | country   |
++-----+-------------+--------+-----+-----------+
+|   1 | Olivia      | F      |  65 | India     |
+|   2 | Liam        | M      |  70 | Ireland   |
+|   3 | Noah        | M      |  82 | Chile     |
+|   4 | Oliver      | M      |  60 | Ireland   |
+|   5 | Emma        | F      |  86 | Spain     |
+|   6 | Charlotte   | F      |  26 | Italy     |
+|   7 | Elijah      | M      |  21 | Spain     |
+|   8 | James       | M      |  92 | Brazil    |
+|   9 | Elizabeth   | F      |  60 | India     |
+|  10 | Eleanor     | F      |  48 | Italy     |
+|  11 | Ella        | F      |  87 | Australia |
+|  12 | William     | M      |  90 | Ireland   |
+|  13 | Harper      | F      |  65 | Chile     |
+|  14 | Luna        | F      |  40 | Australia |
+|  15 | Camila      | F      |  73 | Spain     |
+|  16 | Gianna      | F      |  95 | India     |
+|  17 | Benjamin    | M      |  35 | Ireland   |
+|  18 | Lucas       | M      |  75 | USA       |
+|  19 | Henry       | M      |  41 | Ireland   |
+|  20 | Abigail     | F      |  69 | Sri Lanka |
+|  21 | Sofia       | F      |  81 | Spain     |
+|  22 | Avery       | F      |  46 | Italy     |
+|  23 | Scarlett    | F      |  77 | Sri Lanka |
+|  24 | Emily       | F      |  13 | India     |
+|  25 | Aria        | F      |  88 | India     |
+|  26 | Theodore    | M      |  38 | Ireland   |
+|  27 | Jack        | M      |  94 | USA       |
+|  28 | Levi        | M      |  64 | Italy     |
+|  29 | Alexander   | M      |  91 | Chile     |
+|  30 | Nora        | F      |  77 | Ireland   |
+|  31 | Hazel       | F      |  18 | Italy     |
+|  32 | Madison     | F      |  74 | Italy     |
+|  33 | Ellie       | F      |  75 | Brazil    |
+|  34 | Lily        | F      |  98 | Spain     |
+|  35 | Jacob       | M      |  26 | Sri Lanka |
+|  36 | Asher       | M      |  58 | India     |
+|  37 | Aiden       | M      |  56 | Chile     |
+|  38 | Violet      | F      |  19 | India     |
+|  39 | Aurora      | F      |  71 | Sri Lanka |
+|  40 | Joseph      | M      |  81 | Australia |
+|  41 | Wyatt       | M      |  78 | Spain     |
+|  42 | David       | M      |  62 | Sri Lanka |
+|  43 | Leo         | M      |  23 | Italy     |
+|  44 | Luke        | M      |  35 | USA       |
+|  45 | Michael     | M      |  83 | Ireland   |
+|  46 | Daniel      | M      |  63 | Chile     |
+|  47 | Grace       | F      |  50 | Australia |
+|  48 | Carter      | M      |  25 | Spain     |
+|  49 | Samuel      | M      |  57 | USA       |
+|  50 | Josephine   | F      |  30 | Brazil    |
+|  51 | Maverick    | M      |  61 | Sri Lanka |
+|  52 | Ivy         | F      |  21 | Spain     |
+|  53 | Everly      | F      |  83 | Chile     |
+|  54 | Lillian     | F      |  72 | Australia |
+|  55 | Paisley     | F      |  79 | Brazil    |
+|  56 | Elena       | F      |  27 | Chile     |
+|  57 | Naomi       | F      |  55 | Chile     |
+|  58 | Isaiah      | M      |  80 | Italy     |
+|  59 | Andrew      | M      |  10 | Italy     |
+|  60 | Joshua      | M      |  49 | Spain     |
+|  61 | Nathan      | M      |  79 | Spain     |
+|  62 | Nolan       | M      |  99 | Chile     |
+|  63 | Adrian      | M      |  65 | Brazil    |
+|  64 | Aaliyah     | F      |  67 | Australia |
+|  65 | Ruby        | F      |  25 | Brazil    |
+|  66 | Brooklyn    | F      |  38 | India     |
+|  67 | Alice       | F      |  39 | Australia |
+|  68 | Cameron     | M      |  47 | Italy     |
+|  69 | Santiago    | M      |  46 | Ireland   |
+|  70 | Eli         | M      |  50 | Australia |
+|  71 | Aaron       | M      |  71 | Brazil    |
+|  72 | Ryan        | M      |  84 | India     |
+|  73 | Angel       | M      |  68 | USA       |
+|  74 | Madelyn     | F      |  53 | USA       |
+|  75 | Josephine   | F      |  17 | India     |
+|  76 | Bella       | F      |  37 | Australia |
+|  77 | Skylar      | F      |  56 | Australia |
+|  78 | Cooper      | M      |  51 | Ireland   |
+|  79 | Waylon      | M      |  55 | Sri Lanka |
+|  80 | Easton      | M      |  28 | Spain     |
+|  81 | Kai         | M      |  49 | Ireland   |
+|  82 | Natalia     | F      |  97 | Ireland   |
+|  83 | Quinn       | F      |  78 | Australia |
+|  84 | Caroline    | F      |  19 | Spain     |
+|  85 | Allison     | F      |  93 | Ireland   |
+|  86 | Gabriella   | F      |  78 | Sri Lanka |
+|  87 | Christian   | M      |  91 | Ireland   |
+|  88 | Landon      | M      |  35 | USA       |
+|  89 | Colton      | M      |  54 | Australia |
+|  90 | Roman       | M      |  33 | Italy     |
+|  91 | Ariana      | F      |  34 | USA       |
+|  92 | Emery       | F      |  85 | Spain     |
+|  93 | Lydia       | F      |  79 | Spain     |
+|  94 | Axel        | M      |  83 | Australia |
+|  95 | Brooks      | M      |  34 | Italy     |
+|  96 | Eva         | F      |  22 | Chile     |
+|  97 | Adeline     | F      |  43 | India     |
+|  98 | Jose        | M      |  11 | Italy     |
+|  99 | Bennett     | M      |  18 | Brazil    |
+| 100 | Silas       | M      |  82 | India     |
+| 101 | Nicholas    | M      |  82 | Sri Lanka |
+| 102 | Parker      | M      |  41 | Australia |
+| 103 | Beau        | M      |  28 | Australia |
+| 104 | Vivian      | F      |  26 | Italy     |
+| 105 | Clara       | F      |  98 | USA       |
+| 106 | Weston      | M      |  72 | Ireland   |
+| 107 | Austin      | M      |  68 | India     |
+| 108 | Connor      | M      |  32 | Ireland   |
+| 109 | Maria       | F      |  31 | Ireland   |
+| 110 | Iris        | F      |  16 | Ireland   |
+| 111 | Ayla        | F      |  88 | Sri Lanka |
+| 112 | Carson      | M      |  38 | Chile     |
+| 113 | Dominic     | M      |  71 | India     |
+| 114 | Xavier      | M      |  95 | Brazil    |
+| 115 | Jaxson      | M      |  63 | Australia |
+| 116 | Melody      | F      |  21 | USA       |
+| 117 | Julia       | F      |  75 | Australia |
+| 118 | Jonathan    | M      |  42 | Sri Lanka |
+| 119 | Robert      | M      |  71 | Ireland   |
+| 120 | Jameson     | M      |  85 | Spain     |
+| 121 | Ian         | M      |  89 | Australia |
+| 122 | Everett     | M      |  64 | India     |
+| 123 | Arya        | F      |  43 | Chile     |
+| 124 | Eden        | F      |  74 | Spain     |
+| 125 | Remi        | F      |  72 | Sri Lanka |
+| 126 | Vincent     | M      |  81 | Brazil    |
+| 127 | Legend      | M      |  90 | Ireland   |
+| 128 | Myles       | M      |  54 | Italy     |
+| 129 | Harrison    | M      |  18 | India     |
+| 130 | Charlie     | F      |  62 | USA       |
+| 131 | Alaia       | F      |  57 | India     |
+| 132 | Melanie     | F      |  24 | Italy     |
+| 133 | Walker      | M      |  54 | Chile     |
+| 134 | Jason       | M      |  16 | Ireland   |
+| 135 | Brayden     | M      |  21 | Italy     |
+| 136 | Cole        | M      |  40 | Chile     |
+| 137 | Nathaniel   | M      |  87 | USA       |
+| 138 | Alina       | F      |  40 | Chile     |
+| 139 | Lucia       | F      |  56 | Ireland   |
+| 140 | Ximena      | F      |  83 | Spain     |
+| 141 | George      | M      |  23 | Brazil    |
+| 142 | Lorenzo     | M      |  31 | Italy     |
+| 143 | Zion        | M      |  59 | Italy     |
+| 144 | Luis        | M      |  27 | Australia |
+| 145 | Adalyn      | F      |  60 | Brazil    |
+| 146 | Archer      | M      |  91 | Italy     |
+| 147 | Enzo        | M      |  80 | India     |
+| 148 | Jonah       | M      |  59 | Brazil    |
+| 149 | Isabel      | F      |  13 | Spain     |
+| 150 | Reese       | F      |  48 | Ireland   |
+| 151 | Emersyn     | F      |  58 | Italy     |
+| 152 | Thiago      | M      |  75 | India     |
+| 153 | Theo        | M      |  68 | Chile     |
+| 154 | River       | F      |  61 | Sri Lanka |
+| 155 | Ayden       | M      |  18 | Chile     |
+| 156 | Zachary     | M      |  62 | USA       |
+| 157 | Calvin      | M      |  78 | Sri Lanka |
+| 158 | Braxton     | M      |  16 | Italy     |
+| 159 | Esther      | F      |  69 | Italy     |
+| 160 | Valeria     | F      |  38 | Brazil    |
+| 161 | Ashton      | M      |  35 | India     |
+| 162 | Rhett       | M      |  98 | Chile     |
+| 163 | Atlas       | M      |  21 | Italy     |
+| 164 | Jude        | M      |  81 | Spain     |
+| 165 | Bailey      | F      |  72 | Italy     |
+| 166 | Ember       | F      |  28 | USA       |
+| 167 | Bentley     | M      |  62 | Brazil    |
+| 168 | Carlos      | M      |  38 | USA       |
+| 169 | Ryker       | M      |  97 | Italy     |
+| 170 | Adriel      | M      |  19 | Chile     |
+| 171 | Alexandra   | F      | 100 | USA       |
+| 172 | Faith       | F      |  42 | Sri Lanka |
+| 173 | Arthur      | M      |  63 | Spain     |
+| 174 | Ace         | M      |  94 | Ireland   |
+| 175 | Tyler       | M      | 100 | Sri Lanka |
+| 176 | Jayce       | M      |  28 | Australia |
+| 177 | Millie      | F      | 100 | Ireland   |
+| 178 | June        | F      |  98 | Ireland   |
+| 179 | Kaiden      | M      |  91 | Sri Lanka |
+| 180 | Maxwell     | M      |  89 | Italy     |
+| 181 | Juan        | M      |  88 | Spain     |
+| 182 | Dean        | M      |  79 | Chile     |
+| 183 | Ada         | F      |  32 | Italy     |
+| 184 | Anastasia   | F      |  32 | Sri Lanka |
+| 185 | Olive       | F      |  99 | Spain     |
+| 186 | Matteo      | M      |  66 | Italy     |
+| 187 | Malachi     | M      |  64 | Australia |
+| 188 | Ivan        | M      |  16 | Chile     |
+| 189 | Elliott     | M      |  43 | Spain     |
+| 190 | Jesus       | M      |  98 | Brazil    |
+| 191 | Amy         | F      |  69 | Spain     |
+| 192 | Ruth        | F      |  45 | Sri Lanka |
+| 193 | Aubree      | F      |  83 | Australia |
+| 194 | Max         | M      |  28 | Chile     |
+| 195 | Elliot      | M      |  39 | Italy     |
+| 196 | Graham      | M      |  68 | USA       |
+| 197 | Arabella    | F      |  94 | Chile     |
+| 198 | Sara        | F      |  69 | Brazil    |
+| 199 | Journee     | F      |  81 | Brazil    |
+| 200 | Beckett     | M      |  73 | USA       |
+| 201 | Amari       | M      |  65 | Spain     |
+| 202 | Karter      | M      |  21 | Chile     |
+| 203 | Timothy     | M      |  79 | Italy     |
+| 204 | Abraham     | M      |  79 | Brazil    |
+| 205 | Jesse       | M      |  20 | Australia |
+| 206 | Selena      | F      |  83 | Chile     |
+| 207 | Oaklynn     | F      |  71 | Brazil    |
+| 208 | Morgan      | F      |  42 | Italy     |
+| 209 | Zayden      | M      |  71 | Sri Lanka |
+| 210 | Blake       | M      |  42 | USA       |
+| 211 | Alejandro   | M      |  32 | Chile     |
+| 212 | Dawson      | M      |  42 | Brazil    |
+| 213 | Juliana     | F      |  36 | Italy     |
+| 214 | Finley      | F      |  46 | India     |
+| 215 | Presley     | F      |  21 | Italy     |
+| 216 | Tristan     | M      |  66 | Sri Lanka |
+| 217 | Victor      | M      |  66 | USA       |
+| 218 | Avery       | M      |  92 | Sri Lanka |
+| 219 | Joel        | M      |  53 | Sri Lanka |
+| 220 | Grant       | M      |  94 | Sri Lanka |
+| 221 | Eric        | M      |  14 | USA       |
+| 222 | London      | F      |  75 | Italy     |
+| 223 | Kimberly    | F      |  65 | Brazil    |
+| 224 | Elsie       | F      |  63 | Ireland   |
+| 225 | Patrick     | M      |  27 | Ireland   |
+| 226 | Peter       | M      |  87 | Chile     |
+| 227 | Richard     | M      |  65 | Brazil    |
+| 228 | Edward      | M      |  78 | USA       |
+| 229 | Andres      | M      |  69 | Sri Lanka |
+| 230 | Nyla        | F      |  96 | Chile     |
+| 231 | Vera        | F      |  90 | Chile     |
+| 232 | Hope        | F      |  51 | Chile     |
+| 233 | Annie       | F      |  50 | Australia |
+| 234 | Kaia        | F      |  41 | Ireland   |
+| 235 | Myla        | F      |  54 | Ireland   |
+| 236 | Adonis      | M      |  12 | Australia |
+| 237 | Kyrie       | M      |  75 | Italy     |
+| 238 | Matias      | M      |  75 | USA       |
+| 239 | Oscar       | M      |  74 | India     |
+| 240 | Lukas       | M      |  93 | Spain     |
+| 241 | Harlow      | F      |  86 | Italy     |
+| 242 | Rachel      | F      |  58 | India     |
+| 243 | Gracie      | F      |  80 | Italy     |
+| 244 | Rowan       | F      |  93 | Italy     |
+| 245 | Rafael      | M      |  37 | Brazil    |
+| 246 | Zane        | M      |  81 | Brazil    |
+| 247 | Jeremy      | M      |  49 | Brazil    |
+| 248 | Lilah       | F      | 100 | Spain     |
+| 249 | Adelyn      | F      |  42 | Brazil    |
+| 250 | Phoebe      | F      |  67 | Australia |
+| 251 | Octavia     | F      |  34 | Italy     |
+| 252 | Kash        | M      |  22 | Chile     |
+| 253 | Preston     | M      |  79 | Australia |
+| 254 | Kyler       | M      |  94 | Australia |
+| 255 | Jax         | M      |  66 | Brazil    |
+| 256 | Jett        | M      |  80 | Australia |
+| 257 | Kaleb       | M      |  24 | Italy     |
+| 258 | Kayla       | F      |  92 | India     |
+| 259 | Malia       | F      |  77 | India     |
+| 260 | Elaina      | F      |  27 | Sri Lanka |
+| 261 | Saylor      | F      |  58 | Spain     |
+| 262 | Brooke      | F      |  17 | Sri Lanka |
+| 263 | Riley       | M      |  82 | India     |
+| 264 | Simon       | M      |  26 | India     |
+| 265 | Phoenix     | M      |  87 | Ireland   |
+| 266 | Adelaide    | F      |  91 | India     |
+| 267 | Daniela     | F      |  82 | Ireland   |
+| 268 | Kenneth     | M      |  86 | Chile     |
+| 269 | Nico        | M      |  98 | Spain     |
+| 270 | Kaden       | M      |  75 | Italy     |
+| 271 | Lane        | M      |  82 | Ireland   |
+| 272 | Delaney     | F      |  58 | USA       |
+| 273 | Dakota      | F      |  95 | Brazil    |
+| 274 | Mya         | F      |  37 | USA       |
+| 275 | Kairo       | M      |  77 | Chile     |
+| 276 | Maximus     | M      |  21 | Brazil    |
+| 277 | Omar        | M      |  13 | Spain     |
+| 278 | Finley      | M      |  14 | Australia |
+| 279 | Lucille     | F      |  85 | Chile     |
+| 280 | Trinity     | F      |  10 | USA       |
+| 281 | Gia         | F      |  69 | Spain     |
+| 282 | Tatum       | F      |  69 | Brazil    |
+| 283 | Atticus     | M      |  81 | Brazil    |
+| 284 | Crew        | M      |  46 | Ireland   |
+| 285 | Brantley    | M      |  10 | Italy     |
+| 286 | Kali        | F      |  14 | Brazil    |
+| 287 | Stevie      | F      |  78 | Ireland   |
+| 288 | Maggie      | F      |  73 | Spain     |
+| 289 | Colin       | M      |  37 | USA       |
+| 290 | Dallas      | M      |  73 | Sri Lanka |
+| 291 | Walter      | M      |  91 | Australia |
+| 292 | Brady       | M      |  23 | Ireland   |
+| 293 | Hayden      | F      |  53 | Ireland   |
+| 294 | Joanna      | F      |  64 | India     |
+| 295 | Jocelyn     | F      |  97 | USA       |
+| 296 | Bryan       | M      |  54 | Brazil    |
+| 297 | Aidan       | M      |  94 | Australia |
+| 298 | Cohen       | M      |  28 | Brazil    |
+| 299 | Brian       | M      |  83 | Spain     |
+| 300 | Cayden      | M      |  42 | Chile     |
+| 301 | Andre       | M      |  17 | Sri Lanka |
+| 302 | Leia        | F      |  68 | Ireland   |
+| 303 | Paige       | F      |  82 | Brazil    |
+| 304 | Niko        | M      |  54 | Sri Lanka |
+| 305 | Maximiliano | M      |  87 | Sri Lanka |
+| 306 | Zander      | M      |  42 | Chile     |
+| 307 | Khalil      | M      |  48 | Brazil    |
+| 308 | Rory        | M      |  93 | Sri Lanka |
+| 309 | Harley      | F      |  12 | Chile     |
+| 310 | Lia         | F      |  50 | Brazil    |
+| 311 | Phoenix     | F      |  36 | Australia |
+| 312 | Francisco   | M      |  50 | Brazil    |
+| 313 | Cruz        | M      |  11 | Sri Lanka |
+| 314 | Kobe        | M      |  11 | Chile     |
+| 315 | Thea        | F      |  28 | Ireland   |
+| 316 | Jayla       | F      |  16 | Chile     |
+| 317 | Reid        | M      |  19 | USA       |
+| 318 | Daxton      | M      |  90 | Chile     |
+| 319 | Vivienne    | F      |  73 | Ireland   |
+| 320 | Hallie      | F      |  86 | Sri Lanka |
+| 321 | Madilyn     | F      |  33 | USA       |
+| 322 | Orion       | M      |  38 | USA       |
+| 323 | Spencer     | M      |  65 | USA       |
+| 324 | Ophelia     | F      |  58 | USA       |
+| 325 | Celeste     | F      |  59 | USA       |
+| 326 | Alayah      | F      |  99 | USA       |
+| 327 | Colson      | M      |  10 | USA       |
+| 328 | Cairo       | M      |  83 | Spain     |
+| 329 | Gunner      | M      |  39 | Brazil    |
+| 330 | Nina        | F      |  91 | Spain     |
+| 331 | Briella     | F      |  75 | Sri Lanka |
+| 332 | Wade        | M      |  79 | Brazil    |
+| 333 | Chance      | M      |  39 | Italy     |
+| 334 | Odin        | M      |  56 | Ireland   |
+| 335 | Anderson    | M      |  41 | India     |
+| 336 | Amari       | F      |  96 | Australia |
+| 337 | Adriana     | F      |  35 | Spain     |
+| 338 | Kane        | M      |  15 | Sri Lanka |
+| 339 | Raymond     | M      |  78 | India     |
+| 340 | Cristian    | M      |  84 | Spain     |
+| 341 | Kalani      | F      |  49 | Sri Lanka |
+| 342 | Aniyah      | F      |  92 | USA       |
+| 343 | Aziel       | M      |  49 | USA       |
+| 344 | Prince      | M      |  62 | India     |
+| 345 | Ezequiel    | M      |  80 | Sri Lanka |
+| 346 | Jake        | M      |  32 | Spain     |
+| 347 | Otto        | M      |  19 | Australia |
+| 348 | Amina       | F      |  18 | USA       |
+| 349 | Ariyah      | F      |  73 | Spain     |
+| 350 | Adelynn     | F      |  44 | Italy     |
+| 351 | Remington   | F      |  38 | USA       |
+| 352 | Reign       | F      |  22 | Italy     |
+| 353 | Eduardo     | M      |  21 | Brazil    |
+| 354 | Rylan       | M      |  16 | Chile     |
+| 355 | Ali         | M      |  76 | Brazil    |
+| 356 | Willa       | F      |  50 | India     |
+| 357 | Avianna     | F      |  30 | Italy     |
+| 358 | Makayla     | F      |  30 | Ireland   |
+| 359 | Gracelyn    | F      |  35 | Ireland   |
+| 360 | Elle        | F      |  28 | Australia |
+| 361 | Amiyah      | F      |  74 | Spain     |
+| 362 | Arielle     | F      |  59 | Italy     |
+| 363 | Elianna     | F      |  61 | Sri Lanka |
+| 364 | Giselle     | F      |  77 | Chile     |
++-----+-------------+--------+-----+-----------+
+364 rows in set (0.01 sec)
+
+mysql> SELECT COUNT(id), gender
+    -> FROM persons
+    -> WHERE age >= 20 AND age <= 24
+    -> GROUP BY gender;
++-----------+--------+
+| COUNT(id) | gender |
++-----------+--------+
+|        12 | M      |
+|         6 | F      |
++-----------+--------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(id), gender
+    -> FROM persons
+    -> WHERE age >= 25 AND age <= 29
+    -> GROUP BY gender;
++-----------+--------+
+| COUNT(id) | gender |
++-----------+--------+
+|         8 | F      |
+|        10 | M      |
++-----------+--------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(id), gender, '20 - 24' as Age_range
+    -> FROM persons
+    -> WHERE age >= 20 and age <= 24
+    -> GROUP BY gender
+    ->
+    -> UNION
+    ->
+    -> SELECT COUNT(id), gender
+    -> FROM persons
+    -> WHERE age >= 25 and age <= 29
+    -> GROUP BY gender;
+ERROR 1222 (21000): The used SELECT statements have a different number of columns
+mysql> SELECT COUNT(id), gender, '20 - 24' as Age_range
+    -> FROM persons
+    -> WHERE age >= 20 and age <= 24
+    -> GROUP BY gender
+    ->
+    -> UNION
+    ->
+    -> SELECT COUNT(id), gender, '25 - 29' as Age_range
+    -> FROM persons
+    -> WHERE age >= 25 and age <= 29
+    -> GROUP BY gender;
++-----------+--------+-----------+
+| COUNT(id) | gender | Age_range |
++-----------+--------+-----------+
+|        12 | M      | 20 - 24   |
+|         6 | F      | 20 - 24   |
+|         8 | F      | 25 - 29   |
+|        10 | M      | 25 - 29   |
++-----------+--------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT DISTINCT Country
+    -> FROM Persons;
++-----------+
+| Country   |
++-----------+
+| India     |
+| Ireland   |
+| Chile     |
+| Spain     |
+| Italy     |
+| Brazil    |
+| Australia |
+| USA       |
+| Sri Lanka |
++-----------+
+9 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(ID), Gender, 'Asia'
+    -> FROM Persons
+    -> WHERE Country IN ('India', 'Sri Lanka')
+    -> GROUP BY Gender;
++-----------+--------+------+
+| COUNT(ID) | Gender | Asia |
++-----------+--------+------+
+|        33 | F      | Asia |
+|        39 | M      | Asia |
++-----------+--------+------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(ID), Gender, 'Europe'
+    -> FROM Persons
+    -> WHERE Country IN ('Ireland', 'Italy', 'Spain')
+    -> GROUP BY Gender;
++-----------+--------+--------+
+| COUNT(ID) | Gender | Europe |
++-----------+--------+--------+
+|        67 | M      | Europe |
+|        64 | F      | Europe |
++-----------+--------+--------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(ID), Gender, 'South America'
+    -> FROM Persons
+    -> WHERE Country IN ('Brazil', 'Chile')
+    -> GROUP BY Gender;
++-----------+--------+---------------+
+| COUNT(ID) | Gender | South America |
++-----------+--------+---------------+
+|        53 | M      | South America |
+|        32 | F      | South America |
++-----------+--------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(ID), Gender, 'Australia'
+    -> FROM Persons
+    -> WHERE Country ='Australia'
+    -> GROUP BY Gender;
++-----------+--------+-----------+
+| COUNT(ID) | Gender | Australia |
++-----------+--------+-----------+
+|        16 | F      | Australia |
+|        20 | M      | Australia |
++-----------+--------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(ID) as Count, Gender, 'Asia' as Continent
+    -> FROM Persons
+    -> WHERE Country IN ('India', 'Sri Lanka')
+    -> GROUP BY Gender
+    ->
+    -> UNION
+    ->
+    -> SELECT COUNT(ID), Gender, 'Europe'
+    -> FROM Persons
+    -> WHERE Country IN ('Ireland', 'Italy', 'Spain')
+    -> GROUP BY Gender
+    ->
+    -> UNION
+    ->
+    -> SELECT COUNT(ID), Gender, 'South America'
+    -> FROM Persons
+    -> WHERE Country IN ('Brazil', 'Chile')
+    -> GROUP BY Gender
+    ->
+    -> UNION
+    ->
+    -> SELECT COUNT(ID), Gender, 'North America'
+    -> FROM Persons
+    -> WHERE Country ='USA'
+    -> GROUP BY Gender
+    ->
+    -> UNION
+    ->
+    -> SELECT COUNT(ID), Gender, 'Australia'
+    -> FROM Persons
+    -> WHERE Country ='Australia'
+    -> GROUP BY Gender;
++-------+--------+---------------+
+| Count | Gender | Continent     |
++-------+--------+---------------+
+|    33 | F      | Asia          |
+|    39 | M      | Asia          |
+|    67 | M      | Europe        |
+|    64 | F      | Europe        |
+|    53 | M      | South America |
+|    32 | F      | South America |
+|    22 | M      | North America |
+|    18 | F      | North America |
+|    16 | F      | Australia     |
+|    20 | M      | Australia     |
++-------+--------+---------------+
+10 rows in set (0.01 sec)
+
+mysql> SELECT AVG(AGE) as Average_age, Gender, 'Asia' as Continent
+    -> FROM Persons
+    -> WHERE Country IN ('India', 'Sri Lanka')
+    -> GROUP BY Gender
+    ->
+    -> UNION
+    ->
+    -> SELECT AVG(AGE), Gender, 'Europe'
+    -> FROM Persons
+    -> WHERE Country IN ('Ireland', 'Italy', 'Spain')
+    -> GROUP BY Gender
+    ->
+    -> UNION
+    ->
+    -> SELECT AVG(AGE), Gender, 'South America'
+    -> FROM Persons
+    -> WHERE Country IN ('Brazil', 'Chile')
+    -> GROUP BY Gender
+    ->
+    -> UNION
+    ->
+    -> SELECT AVG(AGE), Gender, 'North America'
+    -> FROM Persons
+    -> WHERE Country ='USA'
+    -> GROUP BY Gender
+    ->
+    -> UNION
+    ->
+    -> SELECT AVG(AGE), Gender, 'Australia'
+    -> FROM Persons
+    -> WHERE Country ='Australia'
+    -> GROUP BY Gender;
++-------------+--------+---------------+
+| Average_age | Gender | Continent     |
++-------------+--------+---------------+
+|     58.2727 | F      | Asia          |
+|     63.3333 | M      | Asia          |
+|     55.6567 | M      | Europe        |
+|     59.2031 | F      | Europe        |
+|     55.7547 | M      | South America |
+|     58.8750 | F      | South America |
+|     53.8636 | M      | North America |
+|     55.2778 | F      | North America |
+|     60.0625 | F      | Australia     |
+|     55.5500 | M      | Australia     |
++-------------+--------+---------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Persons
+    -> WHERE id % 2 = 0;
++-----+-----------+--------+-----+-----------+
+| id  | name      | gender | age | country   |
++-----+-----------+--------+-----+-----------+
+|   2 | Liam      | M      |  70 | Ireland   |
+|   4 | Oliver    | M      |  60 | Ireland   |
+|   6 | Charlotte | F      |  26 | Italy     |
+|   8 | James     | M      |  92 | Brazil    |
+|  10 | Eleanor   | F      |  48 | Italy     |
+|  12 | William   | M      |  90 | Ireland   |
+|  14 | Luna      | F      |  40 | Australia |
+|  16 | Gianna    | F      |  95 | India     |
+|  18 | Lucas     | M      |  75 | USA       |
+|  20 | Abigail   | F      |  69 | Sri Lanka |
+|  22 | Avery     | F      |  46 | Italy     |
+|  24 | Emily     | F      |  13 | India     |
+|  26 | Theodore  | M      |  38 | Ireland   |
+|  28 | Levi      | M      |  64 | Italy     |
+|  30 | Nora      | F      |  77 | Ireland   |
+|  32 | Madison   | F      |  74 | Italy     |
+|  34 | Lily      | F      |  98 | Spain     |
+|  36 | Asher     | M      |  58 | India     |
+|  38 | Violet    | F      |  19 | India     |
+|  40 | Joseph    | M      |  81 | Australia |
+|  42 | David     | M      |  62 | Sri Lanka |
+|  44 | Luke      | M      |  35 | USA       |
+|  46 | Daniel    | M      |  63 | Chile     |
+|  48 | Carter    | M      |  25 | Spain     |
+|  50 | Josephine | F      |  30 | Brazil    |
+|  52 | Ivy       | F      |  21 | Spain     |
+|  54 | Lillian   | F      |  72 | Australia |
+|  56 | Elena     | F      |  27 | Chile     |
+|  58 | Isaiah    | M      |  80 | Italy     |
+|  60 | Joshua    | M      |  49 | Spain     |
+|  62 | Nolan     | M      |  99 | Chile     |
+|  64 | Aaliyah   | F      |  67 | Australia |
+|  66 | Brooklyn  | F      |  38 | India     |
+|  68 | Cameron   | M      |  47 | Italy     |
+|  70 | Eli       | M      |  50 | Australia |
+|  72 | Ryan      | M      |  84 | India     |
+|  74 | Madelyn   | F      |  53 | USA       |
+|  76 | Bella     | F      |  37 | Australia |
+|  78 | Cooper    | M      |  51 | Ireland   |
+|  80 | Easton    | M      |  28 | Spain     |
+|  82 | Natalia   | F      |  97 | Ireland   |
+|  84 | Caroline  | F      |  19 | Spain     |
+|  86 | Gabriella | F      |  78 | Sri Lanka |
+|  88 | Landon    | M      |  35 | USA       |
+|  90 | Roman     | M      |  33 | Italy     |
+|  92 | Emery     | F      |  85 | Spain     |
+|  94 | Axel      | M      |  83 | Australia |
+|  96 | Eva       | F      |  22 | Chile     |
+|  98 | Jose      | M      |  11 | Italy     |
+| 100 | Silas     | M      |  82 | India     |
+| 102 | Parker    | M      |  41 | Australia |
+| 104 | Vivian    | F      |  26 | Italy     |
+| 106 | Weston    | M      |  72 | Ireland   |
+| 108 | Connor    | M      |  32 | Ireland   |
+| 110 | Iris      | F      |  16 | Ireland   |
+| 112 | Carson    | M      |  38 | Chile     |
+| 114 | Xavier    | M      |  95 | Brazil    |
+| 116 | Melody    | F      |  21 | USA       |
+| 118 | Jonathan  | M      |  42 | Sri Lanka |
+| 120 | Jameson   | M      |  85 | Spain     |
+| 122 | Everett   | M      |  64 | India     |
+| 124 | Eden      | F      |  74 | Spain     |
+| 126 | Vincent   | M      |  81 | Brazil    |
+| 128 | Myles     | M      |  54 | Italy     |
+| 130 | Charlie   | F      |  62 | USA       |
+| 132 | Melanie   | F      |  24 | Italy     |
+| 134 | Jason     | M      |  16 | Ireland   |
+| 136 | Cole      | M      |  40 | Chile     |
+| 138 | Alina     | F      |  40 | Chile     |
+| 140 | Ximena    | F      |  83 | Spain     |
+| 142 | Lorenzo   | M      |  31 | Italy     |
+| 144 | Luis      | M      |  27 | Australia |
+| 146 | Archer    | M      |  91 | Italy     |
+| 148 | Jonah     | M      |  59 | Brazil    |
+| 150 | Reese     | F      |  48 | Ireland   |
+| 152 | Thiago    | M      |  75 | India     |
+| 154 | River     | F      |  61 | Sri Lanka |
+| 156 | Zachary   | M      |  62 | USA       |
+| 158 | Braxton   | M      |  16 | Italy     |
+| 160 | Valeria   | F      |  38 | Brazil    |
+| 162 | Rhett     | M      |  98 | Chile     |
+| 164 | Jude      | M      |  81 | Spain     |
+| 166 | Ember     | F      |  28 | USA       |
+| 168 | Carlos    | M      |  38 | USA       |
+| 170 | Adriel    | M      |  19 | Chile     |
+| 172 | Faith     | F      |  42 | Sri Lanka |
+| 174 | Ace       | M      |  94 | Ireland   |
+| 176 | Jayce     | M      |  28 | Australia |
+| 178 | June      | F      |  98 | Ireland   |
+| 180 | Maxwell   | M      |  89 | Italy     |
+| 182 | Dean      | M      |  79 | Chile     |
+| 184 | Anastasia | F      |  32 | Sri Lanka |
+| 186 | Matteo    | M      |  66 | Italy     |
+| 188 | Ivan      | M      |  16 | Chile     |
+| 190 | Jesus     | M      |  98 | Brazil    |
+| 192 | Ruth      | F      |  45 | Sri Lanka |
+| 194 | Max       | M      |  28 | Chile     |
+| 196 | Graham    | M      |  68 | USA       |
+| 198 | Sara      | F      |  69 | Brazil    |
+| 200 | Beckett   | M      |  73 | USA       |
+| 202 | Karter    | M      |  21 | Chile     |
+| 204 | Abraham   | M      |  79 | Brazil    |
+| 206 | Selena    | F      |  83 | Chile     |
+| 208 | Morgan    | F      |  42 | Italy     |
+| 210 | Blake     | M      |  42 | USA       |
+| 212 | Dawson    | M      |  42 | Brazil    |
+| 214 | Finley    | F      |  46 | India     |
+| 216 | Tristan   | M      |  66 | Sri Lanka |
+| 218 | Avery     | M      |  92 | Sri Lanka |
+| 220 | Grant     | M      |  94 | Sri Lanka |
+| 222 | London    | F      |  75 | Italy     |
+| 224 | Elsie     | F      |  63 | Ireland   |
+| 226 | Peter     | M      |  87 | Chile     |
+| 228 | Edward    | M      |  78 | USA       |
+| 230 | Nyla      | F      |  96 | Chile     |
+| 232 | Hope      | F      |  51 | Chile     |
+| 234 | Kaia      | F      |  41 | Ireland   |
+| 236 | Adonis    | M      |  12 | Australia |
+| 238 | Matias    | M      |  75 | USA       |
+| 240 | Lukas     | M      |  93 | Spain     |
+| 242 | Rachel    | F      |  58 | India     |
+| 244 | Rowan     | F      |  93 | Italy     |
+| 246 | Zane      | M      |  81 | Brazil    |
+| 248 | Lilah     | F      | 100 | Spain     |
+| 250 | Phoebe    | F      |  67 | Australia |
+| 252 | Kash      | M      |  22 | Chile     |
+| 254 | Kyler     | M      |  94 | Australia |
+| 256 | Jett      | M      |  80 | Australia |
+| 258 | Kayla     | F      |  92 | India     |
+| 260 | Elaina    | F      |  27 | Sri Lanka |
+| 262 | Brooke    | F      |  17 | Sri Lanka |
+| 264 | Simon     | M      |  26 | India     |
+| 266 | Adelaide  | F      |  91 | India     |
+| 268 | Kenneth   | M      |  86 | Chile     |
+| 270 | Kaden     | M      |  75 | Italy     |
+| 272 | Delaney   | F      |  58 | USA       |
+| 274 | Mya       | F      |  37 | USA       |
+| 276 | Maximus   | M      |  21 | Brazil    |
+| 278 | Finley    | M      |  14 | Australia |
+| 280 | Trinity   | F      |  10 | USA       |
+| 282 | Tatum     | F      |  69 | Brazil    |
+| 284 | Crew      | M      |  46 | Ireland   |
+| 286 | Kali      | F      |  14 | Brazil    |
+| 288 | Maggie    | F      |  73 | Spain     |
+| 290 | Dallas    | M      |  73 | Sri Lanka |
+| 292 | Brady     | M      |  23 | Ireland   |
+| 294 | Joanna    | F      |  64 | India     |
+| 296 | Bryan     | M      |  54 | Brazil    |
+| 298 | Cohen     | M      |  28 | Brazil    |
+| 300 | Cayden    | M      |  42 | Chile     |
+| 302 | Leia      | F      |  68 | Ireland   |
+| 304 | Niko      | M      |  54 | Sri Lanka |
+| 306 | Zander    | M      |  42 | Chile     |
+| 308 | Rory      | M      |  93 | Sri Lanka |
+| 310 | Lia       | F      |  50 | Brazil    |
+| 312 | Francisco | M      |  50 | Brazil    |
+| 314 | Kobe      | M      |  11 | Chile     |
+| 316 | Jayla     | F      |  16 | Chile     |
+| 318 | Daxton    | M      |  90 | Chile     |
+| 320 | Hallie    | F      |  86 | Sri Lanka |
+| 322 | Orion     | M      |  38 | USA       |
+| 324 | Ophelia   | F      |  58 | USA       |
+| 326 | Alayah    | F      |  99 | USA       |
+| 328 | Cairo     | M      |  83 | Spain     |
+| 330 | Nina      | F      |  91 | Spain     |
+| 332 | Wade      | M      |  79 | Brazil    |
+| 334 | Odin      | M      |  56 | Ireland   |
+| 336 | Amari     | F      |  96 | Australia |
+| 338 | Kane      | M      |  15 | Sri Lanka |
+| 340 | Cristian  | M      |  84 | Spain     |
+| 342 | Aniyah    | F      |  92 | USA       |
+| 344 | Prince    | M      |  62 | India     |
+| 346 | Jake      | M      |  32 | Spain     |
+| 348 | Amina     | F      |  18 | USA       |
+| 350 | Adelynn   | F      |  44 | Italy     |
+| 352 | Reign     | F      |  22 | Italy     |
+| 354 | Rylan     | M      |  16 | Chile     |
+| 356 | Willa     | F      |  50 | India     |
+| 358 | Makayla   | F      |  30 | Ireland   |
+| 360 | Elle      | F      |  28 | Australia |
+| 362 | Arielle   | F      |  59 | Italy     |
+| 364 | Giselle   | F      |  77 | Chile     |
++-----+-----------+--------+-----+-----------+
+182 rows in set (0.01 sec)
+
+mysql> SELECT * FROM Persons
+    -> WHERE id % 3 = 0;
++-----+-----------+--------+-----+-----------+
+| id  | name      | gender | age | country   |
++-----+-----------+--------+-----+-----------+
+|   3 | Noah      | M      |  82 | Chile     |
+|   6 | Charlotte | F      |  26 | Italy     |
+|   9 | Elizabeth | F      |  60 | India     |
+|  12 | William   | M      |  90 | Ireland   |
+|  15 | Camila    | F      |  73 | Spain     |
+|  18 | Lucas     | M      |  75 | USA       |
+|  21 | Sofia     | F      |  81 | Spain     |
+|  24 | Emily     | F      |  13 | India     |
+|  27 | Jack      | M      |  94 | USA       |
+|  30 | Nora      | F      |  77 | Ireland   |
+|  33 | Ellie     | F      |  75 | Brazil    |
+|  36 | Asher     | M      |  58 | India     |
+|  39 | Aurora    | F      |  71 | Sri Lanka |
+|  42 | David     | M      |  62 | Sri Lanka |
+|  45 | Michael   | M      |  83 | Ireland   |
+|  48 | Carter    | M      |  25 | Spain     |
+|  51 | Maverick  | M      |  61 | Sri Lanka |
+|  54 | Lillian   | F      |  72 | Australia |
+|  57 | Naomi     | F      |  55 | Chile     |
+|  60 | Joshua    | M      |  49 | Spain     |
+|  63 | Adrian    | M      |  65 | Brazil    |
+|  66 | Brooklyn  | F      |  38 | India     |
+|  69 | Santiago  | M      |  46 | Ireland   |
+|  72 | Ryan      | M      |  84 | India     |
+|  75 | Josephine | F      |  17 | India     |
+|  78 | Cooper    | M      |  51 | Ireland   |
+|  81 | Kai       | M      |  49 | Ireland   |
+|  84 | Caroline  | F      |  19 | Spain     |
+|  87 | Christian | M      |  91 | Ireland   |
+|  90 | Roman     | M      |  33 | Italy     |
+|  93 | Lydia     | F      |  79 | Spain     |
+|  96 | Eva       | F      |  22 | Chile     |
+|  99 | Bennett   | M      |  18 | Brazil    |
+| 102 | Parker    | M      |  41 | Australia |
+| 105 | Clara     | F      |  98 | USA       |
+| 108 | Connor    | M      |  32 | Ireland   |
+| 111 | Ayla      | F      |  88 | Sri Lanka |
+| 114 | Xavier    | M      |  95 | Brazil    |
+| 117 | Julia     | F      |  75 | Australia |
+| 120 | Jameson   | M      |  85 | Spain     |
+| 123 | Arya      | F      |  43 | Chile     |
+| 126 | Vincent   | M      |  81 | Brazil    |
+| 129 | Harrison  | M      |  18 | India     |
+| 132 | Melanie   | F      |  24 | Italy     |
+| 135 | Brayden   | M      |  21 | Italy     |
+| 138 | Alina     | F      |  40 | Chile     |
+| 141 | George    | M      |  23 | Brazil    |
+| 144 | Luis      | M      |  27 | Australia |
+| 147 | Enzo      | M      |  80 | India     |
+| 150 | Reese     | F      |  48 | Ireland   |
+| 153 | Theo      | M      |  68 | Chile     |
+| 156 | Zachary   | M      |  62 | USA       |
+| 159 | Esther    | F      |  69 | Italy     |
+| 162 | Rhett     | M      |  98 | Chile     |
+| 165 | Bailey    | F      |  72 | Italy     |
+| 168 | Carlos    | M      |  38 | USA       |
+| 171 | Alexandra | F      | 100 | USA       |
+| 174 | Ace       | M      |  94 | Ireland   |
+| 177 | Millie    | F      | 100 | Ireland   |
+| 180 | Maxwell   | M      |  89 | Italy     |
+| 183 | Ada       | F      |  32 | Italy     |
+| 186 | Matteo    | M      |  66 | Italy     |
+| 189 | Elliott   | M      |  43 | Spain     |
+| 192 | Ruth      | F      |  45 | Sri Lanka |
+| 195 | Elliot    | M      |  39 | Italy     |
+| 198 | Sara      | F      |  69 | Brazil    |
+| 201 | Amari     | M      |  65 | Spain     |
+| 204 | Abraham   | M      |  79 | Brazil    |
+| 207 | Oaklynn   | F      |  71 | Brazil    |
+| 210 | Blake     | M      |  42 | USA       |
+| 213 | Juliana   | F      |  36 | Italy     |
+| 216 | Tristan   | M      |  66 | Sri Lanka |
+| 219 | Joel      | M      |  53 | Sri Lanka |
+| 222 | London    | F      |  75 | Italy     |
+| 225 | Patrick   | M      |  27 | Ireland   |
+| 228 | Edward    | M      |  78 | USA       |
+| 231 | Vera      | F      |  90 | Chile     |
+| 234 | Kaia      | F      |  41 | Ireland   |
+| 237 | Kyrie     | M      |  75 | Italy     |
+| 240 | Lukas     | M      |  93 | Spain     |
+| 243 | Gracie    | F      |  80 | Italy     |
+| 246 | Zane      | M      |  81 | Brazil    |
+| 249 | Adelyn    | F      |  42 | Brazil    |
+| 252 | Kash      | M      |  22 | Chile     |
+| 255 | Jax       | M      |  66 | Brazil    |
+| 258 | Kayla     | F      |  92 | India     |
+| 261 | Saylor    | F      |  58 | Spain     |
+| 264 | Simon     | M      |  26 | India     |
+| 267 | Daniela   | F      |  82 | Ireland   |
+| 270 | Kaden     | M      |  75 | Italy     |
+| 273 | Dakota    | F      |  95 | Brazil    |
+| 276 | Maximus   | M      |  21 | Brazil    |
+| 279 | Lucille   | F      |  85 | Chile     |
+| 282 | Tatum     | F      |  69 | Brazil    |
+| 285 | Brantley  | M      |  10 | Italy     |
+| 288 | Maggie    | F      |  73 | Spain     |
+| 291 | Walter    | M      |  91 | Australia |
+| 294 | Joanna    | F      |  64 | India     |
+| 297 | Aidan     | M      |  94 | Australia |
+| 300 | Cayden    | M      |  42 | Chile     |
+| 303 | Paige     | F      |  82 | Brazil    |
+| 306 | Zander    | M      |  42 | Chile     |
+| 309 | Harley    | F      |  12 | Chile     |
+| 312 | Francisco | M      |  50 | Brazil    |
+| 315 | Thea      | F      |  28 | Ireland   |
+| 318 | Daxton    | M      |  90 | Chile     |
+| 321 | Madilyn   | F      |  33 | USA       |
+| 324 | Ophelia   | F      |  58 | USA       |
+| 327 | Colson    | M      |  10 | USA       |
+| 330 | Nina      | F      |  91 | Spain     |
+| 333 | Chance    | M      |  39 | Italy     |
+| 336 | Amari     | F      |  96 | Australia |
+| 339 | Raymond   | M      |  78 | India     |
+| 342 | Aniyah    | F      |  92 | USA       |
+| 345 | Ezequiel  | M      |  80 | Sri Lanka |
+| 348 | Amina     | F      |  18 | USA       |
+| 351 | Remington | F      |  38 | USA       |
+| 354 | Rylan     | M      |  16 | Chile     |
+| 357 | Avianna   | F      |  30 | Italy     |
+| 360 | Elle      | F      |  28 | Australia |
+| 363 | Elianna   | F      |  61 | Sri Lanka |
++-----+-----------+--------+-----+-----------+
+121 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Persons
+    -> WHERE id % 2 = 0
+    ->
+    -> UNION
+    ->
+    -> SELECT * FROM Persons
+    -> WHERE id % 3 = 0
+    -> ORDER BY ID;
++-----+-----------+--------+-----+-----------+
+| id  | name      | gender | age | country   |
++-----+-----------+--------+-----+-----------+
+|   2 | Liam      | M      |  70 | Ireland   |
+|   3 | Noah      | M      |  82 | Chile     |
+|   4 | Oliver    | M      |  60 | Ireland   |
+|   6 | Charlotte | F      |  26 | Italy     |
+|   8 | James     | M      |  92 | Brazil    |
+|   9 | Elizabeth | F      |  60 | India     |
+|  10 | Eleanor   | F      |  48 | Italy     |
+|  12 | William   | M      |  90 | Ireland   |
+|  14 | Luna      | F      |  40 | Australia |
+|  15 | Camila    | F      |  73 | Spain     |
+|  16 | Gianna    | F      |  95 | India     |
+|  18 | Lucas     | M      |  75 | USA       |
+|  20 | Abigail   | F      |  69 | Sri Lanka |
+|  21 | Sofia     | F      |  81 | Spain     |
+|  22 | Avery     | F      |  46 | Italy     |
+|  24 | Emily     | F      |  13 | India     |
+|  26 | Theodore  | M      |  38 | Ireland   |
+|  27 | Jack      | M      |  94 | USA       |
+|  28 | Levi      | M      |  64 | Italy     |
+|  30 | Nora      | F      |  77 | Ireland   |
+|  32 | Madison   | F      |  74 | Italy     |
+|  33 | Ellie     | F      |  75 | Brazil    |
+|  34 | Lily      | F      |  98 | Spain     |
+|  36 | Asher     | M      |  58 | India     |
+|  38 | Violet    | F      |  19 | India     |
+|  39 | Aurora    | F      |  71 | Sri Lanka |
+|  40 | Joseph    | M      |  81 | Australia |
+|  42 | David     | M      |  62 | Sri Lanka |
+|  44 | Luke      | M      |  35 | USA       |
+|  45 | Michael   | M      |  83 | Ireland   |
+|  46 | Daniel    | M      |  63 | Chile     |
+|  48 | Carter    | M      |  25 | Spain     |
+|  50 | Josephine | F      |  30 | Brazil    |
+|  51 | Maverick  | M      |  61 | Sri Lanka |
+|  52 | Ivy       | F      |  21 | Spain     |
+|  54 | Lillian   | F      |  72 | Australia |
+|  56 | Elena     | F      |  27 | Chile     |
+|  57 | Naomi     | F      |  55 | Chile     |
+|  58 | Isaiah    | M      |  80 | Italy     |
+|  60 | Joshua    | M      |  49 | Spain     |
+|  62 | Nolan     | M      |  99 | Chile     |
+|  63 | Adrian    | M      |  65 | Brazil    |
+|  64 | Aaliyah   | F      |  67 | Australia |
+|  66 | Brooklyn  | F      |  38 | India     |
+|  68 | Cameron   | M      |  47 | Italy     |
+|  69 | Santiago  | M      |  46 | Ireland   |
+|  70 | Eli       | M      |  50 | Australia |
+|  72 | Ryan      | M      |  84 | India     |
+|  74 | Madelyn   | F      |  53 | USA       |
+|  75 | Josephine | F      |  17 | India     |
+|  76 | Bella     | F      |  37 | Australia |
+|  78 | Cooper    | M      |  51 | Ireland   |
+|  80 | Easton    | M      |  28 | Spain     |
+|  81 | Kai       | M      |  49 | Ireland   |
+|  82 | Natalia   | F      |  97 | Ireland   |
+|  84 | Caroline  | F      |  19 | Spain     |
+|  86 | Gabriella | F      |  78 | Sri Lanka |
+|  87 | Christian | M      |  91 | Ireland   |
+|  88 | Landon    | M      |  35 | USA       |
+|  90 | Roman     | M      |  33 | Italy     |
+|  92 | Emery     | F      |  85 | Spain     |
+|  93 | Lydia     | F      |  79 | Spain     |
+|  94 | Axel      | M      |  83 | Australia |
+|  96 | Eva       | F      |  22 | Chile     |
+|  98 | Jose      | M      |  11 | Italy     |
+|  99 | Bennett   | M      |  18 | Brazil    |
+| 100 | Silas     | M      |  82 | India     |
+| 102 | Parker    | M      |  41 | Australia |
+| 104 | Vivian    | F      |  26 | Italy     |
+| 105 | Clara     | F      |  98 | USA       |
+| 106 | Weston    | M      |  72 | Ireland   |
+| 108 | Connor    | M      |  32 | Ireland   |
+| 110 | Iris      | F      |  16 | Ireland   |
+| 111 | Ayla      | F      |  88 | Sri Lanka |
+| 112 | Carson    | M      |  38 | Chile     |
+| 114 | Xavier    | M      |  95 | Brazil    |
+| 116 | Melody    | F      |  21 | USA       |
+| 117 | Julia     | F      |  75 | Australia |
+| 118 | Jonathan  | M      |  42 | Sri Lanka |
+| 120 | Jameson   | M      |  85 | Spain     |
+| 122 | Everett   | M      |  64 | India     |
+| 123 | Arya      | F      |  43 | Chile     |
+| 124 | Eden      | F      |  74 | Spain     |
+| 126 | Vincent   | M      |  81 | Brazil    |
+| 128 | Myles     | M      |  54 | Italy     |
+| 129 | Harrison  | M      |  18 | India     |
+| 130 | Charlie   | F      |  62 | USA       |
+| 132 | Melanie   | F      |  24 | Italy     |
+| 134 | Jason     | M      |  16 | Ireland   |
+| 135 | Brayden   | M      |  21 | Italy     |
+| 136 | Cole      | M      |  40 | Chile     |
+| 138 | Alina     | F      |  40 | Chile     |
+| 140 | Ximena    | F      |  83 | Spain     |
+| 141 | George    | M      |  23 | Brazil    |
+| 142 | Lorenzo   | M      |  31 | Italy     |
+| 144 | Luis      | M      |  27 | Australia |
+| 146 | Archer    | M      |  91 | Italy     |
+| 147 | Enzo      | M      |  80 | India     |
+| 148 | Jonah     | M      |  59 | Brazil    |
+| 150 | Reese     | F      |  48 | Ireland   |
+| 152 | Thiago    | M      |  75 | India     |
+| 153 | Theo      | M      |  68 | Chile     |
+| 154 | River     | F      |  61 | Sri Lanka |
+| 156 | Zachary   | M      |  62 | USA       |
+| 158 | Braxton   | M      |  16 | Italy     |
+| 159 | Esther    | F      |  69 | Italy     |
+| 160 | Valeria   | F      |  38 | Brazil    |
+| 162 | Rhett     | M      |  98 | Chile     |
+| 164 | Jude      | M      |  81 | Spain     |
+| 165 | Bailey    | F      |  72 | Italy     |
+| 166 | Ember     | F      |  28 | USA       |
+| 168 | Carlos    | M      |  38 | USA       |
+| 170 | Adriel    | M      |  19 | Chile     |
+| 171 | Alexandra | F      | 100 | USA       |
+| 172 | Faith     | F      |  42 | Sri Lanka |
+| 174 | Ace       | M      |  94 | Ireland   |
+| 176 | Jayce     | M      |  28 | Australia |
+| 177 | Millie    | F      | 100 | Ireland   |
+| 178 | June      | F      |  98 | Ireland   |
+| 180 | Maxwell   | M      |  89 | Italy     |
+| 182 | Dean      | M      |  79 | Chile     |
+| 183 | Ada       | F      |  32 | Italy     |
+| 184 | Anastasia | F      |  32 | Sri Lanka |
+| 186 | Matteo    | M      |  66 | Italy     |
+| 188 | Ivan      | M      |  16 | Chile     |
+| 189 | Elliott   | M      |  43 | Spain     |
+| 190 | Jesus     | M      |  98 | Brazil    |
+| 192 | Ruth      | F      |  45 | Sri Lanka |
+| 194 | Max       | M      |  28 | Chile     |
+| 195 | Elliot    | M      |  39 | Italy     |
+| 196 | Graham    | M      |  68 | USA       |
+| 198 | Sara      | F      |  69 | Brazil    |
+| 200 | Beckett   | M      |  73 | USA       |
+| 201 | Amari     | M      |  65 | Spain     |
+| 202 | Karter    | M      |  21 | Chile     |
+| 204 | Abraham   | M      |  79 | Brazil    |
+| 206 | Selena    | F      |  83 | Chile     |
+| 207 | Oaklynn   | F      |  71 | Brazil    |
+| 208 | Morgan    | F      |  42 | Italy     |
+| 210 | Blake     | M      |  42 | USA       |
+| 212 | Dawson    | M      |  42 | Brazil    |
+| 213 | Juliana   | F      |  36 | Italy     |
+| 214 | Finley    | F      |  46 | India     |
+| 216 | Tristan   | M      |  66 | Sri Lanka |
+| 218 | Avery     | M      |  92 | Sri Lanka |
+| 219 | Joel      | M      |  53 | Sri Lanka |
+| 220 | Grant     | M      |  94 | Sri Lanka |
+| 222 | London    | F      |  75 | Italy     |
+| 224 | Elsie     | F      |  63 | Ireland   |
+| 225 | Patrick   | M      |  27 | Ireland   |
+| 226 | Peter     | M      |  87 | Chile     |
+| 228 | Edward    | M      |  78 | USA       |
+| 230 | Nyla      | F      |  96 | Chile     |
+| 231 | Vera      | F      |  90 | Chile     |
+| 232 | Hope      | F      |  51 | Chile     |
+| 234 | Kaia      | F      |  41 | Ireland   |
+| 236 | Adonis    | M      |  12 | Australia |
+| 237 | Kyrie     | M      |  75 | Italy     |
+| 238 | Matias    | M      |  75 | USA       |
+| 240 | Lukas     | M      |  93 | Spain     |
+| 242 | Rachel    | F      |  58 | India     |
+| 243 | Gracie    | F      |  80 | Italy     |
+| 244 | Rowan     | F      |  93 | Italy     |
+| 246 | Zane      | M      |  81 | Brazil    |
+| 248 | Lilah     | F      | 100 | Spain     |
+| 249 | Adelyn    | F      |  42 | Brazil    |
+| 250 | Phoebe    | F      |  67 | Australia |
+| 252 | Kash      | M      |  22 | Chile     |
+| 254 | Kyler     | M      |  94 | Australia |
+| 255 | Jax       | M      |  66 | Brazil    |
+| 256 | Jett      | M      |  80 | Australia |
+| 258 | Kayla     | F      |  92 | India     |
+| 260 | Elaina    | F      |  27 | Sri Lanka |
+| 261 | Saylor    | F      |  58 | Spain     |
+| 262 | Brooke    | F      |  17 | Sri Lanka |
+| 264 | Simon     | M      |  26 | India     |
+| 266 | Adelaide  | F      |  91 | India     |
+| 267 | Daniela   | F      |  82 | Ireland   |
+| 268 | Kenneth   | M      |  86 | Chile     |
+| 270 | Kaden     | M      |  75 | Italy     |
+| 272 | Delaney   | F      |  58 | USA       |
+| 273 | Dakota    | F      |  95 | Brazil    |
+| 274 | Mya       | F      |  37 | USA       |
+| 276 | Maximus   | M      |  21 | Brazil    |
+| 278 | Finley    | M      |  14 | Australia |
+| 279 | Lucille   | F      |  85 | Chile     |
+| 280 | Trinity   | F      |  10 | USA       |
+| 282 | Tatum     | F      |  69 | Brazil    |
+| 284 | Crew      | M      |  46 | Ireland   |
+| 285 | Brantley  | M      |  10 | Italy     |
+| 286 | Kali      | F      |  14 | Brazil    |
+| 288 | Maggie    | F      |  73 | Spain     |
+| 290 | Dallas    | M      |  73 | Sri Lanka |
+| 291 | Walter    | M      |  91 | Australia |
+| 292 | Brady     | M      |  23 | Ireland   |
+| 294 | Joanna    | F      |  64 | India     |
+| 296 | Bryan     | M      |  54 | Brazil    |
+| 297 | Aidan     | M      |  94 | Australia |
+| 298 | Cohen     | M      |  28 | Brazil    |
+| 300 | Cayden    | M      |  42 | Chile     |
+| 302 | Leia      | F      |  68 | Ireland   |
+| 303 | Paige     | F      |  82 | Brazil    |
+| 304 | Niko      | M      |  54 | Sri Lanka |
+| 306 | Zander    | M      |  42 | Chile     |
+| 308 | Rory      | M      |  93 | Sri Lanka |
+| 309 | Harley    | F      |  12 | Chile     |
+| 310 | Lia       | F      |  50 | Brazil    |
+| 312 | Francisco | M      |  50 | Brazil    |
+| 314 | Kobe      | M      |  11 | Chile     |
+| 315 | Thea      | F      |  28 | Ireland   |
+| 316 | Jayla     | F      |  16 | Chile     |
+| 318 | Daxton    | M      |  90 | Chile     |
+| 320 | Hallie    | F      |  86 | Sri Lanka |
+| 321 | Madilyn   | F      |  33 | USA       |
+| 322 | Orion     | M      |  38 | USA       |
+| 324 | Ophelia   | F      |  58 | USA       |
+| 326 | Alayah    | F      |  99 | USA       |
+| 327 | Colson    | M      |  10 | USA       |
+| 328 | Cairo     | M      |  83 | Spain     |
+| 330 | Nina      | F      |  91 | Spain     |
+| 332 | Wade      | M      |  79 | Brazil    |
+| 333 | Chance    | M      |  39 | Italy     |
+| 334 | Odin      | M      |  56 | Ireland   |
+| 336 | Amari     | F      |  96 | Australia |
+| 338 | Kane      | M      |  15 | Sri Lanka |
+| 339 | Raymond   | M      |  78 | India     |
+| 340 | Cristian  | M      |  84 | Spain     |
+| 342 | Aniyah    | F      |  92 | USA       |
+| 344 | Prince    | M      |  62 | India     |
+| 345 | Ezequiel  | M      |  80 | Sri Lanka |
+| 346 | Jake      | M      |  32 | Spain     |
+| 348 | Amina     | F      |  18 | USA       |
+| 350 | Adelynn   | F      |  44 | Italy     |
+| 351 | Remington | F      |  38 | USA       |
+| 352 | Reign     | F      |  22 | Italy     |
+| 354 | Rylan     | M      |  16 | Chile     |
+| 356 | Willa     | F      |  50 | India     |
+| 357 | Avianna   | F      |  30 | Italy     |
+| 358 | Makayla   | F      |  30 | Ireland   |
+| 360 | Elle      | F      |  28 | Australia |
+| 362 | Arielle   | F      |  59 | Italy     |
+| 363 | Elianna   | F      |  61 | Sri Lanka |
+| 364 | Giselle   | F      |  77 | Chile     |
++-----+-----------+--------+-----+-----------+
+243 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Persons
+    -> WHERE id % 2 = 0
+    ->
+    -> UNION ALL
+    ->
+    -> SELECT * FROM Persons
+    -> WHERE id % 3 = 0
+    -> ORDER BY ID;
++-----+-----------+--------+-----+-----------+
+| id  | name      | gender | age | country   |
++-----+-----------+--------+-----+-----------+
+|   2 | Liam      | M      |  70 | Ireland   |
+|   3 | Noah      | M      |  82 | Chile     |
+|   4 | Oliver    | M      |  60 | Ireland   |
+|   6 | Charlotte | F      |  26 | Italy     |
+|   6 | Charlotte | F      |  26 | Italy     |
+|   8 | James     | M      |  92 | Brazil    |
+|   9 | Elizabeth | F      |  60 | India     |
+|  10 | Eleanor   | F      |  48 | Italy     |
+|  12 | William   | M      |  90 | Ireland   |
+|  12 | William   | M      |  90 | Ireland   |
+|  14 | Luna      | F      |  40 | Australia |
+|  15 | Camila    | F      |  73 | Spain     |
+|  16 | Gianna    | F      |  95 | India     |
+|  18 | Lucas     | M      |  75 | USA       |
+|  18 | Lucas     | M      |  75 | USA       |
+|  20 | Abigail   | F      |  69 | Sri Lanka |
+|  21 | Sofia     | F      |  81 | Spain     |
+|  22 | Avery     | F      |  46 | Italy     |
+|  24 | Emily     | F      |  13 | India     |
+|  24 | Emily     | F      |  13 | India     |
+|  26 | Theodore  | M      |  38 | Ireland   |
+|  27 | Jack      | M      |  94 | USA       |
+|  28 | Levi      | M      |  64 | Italy     |
+|  30 | Nora      | F      |  77 | Ireland   |
+|  30 | Nora      | F      |  77 | Ireland   |
+|  32 | Madison   | F      |  74 | Italy     |
+|  33 | Ellie     | F      |  75 | Brazil    |
+|  34 | Lily      | F      |  98 | Spain     |
+|  36 | Asher     | M      |  58 | India     |
+|  36 | Asher     | M      |  58 | India     |
+|  38 | Violet    | F      |  19 | India     |
+|  39 | Aurora    | F      |  71 | Sri Lanka |
+|  40 | Joseph    | M      |  81 | Australia |
+|  42 | David     | M      |  62 | Sri Lanka |
+|  42 | David     | M      |  62 | Sri Lanka |
+|  44 | Luke      | M      |  35 | USA       |
+|  45 | Michael   | M      |  83 | Ireland   |
+|  46 | Daniel    | M      |  63 | Chile     |
+|  48 | Carter    | M      |  25 | Spain     |
+|  48 | Carter    | M      |  25 | Spain     |
+|  50 | Josephine | F      |  30 | Brazil    |
+|  51 | Maverick  | M      |  61 | Sri Lanka |
+|  52 | Ivy       | F      |  21 | Spain     |
+|  54 | Lillian   | F      |  72 | Australia |
+|  54 | Lillian   | F      |  72 | Australia |
+|  56 | Elena     | F      |  27 | Chile     |
+|  57 | Naomi     | F      |  55 | Chile     |
+|  58 | Isaiah    | M      |  80 | Italy     |
+|  60 | Joshua    | M      |  49 | Spain     |
+|  60 | Joshua    | M      |  49 | Spain     |
+|  62 | Nolan     | M      |  99 | Chile     |
+|  63 | Adrian    | M      |  65 | Brazil    |
+|  64 | Aaliyah   | F      |  67 | Australia |
+|  66 | Brooklyn  | F      |  38 | India     |
+|  66 | Brooklyn  | F      |  38 | India     |
+|  68 | Cameron   | M      |  47 | Italy     |
+|  69 | Santiago  | M      |  46 | Ireland   |
+|  70 | Eli       | M      |  50 | Australia |
+|  72 | Ryan      | M      |  84 | India     |
+|  72 | Ryan      | M      |  84 | India     |
+|  74 | Madelyn   | F      |  53 | USA       |
+|  75 | Josephine | F      |  17 | India     |
+|  76 | Bella     | F      |  37 | Australia |
+|  78 | Cooper    | M      |  51 | Ireland   |
+|  78 | Cooper    | M      |  51 | Ireland   |
+|  80 | Easton    | M      |  28 | Spain     |
+|  81 | Kai       | M      |  49 | Ireland   |
+|  82 | Natalia   | F      |  97 | Ireland   |
+|  84 | Caroline  | F      |  19 | Spain     |
+|  84 | Caroline  | F      |  19 | Spain     |
+|  86 | Gabriella | F      |  78 | Sri Lanka |
+|  87 | Christian | M      |  91 | Ireland   |
+|  88 | Landon    | M      |  35 | USA       |
+|  90 | Roman     | M      |  33 | Italy     |
+|  90 | Roman     | M      |  33 | Italy     |
+|  92 | Emery     | F      |  85 | Spain     |
+|  93 | Lydia     | F      |  79 | Spain     |
+|  94 | Axel      | M      |  83 | Australia |
+|  96 | Eva       | F      |  22 | Chile     |
+|  96 | Eva       | F      |  22 | Chile     |
+|  98 | Jose      | M      |  11 | Italy     |
+|  99 | Bennett   | M      |  18 | Brazil    |
+| 100 | Silas     | M      |  82 | India     |
+| 102 | Parker    | M      |  41 | Australia |
+| 102 | Parker    | M      |  41 | Australia |
+| 104 | Vivian    | F      |  26 | Italy     |
+| 105 | Clara     | F      |  98 | USA       |
+| 106 | Weston    | M      |  72 | Ireland   |
+| 108 | Connor    | M      |  32 | Ireland   |
+| 108 | Connor    | M      |  32 | Ireland   |
+| 110 | Iris      | F      |  16 | Ireland   |
+| 111 | Ayla      | F      |  88 | Sri Lanka |
+| 112 | Carson    | M      |  38 | Chile     |
+| 114 | Xavier    | M      |  95 | Brazil    |
+| 114 | Xavier    | M      |  95 | Brazil    |
+| 116 | Melody    | F      |  21 | USA       |
+| 117 | Julia     | F      |  75 | Australia |
+| 118 | Jonathan  | M      |  42 | Sri Lanka |
+| 120 | Jameson   | M      |  85 | Spain     |
+| 120 | Jameson   | M      |  85 | Spain     |
+| 122 | Everett   | M      |  64 | India     |
+| 123 | Arya      | F      |  43 | Chile     |
+| 124 | Eden      | F      |  74 | Spain     |
+| 126 | Vincent   | M      |  81 | Brazil    |
+| 126 | Vincent   | M      |  81 | Brazil    |
+| 128 | Myles     | M      |  54 | Italy     |
+| 129 | Harrison  | M      |  18 | India     |
+| 130 | Charlie   | F      |  62 | USA       |
+| 132 | Melanie   | F      |  24 | Italy     |
+| 132 | Melanie   | F      |  24 | Italy     |
+| 134 | Jason     | M      |  16 | Ireland   |
+| 135 | Brayden   | M      |  21 | Italy     |
+| 136 | Cole      | M      |  40 | Chile     |
+| 138 | Alina     | F      |  40 | Chile     |
+| 138 | Alina     | F      |  40 | Chile     |
+| 140 | Ximena    | F      |  83 | Spain     |
+| 141 | George    | M      |  23 | Brazil    |
+| 142 | Lorenzo   | M      |  31 | Italy     |
+| 144 | Luis      | M      |  27 | Australia |
+| 144 | Luis      | M      |  27 | Australia |
+| 146 | Archer    | M      |  91 | Italy     |
+| 147 | Enzo      | M      |  80 | India     |
+| 148 | Jonah     | M      |  59 | Brazil    |
+| 150 | Reese     | F      |  48 | Ireland   |
+| 150 | Reese     | F      |  48 | Ireland   |
+| 152 | Thiago    | M      |  75 | India     |
+| 153 | Theo      | M      |  68 | Chile     |
+| 154 | River     | F      |  61 | Sri Lanka |
+| 156 | Zachary   | M      |  62 | USA       |
+| 156 | Zachary   | M      |  62 | USA       |
+| 158 | Braxton   | M      |  16 | Italy     |
+| 159 | Esther    | F      |  69 | Italy     |
+| 160 | Valeria   | F      |  38 | Brazil    |
+| 162 | Rhett     | M      |  98 | Chile     |
+| 162 | Rhett     | M      |  98 | Chile     |
+| 164 | Jude      | M      |  81 | Spain     |
+| 165 | Bailey    | F      |  72 | Italy     |
+| 166 | Ember     | F      |  28 | USA       |
+| 168 | Carlos    | M      |  38 | USA       |
+| 168 | Carlos    | M      |  38 | USA       |
+| 170 | Adriel    | M      |  19 | Chile     |
+| 171 | Alexandra | F      | 100 | USA       |
+| 172 | Faith     | F      |  42 | Sri Lanka |
+| 174 | Ace       | M      |  94 | Ireland   |
+| 174 | Ace       | M      |  94 | Ireland   |
+| 176 | Jayce     | M      |  28 | Australia |
+| 177 | Millie    | F      | 100 | Ireland   |
+| 178 | June      | F      |  98 | Ireland   |
+| 180 | Maxwell   | M      |  89 | Italy     |
+| 180 | Maxwell   | M      |  89 | Italy     |
+| 182 | Dean      | M      |  79 | Chile     |
+| 183 | Ada       | F      |  32 | Italy     |
+| 184 | Anastasia | F      |  32 | Sri Lanka |
+| 186 | Matteo    | M      |  66 | Italy     |
+| 186 | Matteo    | M      |  66 | Italy     |
+| 188 | Ivan      | M      |  16 | Chile     |
+| 189 | Elliott   | M      |  43 | Spain     |
+| 190 | Jesus     | M      |  98 | Brazil    |
+| 192 | Ruth      | F      |  45 | Sri Lanka |
+| 192 | Ruth      | F      |  45 | Sri Lanka |
+| 194 | Max       | M      |  28 | Chile     |
+| 195 | Elliot    | M      |  39 | Italy     |
+| 196 | Graham    | M      |  68 | USA       |
+| 198 | Sara      | F      |  69 | Brazil    |
+| 198 | Sara      | F      |  69 | Brazil    |
+| 200 | Beckett   | M      |  73 | USA       |
+| 201 | Amari     | M      |  65 | Spain     |
+| 202 | Karter    | M      |  21 | Chile     |
+| 204 | Abraham   | M      |  79 | Brazil    |
+| 204 | Abraham   | M      |  79 | Brazil    |
+| 206 | Selena    | F      |  83 | Chile     |
+| 207 | Oaklynn   | F      |  71 | Brazil    |
+| 208 | Morgan    | F      |  42 | Italy     |
+| 210 | Blake     | M      |  42 | USA       |
+| 210 | Blake     | M      |  42 | USA       |
+| 212 | Dawson    | M      |  42 | Brazil    |
+| 213 | Juliana   | F      |  36 | Italy     |
+| 214 | Finley    | F      |  46 | India     |
+| 216 | Tristan   | M      |  66 | Sri Lanka |
+| 216 | Tristan   | M      |  66 | Sri Lanka |
+| 218 | Avery     | M      |  92 | Sri Lanka |
+| 219 | Joel      | M      |  53 | Sri Lanka |
+| 220 | Grant     | M      |  94 | Sri Lanka |
+| 222 | London    | F      |  75 | Italy     |
+| 222 | London    | F      |  75 | Italy     |
+| 224 | Elsie     | F      |  63 | Ireland   |
+| 225 | Patrick   | M      |  27 | Ireland   |
+| 226 | Peter     | M      |  87 | Chile     |
+| 228 | Edward    | M      |  78 | USA       |
+| 228 | Edward    | M      |  78 | USA       |
+| 230 | Nyla      | F      |  96 | Chile     |
+| 231 | Vera      | F      |  90 | Chile     |
+| 232 | Hope      | F      |  51 | Chile     |
+| 234 | Kaia      | F      |  41 | Ireland   |
+| 234 | Kaia      | F      |  41 | Ireland   |
+| 236 | Adonis    | M      |  12 | Australia |
+| 237 | Kyrie     | M      |  75 | Italy     |
+| 238 | Matias    | M      |  75 | USA       |
+| 240 | Lukas     | M      |  93 | Spain     |
+| 240 | Lukas     | M      |  93 | Spain     |
+| 242 | Rachel    | F      |  58 | India     |
+| 243 | Gracie    | F      |  80 | Italy     |
+| 244 | Rowan     | F      |  93 | Italy     |
+| 246 | Zane      | M      |  81 | Brazil    |
+| 246 | Zane      | M      |  81 | Brazil    |
+| 248 | Lilah     | F      | 100 | Spain     |
+| 249 | Adelyn    | F      |  42 | Brazil    |
+| 250 | Phoebe    | F      |  67 | Australia |
+| 252 | Kash      | M      |  22 | Chile     |
+| 252 | Kash      | M      |  22 | Chile     |
+| 254 | Kyler     | M      |  94 | Australia |
+| 255 | Jax       | M      |  66 | Brazil    |
+| 256 | Jett      | M      |  80 | Australia |
+| 258 | Kayla     | F      |  92 | India     |
+| 258 | Kayla     | F      |  92 | India     |
+| 260 | Elaina    | F      |  27 | Sri Lanka |
+| 261 | Saylor    | F      |  58 | Spain     |
+| 262 | Brooke    | F      |  17 | Sri Lanka |
+| 264 | Simon     | M      |  26 | India     |
+| 264 | Simon     | M      |  26 | India     |
+| 266 | Adelaide  | F      |  91 | India     |
+| 267 | Daniela   | F      |  82 | Ireland   |
+| 268 | Kenneth   | M      |  86 | Chile     |
+| 270 | Kaden     | M      |  75 | Italy     |
+| 270 | Kaden     | M      |  75 | Italy     |
+| 272 | Delaney   | F      |  58 | USA       |
+| 273 | Dakota    | F      |  95 | Brazil    |
+| 274 | Mya       | F      |  37 | USA       |
+| 276 | Maximus   | M      |  21 | Brazil    |
+| 276 | Maximus   | M      |  21 | Brazil    |
+| 278 | Finley    | M      |  14 | Australia |
+| 279 | Lucille   | F      |  85 | Chile     |
+| 280 | Trinity   | F      |  10 | USA       |
+| 282 | Tatum     | F      |  69 | Brazil    |
+| 282 | Tatum     | F      |  69 | Brazil    |
+| 284 | Crew      | M      |  46 | Ireland   |
+| 285 | Brantley  | M      |  10 | Italy     |
+| 286 | Kali      | F      |  14 | Brazil    |
+| 288 | Maggie    | F      |  73 | Spain     |
+| 288 | Maggie    | F      |  73 | Spain     |
+| 290 | Dallas    | M      |  73 | Sri Lanka |
+| 291 | Walter    | M      |  91 | Australia |
+| 292 | Brady     | M      |  23 | Ireland   |
+| 294 | Joanna    | F      |  64 | India     |
+| 294 | Joanna    | F      |  64 | India     |
+| 296 | Bryan     | M      |  54 | Brazil    |
+| 297 | Aidan     | M      |  94 | Australia |
+| 298 | Cohen     | M      |  28 | Brazil    |
+| 300 | Cayden    | M      |  42 | Chile     |
+| 300 | Cayden    | M      |  42 | Chile     |
+| 302 | Leia      | F      |  68 | Ireland   |
+| 303 | Paige     | F      |  82 | Brazil    |
+| 304 | Niko      | M      |  54 | Sri Lanka |
+| 306 | Zander    | M      |  42 | Chile     |
+| 306 | Zander    | M      |  42 | Chile     |
+| 308 | Rory      | M      |  93 | Sri Lanka |
+| 309 | Harley    | F      |  12 | Chile     |
+| 310 | Lia       | F      |  50 | Brazil    |
+| 312 | Francisco | M      |  50 | Brazil    |
+| 312 | Francisco | M      |  50 | Brazil    |
+| 314 | Kobe      | M      |  11 | Chile     |
+| 315 | Thea      | F      |  28 | Ireland   |
+| 316 | Jayla     | F      |  16 | Chile     |
+| 318 | Daxton    | M      |  90 | Chile     |
+| 318 | Daxton    | M      |  90 | Chile     |
+| 320 | Hallie    | F      |  86 | Sri Lanka |
+| 321 | Madilyn   | F      |  33 | USA       |
+| 322 | Orion     | M      |  38 | USA       |
+| 324 | Ophelia   | F      |  58 | USA       |
+| 324 | Ophelia   | F      |  58 | USA       |
+| 326 | Alayah    | F      |  99 | USA       |
+| 327 | Colson    | M      |  10 | USA       |
+| 328 | Cairo     | M      |  83 | Spain     |
+| 330 | Nina      | F      |  91 | Spain     |
+| 330 | Nina      | F      |  91 | Spain     |
+| 332 | Wade      | M      |  79 | Brazil    |
+| 333 | Chance    | M      |  39 | Italy     |
+| 334 | Odin      | M      |  56 | Ireland   |
+| 336 | Amari     | F      |  96 | Australia |
+| 336 | Amari     | F      |  96 | Australia |
+| 338 | Kane      | M      |  15 | Sri Lanka |
+| 339 | Raymond   | M      |  78 | India     |
+| 340 | Cristian  | M      |  84 | Spain     |
+| 342 | Aniyah    | F      |  92 | USA       |
+| 342 | Aniyah    | F      |  92 | USA       |
+| 344 | Prince    | M      |  62 | India     |
+| 345 | Ezequiel  | M      |  80 | Sri Lanka |
+| 346 | Jake      | M      |  32 | Spain     |
+| 348 | Amina     | F      |  18 | USA       |
+| 348 | Amina     | F      |  18 | USA       |
+| 350 | Adelynn   | F      |  44 | Italy     |
+| 351 | Remington | F      |  38 | USA       |
+| 352 | Reign     | F      |  22 | Italy     |
+| 354 | Rylan     | M      |  16 | Chile     |
+| 354 | Rylan     | M      |  16 | Chile     |
+| 356 | Willa     | F      |  50 | India     |
+| 357 | Avianna   | F      |  30 | Italy     |
+| 358 | Makayla   | F      |  30 | Ireland   |
+| 360 | Elle      | F      |  28 | Australia |
+| 360 | Elle      | F      |  28 | Australia |
+| 362 | Arielle   | F      |  59 | Italy     |
+| 363 | Elianna   | F      |  61 | Sri Lanka |
+| 364 | Giselle   | F      |  77 | Chile     |
++-----+-----------+--------+-----+-----------+
+303 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(ID) AS Count, gender,
+    -> CASE
+    -> WHEN Country IN ('India', 'Sri Lanka') THEN 'Asia'
+    -> WHEN Country IN ('Ireland', 'Italy', 'Spain') THEN 'Europe'
+    -> WHEN Country IN ('Brazil', 'Chile') THEN 'South America'
+    -> WHEN Country IN ('USA') THEN 'North America'
+    -> ELSE 'Australia'
+    -> END AS Continent
+    -> FROM Persons
+    -> GROUP BY Continent, gender;
++-------+--------+---------------+
+| Count | gender | Continent     |
++-------+--------+---------------+
+|    33 | F      | Asia          |
+|    67 | M      | Europe        |
+|    53 | M      | South America |
+|    64 | F      | Europe        |
+|    16 | F      | Australia     |
+|    32 | F      | South America |
+|    22 | M      | North America |
+|    39 | M      | Asia          |
+|    20 | M      | Australia     |
+|    18 | F      | North America |
++-------+--------+---------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(ID) AS Count, gender,
+    -> CASE Country
+    -> WHEN 'India' THEN 'Asia'
+    -> WHEN 'Australia' THEN 'Australia'
+    -> ELSE 'Others'
+    -> END AS Continent
+    -> FROM Persons
+    -> GROUP BY Continent, gender;
++-------+--------+-----------+
+| Count | gender | Continent |
++-------+--------+-----------+
+|    17 | F      | Asia      |
+|   165 | M      | Others    |
+|   130 | F      | Others    |
+|    16 | F      | Australia |
+|    16 | M      | Asia      |
+|    20 | M      | Australia |
++-------+--------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT id, gender,
+    -> CASE Age
+    -> WHEN 18 THEN 'border'
+    -> ELSE 'Too old or Too young'
+    -> END AS Tag
+    -> FROM persons;
++-----+--------+----------------------+
+| id  | gender | Tag                  |
++-----+--------+----------------------+
+|   1 | F      | Too old or Too young |
+|   2 | M      | Too old or Too young |
+|   3 | M      | Too old or Too young |
+|   4 | M      | Too old or Too young |
+|   5 | F      | Too old or Too young |
+|   6 | F      | Too old or Too young |
+|   7 | M      | Too old or Too young |
+|   8 | M      | Too old or Too young |
+|   9 | F      | Too old or Too young |
+|  10 | F      | Too old or Too young |
+|  11 | F      | Too old or Too young |
+|  12 | M      | Too old or Too young |
+|  13 | F      | Too old or Too young |
+|  14 | F      | Too old or Too young |
+|  15 | F      | Too old or Too young |
+|  16 | F      | Too old or Too young |
+|  17 | M      | Too old or Too young |
+|  18 | M      | Too old or Too young |
+|  19 | M      | Too old or Too young |
+|  20 | F      | Too old or Too young |
+|  21 | F      | Too old or Too young |
+|  22 | F      | Too old or Too young |
+|  23 | F      | Too old or Too young |
+|  24 | F      | Too old or Too young |
+|  25 | F      | Too old or Too young |
+|  26 | M      | Too old or Too young |
+|  27 | M      | Too old or Too young |
+|  28 | M      | Too old or Too young |
+|  29 | M      | Too old or Too young |
+|  30 | F      | Too old or Too young |
+|  31 | F      | border               |
+|  32 | F      | Too old or Too young |
+|  33 | F      | Too old or Too young |
+|  34 | F      | Too old or Too young |
+|  35 | M      | Too old or Too young |
+|  36 | M      | Too old or Too young |
+|  37 | M      | Too old or Too young |
+|  38 | F      | Too old or Too young |
+|  39 | F      | Too old or Too young |
+|  40 | M      | Too old or Too young |
+|  41 | M      | Too old or Too young |
+|  42 | M      | Too old or Too young |
+|  43 | M      | Too old or Too young |
+|  44 | M      | Too old or Too young |
+|  45 | M      | Too old or Too young |
+|  46 | M      | Too old or Too young |
+|  47 | F      | Too old or Too young |
+|  48 | M      | Too old or Too young |
+|  49 | M      | Too old or Too young |
+|  50 | F      | Too old or Too young |
+|  51 | M      | Too old or Too young |
+|  52 | F      | Too old or Too young |
+|  53 | F      | Too old or Too young |
+|  54 | F      | Too old or Too young |
+|  55 | F      | Too old or Too young |
+|  56 | F      | Too old or Too young |
+|  57 | F      | Too old or Too young |
+|  58 | M      | Too old or Too young |
+|  59 | M      | Too old or Too young |
+|  60 | M      | Too old or Too young |
+|  61 | M      | Too old or Too young |
+|  62 | M      | Too old or Too young |
+|  63 | M      | Too old or Too young |
+|  64 | F      | Too old or Too young |
+|  65 | F      | Too old or Too young |
+|  66 | F      | Too old or Too young |
+|  67 | F      | Too old or Too young |
+|  68 | M      | Too old or Too young |
+|  69 | M      | Too old or Too young |
+|  70 | M      | Too old or Too young |
+|  71 | M      | Too old or Too young |
+|  72 | M      | Too old or Too young |
+|  73 | M      | Too old or Too young |
+|  74 | F      | Too old or Too young |
+|  75 | F      | Too old or Too young |
+|  76 | F      | Too old or Too young |
+|  77 | F      | Too old or Too young |
+|  78 | M      | Too old or Too young |
+|  79 | M      | Too old or Too young |
+|  80 | M      | Too old or Too young |
+|  81 | M      | Too old or Too young |
+|  82 | F      | Too old or Too young |
+|  83 | F      | Too old or Too young |
+|  84 | F      | Too old or Too young |
+|  85 | F      | Too old or Too young |
+|  86 | F      | Too old or Too young |
+|  87 | M      | Too old or Too young |
+|  88 | M      | Too old or Too young |
+|  89 | M      | Too old or Too young |
+|  90 | M      | Too old or Too young |
+|  91 | F      | Too old or Too young |
+|  92 | F      | Too old or Too young |
+|  93 | F      | Too old or Too young |
+|  94 | M      | Too old or Too young |
+|  95 | M      | Too old or Too young |
+|  96 | F      | Too old or Too young |
+|  97 | F      | Too old or Too young |
+|  98 | M      | Too old or Too young |
+|  99 | M      | border               |
+| 100 | M      | Too old or Too young |
+| 101 | M      | Too old or Too young |
+| 102 | M      | Too old or Too young |
+| 103 | M      | Too old or Too young |
+| 104 | F      | Too old or Too young |
+| 105 | F      | Too old or Too young |
+| 106 | M      | Too old or Too young |
+| 107 | M      | Too old or Too young |
+| 108 | M      | Too old or Too young |
+| 109 | F      | Too old or Too young |
+| 110 | F      | Too old or Too young |
+| 111 | F      | Too old or Too young |
+| 112 | M      | Too old or Too young |
+| 113 | M      | Too old or Too young |
+| 114 | M      | Too old or Too young |
+| 115 | M      | Too old or Too young |
+| 116 | F      | Too old or Too young |
+| 117 | F      | Too old or Too young |
+| 118 | M      | Too old or Too young |
+| 119 | M      | Too old or Too young |
+| 120 | M      | Too old or Too young |
+| 121 | M      | Too old or Too young |
+| 122 | M      | Too old or Too young |
+| 123 | F      | Too old or Too young |
+| 124 | F      | Too old or Too young |
+| 125 | F      | Too old or Too young |
+| 126 | M      | Too old or Too young |
+| 127 | M      | Too old or Too young |
+| 128 | M      | Too old or Too young |
+| 129 | M      | border               |
+| 130 | F      | Too old or Too young |
+| 131 | F      | Too old or Too young |
+| 132 | F      | Too old or Too young |
+| 133 | M      | Too old or Too young |
+| 134 | M      | Too old or Too young |
+| 135 | M      | Too old or Too young |
+| 136 | M      | Too old or Too young |
+| 137 | M      | Too old or Too young |
+| 138 | F      | Too old or Too young |
+| 139 | F      | Too old or Too young |
+| 140 | F      | Too old or Too young |
+| 141 | M      | Too old or Too young |
+| 142 | M      | Too old or Too young |
+| 143 | M      | Too old or Too young |
+| 144 | M      | Too old or Too young |
+| 145 | F      | Too old or Too young |
+| 146 | M      | Too old or Too young |
+| 147 | M      | Too old or Too young |
+| 148 | M      | Too old or Too young |
+| 149 | F      | Too old or Too young |
+| 150 | F      | Too old or Too young |
+| 151 | F      | Too old or Too young |
+| 152 | M      | Too old or Too young |
+| 153 | M      | Too old or Too young |
+| 154 | F      | Too old or Too young |
+| 155 | M      | border               |
+| 156 | M      | Too old or Too young |
+| 157 | M      | Too old or Too young |
+| 158 | M      | Too old or Too young |
+| 159 | F      | Too old or Too young |
+| 160 | F      | Too old or Too young |
+| 161 | M      | Too old or Too young |
+| 162 | M      | Too old or Too young |
+| 163 | M      | Too old or Too young |
+| 164 | M      | Too old or Too young |
+| 165 | F      | Too old or Too young |
+| 166 | F      | Too old or Too young |
+| 167 | M      | Too old or Too young |
+| 168 | M      | Too old or Too young |
+| 169 | M      | Too old or Too young |
+| 170 | M      | Too old or Too young |
+| 171 | F      | Too old or Too young |
+| 172 | F      | Too old or Too young |
+| 173 | M      | Too old or Too young |
+| 174 | M      | Too old or Too young |
+| 175 | M      | Too old or Too young |
+| 176 | M      | Too old or Too young |
+| 177 | F      | Too old or Too young |
+| 178 | F      | Too old or Too young |
+| 179 | M      | Too old or Too young |
+| 180 | M      | Too old or Too young |
+| 181 | M      | Too old or Too young |
+| 182 | M      | Too old or Too young |
+| 183 | F      | Too old or Too young |
+| 184 | F      | Too old or Too young |
+| 185 | F      | Too old or Too young |
+| 186 | M      | Too old or Too young |
+| 187 | M      | Too old or Too young |
+| 188 | M      | Too old or Too young |
+| 189 | M      | Too old or Too young |
+| 190 | M      | Too old or Too young |
+| 191 | F      | Too old or Too young |
+| 192 | F      | Too old or Too young |
+| 193 | F      | Too old or Too young |
+| 194 | M      | Too old or Too young |
+| 195 | M      | Too old or Too young |
+| 196 | M      | Too old or Too young |
+| 197 | F      | Too old or Too young |
+| 198 | F      | Too old or Too young |
+| 199 | F      | Too old or Too young |
+| 200 | M      | Too old or Too young |
+| 201 | M      | Too old or Too young |
+| 202 | M      | Too old or Too young |
+| 203 | M      | Too old or Too young |
+| 204 | M      | Too old or Too young |
+| 205 | M      | Too old or Too young |
+| 206 | F      | Too old or Too young |
+| 207 | F      | Too old or Too young |
+| 208 | F      | Too old or Too young |
+| 209 | M      | Too old or Too young |
+| 210 | M      | Too old or Too young |
+| 211 | M      | Too old or Too young |
+| 212 | M      | Too old or Too young |
+| 213 | F      | Too old or Too young |
+| 214 | F      | Too old or Too young |
+| 215 | F      | Too old or Too young |
+| 216 | M      | Too old or Too young |
+| 217 | M      | Too old or Too young |
+| 218 | M      | Too old or Too young |
+| 219 | M      | Too old or Too young |
+| 220 | M      | Too old or Too young |
+| 221 | M      | Too old or Too young |
+| 222 | F      | Too old or Too young |
+| 223 | F      | Too old or Too young |
+| 224 | F      | Too old or Too young |
+| 225 | M      | Too old or Too young |
+| 226 | M      | Too old or Too young |
+| 227 | M      | Too old or Too young |
+| 228 | M      | Too old or Too young |
+| 229 | M      | Too old or Too young |
+| 230 | F      | Too old or Too young |
+| 231 | F      | Too old or Too young |
+| 232 | F      | Too old or Too young |
+| 233 | F      | Too old or Too young |
+| 234 | F      | Too old or Too young |
+| 235 | F      | Too old or Too young |
+| 236 | M      | Too old or Too young |
+| 237 | M      | Too old or Too young |
+| 238 | M      | Too old or Too young |
+| 239 | M      | Too old or Too young |
+| 240 | M      | Too old or Too young |
+| 241 | F      | Too old or Too young |
+| 242 | F      | Too old or Too young |
+| 243 | F      | Too old or Too young |
+| 244 | F      | Too old or Too young |
+| 245 | M      | Too old or Too young |
+| 246 | M      | Too old or Too young |
+| 247 | M      | Too old or Too young |
+| 248 | F      | Too old or Too young |
+| 249 | F      | Too old or Too young |
+| 250 | F      | Too old or Too young |
+| 251 | F      | Too old or Too young |
+| 252 | M      | Too old or Too young |
+| 253 | M      | Too old or Too young |
+| 254 | M      | Too old or Too young |
+| 255 | M      | Too old or Too young |
+| 256 | M      | Too old or Too young |
+| 257 | M      | Too old or Too young |
+| 258 | F      | Too old or Too young |
+| 259 | F      | Too old or Too young |
+| 260 | F      | Too old or Too young |
+| 261 | F      | Too old or Too young |
+| 262 | F      | Too old or Too young |
+| 263 | M      | Too old or Too young |
+| 264 | M      | Too old or Too young |
+| 265 | M      | Too old or Too young |
+| 266 | F      | Too old or Too young |
+| 267 | F      | Too old or Too young |
+| 268 | M      | Too old or Too young |
+| 269 | M      | Too old or Too young |
+| 270 | M      | Too old or Too young |
+| 271 | M      | Too old or Too young |
+| 272 | F      | Too old or Too young |
+| 273 | F      | Too old or Too young |
+| 274 | F      | Too old or Too young |
+| 275 | M      | Too old or Too young |
+| 276 | M      | Too old or Too young |
+| 277 | M      | Too old or Too young |
+| 278 | M      | Too old or Too young |
+| 279 | F      | Too old or Too young |
+| 280 | F      | Too old or Too young |
+| 281 | F      | Too old or Too young |
+| 282 | F      | Too old or Too young |
+| 283 | M      | Too old or Too young |
+| 284 | M      | Too old or Too young |
+| 285 | M      | Too old or Too young |
+| 286 | F      | Too old or Too young |
+| 287 | F      | Too old or Too young |
+| 288 | F      | Too old or Too young |
+| 289 | M      | Too old or Too young |
+| 290 | M      | Too old or Too young |
+| 291 | M      | Too old or Too young |
+| 292 | M      | Too old or Too young |
+| 293 | F      | Too old or Too young |
+| 294 | F      | Too old or Too young |
+| 295 | F      | Too old or Too young |
+| 296 | M      | Too old or Too young |
+| 297 | M      | Too old or Too young |
+| 298 | M      | Too old or Too young |
+| 299 | M      | Too old or Too young |
+| 300 | M      | Too old or Too young |
+| 301 | M      | Too old or Too young |
+| 302 | F      | Too old or Too young |
+| 303 | F      | Too old or Too young |
+| 304 | M      | Too old or Too young |
+| 305 | M      | Too old or Too young |
+| 306 | M      | Too old or Too young |
+| 307 | M      | Too old or Too young |
+| 308 | M      | Too old or Too young |
+| 309 | F      | Too old or Too young |
+| 310 | F      | Too old or Too young |
+| 311 | F      | Too old or Too young |
+| 312 | M      | Too old or Too young |
+| 313 | M      | Too old or Too young |
+| 314 | M      | Too old or Too young |
+| 315 | F      | Too old or Too young |
+| 316 | F      | Too old or Too young |
+| 317 | M      | Too old or Too young |
+| 318 | M      | Too old or Too young |
+| 319 | F      | Too old or Too young |
+| 320 | F      | Too old or Too young |
+| 321 | F      | Too old or Too young |
+| 322 | M      | Too old or Too young |
+| 323 | M      | Too old or Too young |
+| 324 | F      | Too old or Too young |
+| 325 | F      | Too old or Too young |
+| 326 | F      | Too old or Too young |
+| 327 | M      | Too old or Too young |
+| 328 | M      | Too old or Too young |
+| 329 | M      | Too old or Too young |
+| 330 | F      | Too old or Too young |
+| 331 | F      | Too old or Too young |
+| 332 | M      | Too old or Too young |
+| 333 | M      | Too old or Too young |
+| 334 | M      | Too old or Too young |
+| 335 | M      | Too old or Too young |
+| 336 | F      | Too old or Too young |
+| 337 | F      | Too old or Too young |
+| 338 | M      | Too old or Too young |
+| 339 | M      | Too old or Too young |
+| 340 | M      | Too old or Too young |
+| 341 | F      | Too old or Too young |
+| 342 | F      | Too old or Too young |
+| 343 | M      | Too old or Too young |
+| 344 | M      | Too old or Too young |
+| 345 | M      | Too old or Too young |
+| 346 | M      | Too old or Too young |
+| 347 | M      | Too old or Too young |
+| 348 | F      | border               |
+| 349 | F      | Too old or Too young |
+| 350 | F      | Too old or Too young |
+| 351 | F      | Too old or Too young |
+| 352 | F      | Too old or Too young |
+| 353 | M      | Too old or Too young |
+| 354 | M      | Too old or Too young |
+| 355 | M      | Too old or Too young |
+| 356 | F      | Too old or Too young |
+| 357 | F      | Too old or Too young |
+| 358 | F      | Too old or Too young |
+| 359 | F      | Too old or Too young |
+| 360 | F      | Too old or Too young |
+| 361 | F      | Too old or Too young |
+| 362 | F      | Too old or Too young |
+| 363 | F      | Too old or Too young |
+| 364 | F      | Too old or Too young |
++-----+--------+----------------------+
+364 rows in set (0.00 sec)
+
+mysql> SELECT id, age, IF (age = 18, 'border', 'Too old or Too Young') as Tag
+    -> FROM persons;
++-----+-----+----------------------+
+| id  | age | Tag                  |
++-----+-----+----------------------+
+|   1 |  65 | Too old or Too Young |
+|   2 |  70 | Too old or Too Young |
+|   3 |  82 | Too old or Too Young |
+|   4 |  60 | Too old or Too Young |
+|   5 |  86 | Too old or Too Young |
+|   6 |  26 | Too old or Too Young |
+|   7 |  21 | Too old or Too Young |
+|   8 |  92 | Too old or Too Young |
+|   9 |  60 | Too old or Too Young |
+|  10 |  48 | Too old or Too Young |
+|  11 |  87 | Too old or Too Young |
+|  12 |  90 | Too old or Too Young |
+|  13 |  65 | Too old or Too Young |
+|  14 |  40 | Too old or Too Young |
+|  15 |  73 | Too old or Too Young |
+|  16 |  95 | Too old or Too Young |
+|  17 |  35 | Too old or Too Young |
+|  18 |  75 | Too old or Too Young |
+|  19 |  41 | Too old or Too Young |
+|  20 |  69 | Too old or Too Young |
+|  21 |  81 | Too old or Too Young |
+|  22 |  46 | Too old or Too Young |
+|  23 |  77 | Too old or Too Young |
+|  24 |  13 | Too old or Too Young |
+|  25 |  88 | Too old or Too Young |
+|  26 |  38 | Too old or Too Young |
+|  27 |  94 | Too old or Too Young |
+|  28 |  64 | Too old or Too Young |
+|  29 |  91 | Too old or Too Young |
+|  30 |  77 | Too old or Too Young |
+|  31 |  18 | border               |
+|  32 |  74 | Too old or Too Young |
+|  33 |  75 | Too old or Too Young |
+|  34 |  98 | Too old or Too Young |
+|  35 |  26 | Too old or Too Young |
+|  36 |  58 | Too old or Too Young |
+|  37 |  56 | Too old or Too Young |
+|  38 |  19 | Too old or Too Young |
+|  39 |  71 | Too old or Too Young |
+|  40 |  81 | Too old or Too Young |
+|  41 |  78 | Too old or Too Young |
+|  42 |  62 | Too old or Too Young |
+|  43 |  23 | Too old or Too Young |
+|  44 |  35 | Too old or Too Young |
+|  45 |  83 | Too old or Too Young |
+|  46 |  63 | Too old or Too Young |
+|  47 |  50 | Too old or Too Young |
+|  48 |  25 | Too old or Too Young |
+|  49 |  57 | Too old or Too Young |
+|  50 |  30 | Too old or Too Young |
+|  51 |  61 | Too old or Too Young |
+|  52 |  21 | Too old or Too Young |
+|  53 |  83 | Too old or Too Young |
+|  54 |  72 | Too old or Too Young |
+|  55 |  79 | Too old or Too Young |
+|  56 |  27 | Too old or Too Young |
+|  57 |  55 | Too old or Too Young |
+|  58 |  80 | Too old or Too Young |
+|  59 |  10 | Too old or Too Young |
+|  60 |  49 | Too old or Too Young |
+|  61 |  79 | Too old or Too Young |
+|  62 |  99 | Too old or Too Young |
+|  63 |  65 | Too old or Too Young |
+|  64 |  67 | Too old or Too Young |
+|  65 |  25 | Too old or Too Young |
+|  66 |  38 | Too old or Too Young |
+|  67 |  39 | Too old or Too Young |
+|  68 |  47 | Too old or Too Young |
+|  69 |  46 | Too old or Too Young |
+|  70 |  50 | Too old or Too Young |
+|  71 |  71 | Too old or Too Young |
+|  72 |  84 | Too old or Too Young |
+|  73 |  68 | Too old or Too Young |
+|  74 |  53 | Too old or Too Young |
+|  75 |  17 | Too old or Too Young |
+|  76 |  37 | Too old or Too Young |
+|  77 |  56 | Too old or Too Young |
+|  78 |  51 | Too old or Too Young |
+|  79 |  55 | Too old or Too Young |
+|  80 |  28 | Too old or Too Young |
+|  81 |  49 | Too old or Too Young |
+|  82 |  97 | Too old or Too Young |
+|  83 |  78 | Too old or Too Young |
+|  84 |  19 | Too old or Too Young |
+|  85 |  93 | Too old or Too Young |
+|  86 |  78 | Too old or Too Young |
+|  87 |  91 | Too old or Too Young |
+|  88 |  35 | Too old or Too Young |
+|  89 |  54 | Too old or Too Young |
+|  90 |  33 | Too old or Too Young |
+|  91 |  34 | Too old or Too Young |
+|  92 |  85 | Too old or Too Young |
+|  93 |  79 | Too old or Too Young |
+|  94 |  83 | Too old or Too Young |
+|  95 |  34 | Too old or Too Young |
+|  96 |  22 | Too old or Too Young |
+|  97 |  43 | Too old or Too Young |
+|  98 |  11 | Too old or Too Young |
+|  99 |  18 | border               |
+| 100 |  82 | Too old or Too Young |
+| 101 |  82 | Too old or Too Young |
+| 102 |  41 | Too old or Too Young |
+| 103 |  28 | Too old or Too Young |
+| 104 |  26 | Too old or Too Young |
+| 105 |  98 | Too old or Too Young |
+| 106 |  72 | Too old or Too Young |
+| 107 |  68 | Too old or Too Young |
+| 108 |  32 | Too old or Too Young |
+| 109 |  31 | Too old or Too Young |
+| 110 |  16 | Too old or Too Young |
+| 111 |  88 | Too old or Too Young |
+| 112 |  38 | Too old or Too Young |
+| 113 |  71 | Too old or Too Young |
+| 114 |  95 | Too old or Too Young |
+| 115 |  63 | Too old or Too Young |
+| 116 |  21 | Too old or Too Young |
+| 117 |  75 | Too old or Too Young |
+| 118 |  42 | Too old or Too Young |
+| 119 |  71 | Too old or Too Young |
+| 120 |  85 | Too old or Too Young |
+| 121 |  89 | Too old or Too Young |
+| 122 |  64 | Too old or Too Young |
+| 123 |  43 | Too old or Too Young |
+| 124 |  74 | Too old or Too Young |
+| 125 |  72 | Too old or Too Young |
+| 126 |  81 | Too old or Too Young |
+| 127 |  90 | Too old or Too Young |
+| 128 |  54 | Too old or Too Young |
+| 129 |  18 | border               |
+| 130 |  62 | Too old or Too Young |
+| 131 |  57 | Too old or Too Young |
+| 132 |  24 | Too old or Too Young |
+| 133 |  54 | Too old or Too Young |
+| 134 |  16 | Too old or Too Young |
+| 135 |  21 | Too old or Too Young |
+| 136 |  40 | Too old or Too Young |
+| 137 |  87 | Too old or Too Young |
+| 138 |  40 | Too old or Too Young |
+| 139 |  56 | Too old or Too Young |
+| 140 |  83 | Too old or Too Young |
+| 141 |  23 | Too old or Too Young |
+| 142 |  31 | Too old or Too Young |
+| 143 |  59 | Too old or Too Young |
+| 144 |  27 | Too old or Too Young |
+| 145 |  60 | Too old or Too Young |
+| 146 |  91 | Too old or Too Young |
+| 147 |  80 | Too old or Too Young |
+| 148 |  59 | Too old or Too Young |
+| 149 |  13 | Too old or Too Young |
+| 150 |  48 | Too old or Too Young |
+| 151 |  58 | Too old or Too Young |
+| 152 |  75 | Too old or Too Young |
+| 153 |  68 | Too old or Too Young |
+| 154 |  61 | Too old or Too Young |
+| 155 |  18 | border               |
+| 156 |  62 | Too old or Too Young |
+| 157 |  78 | Too old or Too Young |
+| 158 |  16 | Too old or Too Young |
+| 159 |  69 | Too old or Too Young |
+| 160 |  38 | Too old or Too Young |
+| 161 |  35 | Too old or Too Young |
+| 162 |  98 | Too old or Too Young |
+| 163 |  21 | Too old or Too Young |
+| 164 |  81 | Too old or Too Young |
+| 165 |  72 | Too old or Too Young |
+| 166 |  28 | Too old or Too Young |
+| 167 |  62 | Too old or Too Young |
+| 168 |  38 | Too old or Too Young |
+| 169 |  97 | Too old or Too Young |
+| 170 |  19 | Too old or Too Young |
+| 171 | 100 | Too old or Too Young |
+| 172 |  42 | Too old or Too Young |
+| 173 |  63 | Too old or Too Young |
+| 174 |  94 | Too old or Too Young |
+| 175 | 100 | Too old or Too Young |
+| 176 |  28 | Too old or Too Young |
+| 177 | 100 | Too old or Too Young |
+| 178 |  98 | Too old or Too Young |
+| 179 |  91 | Too old or Too Young |
+| 180 |  89 | Too old or Too Young |
+| 181 |  88 | Too old or Too Young |
+| 182 |  79 | Too old or Too Young |
+| 183 |  32 | Too old or Too Young |
+| 184 |  32 | Too old or Too Young |
+| 185 |  99 | Too old or Too Young |
+| 186 |  66 | Too old or Too Young |
+| 187 |  64 | Too old or Too Young |
+| 188 |  16 | Too old or Too Young |
+| 189 |  43 | Too old or Too Young |
+| 190 |  98 | Too old or Too Young |
+| 191 |  69 | Too old or Too Young |
+| 192 |  45 | Too old or Too Young |
+| 193 |  83 | Too old or Too Young |
+| 194 |  28 | Too old or Too Young |
+| 195 |  39 | Too old or Too Young |
+| 196 |  68 | Too old or Too Young |
+| 197 |  94 | Too old or Too Young |
+| 198 |  69 | Too old or Too Young |
+| 199 |  81 | Too old or Too Young |
+| 200 |  73 | Too old or Too Young |
+| 201 |  65 | Too old or Too Young |
+| 202 |  21 | Too old or Too Young |
+| 203 |  79 | Too old or Too Young |
+| 204 |  79 | Too old or Too Young |
+| 205 |  20 | Too old or Too Young |
+| 206 |  83 | Too old or Too Young |
+| 207 |  71 | Too old or Too Young |
+| 208 |  42 | Too old or Too Young |
+| 209 |  71 | Too old or Too Young |
+| 210 |  42 | Too old or Too Young |
+| 211 |  32 | Too old or Too Young |
+| 212 |  42 | Too old or Too Young |
+| 213 |  36 | Too old or Too Young |
+| 214 |  46 | Too old or Too Young |
+| 215 |  21 | Too old or Too Young |
+| 216 |  66 | Too old or Too Young |
+| 217 |  66 | Too old or Too Young |
+| 218 |  92 | Too old or Too Young |
+| 219 |  53 | Too old or Too Young |
+| 220 |  94 | Too old or Too Young |
+| 221 |  14 | Too old or Too Young |
+| 222 |  75 | Too old or Too Young |
+| 223 |  65 | Too old or Too Young |
+| 224 |  63 | Too old or Too Young |
+| 225 |  27 | Too old or Too Young |
+| 226 |  87 | Too old or Too Young |
+| 227 |  65 | Too old or Too Young |
+| 228 |  78 | Too old or Too Young |
+| 229 |  69 | Too old or Too Young |
+| 230 |  96 | Too old or Too Young |
+| 231 |  90 | Too old or Too Young |
+| 232 |  51 | Too old or Too Young |
+| 233 |  50 | Too old or Too Young |
+| 234 |  41 | Too old or Too Young |
+| 235 |  54 | Too old or Too Young |
+| 236 |  12 | Too old or Too Young |
+| 237 |  75 | Too old or Too Young |
+| 238 |  75 | Too old or Too Young |
+| 239 |  74 | Too old or Too Young |
+| 240 |  93 | Too old or Too Young |
+| 241 |  86 | Too old or Too Young |
+| 242 |  58 | Too old or Too Young |
+| 243 |  80 | Too old or Too Young |
+| 244 |  93 | Too old or Too Young |
+| 245 |  37 | Too old or Too Young |
+| 246 |  81 | Too old or Too Young |
+| 247 |  49 | Too old or Too Young |
+| 248 | 100 | Too old or Too Young |
+| 249 |  42 | Too old or Too Young |
+| 250 |  67 | Too old or Too Young |
+| 251 |  34 | Too old or Too Young |
+| 252 |  22 | Too old or Too Young |
+| 253 |  79 | Too old or Too Young |
+| 254 |  94 | Too old or Too Young |
+| 255 |  66 | Too old or Too Young |
+| 256 |  80 | Too old or Too Young |
+| 257 |  24 | Too old or Too Young |
+| 258 |  92 | Too old or Too Young |
+| 259 |  77 | Too old or Too Young |
+| 260 |  27 | Too old or Too Young |
+| 261 |  58 | Too old or Too Young |
+| 262 |  17 | Too old or Too Young |
+| 263 |  82 | Too old or Too Young |
+| 264 |  26 | Too old or Too Young |
+| 265 |  87 | Too old or Too Young |
+| 266 |  91 | Too old or Too Young |
+| 267 |  82 | Too old or Too Young |
+| 268 |  86 | Too old or Too Young |
+| 269 |  98 | Too old or Too Young |
+| 270 |  75 | Too old or Too Young |
+| 271 |  82 | Too old or Too Young |
+| 272 |  58 | Too old or Too Young |
+| 273 |  95 | Too old or Too Young |
+| 274 |  37 | Too old or Too Young |
+| 275 |  77 | Too old or Too Young |
+| 276 |  21 | Too old or Too Young |
+| 277 |  13 | Too old or Too Young |
+| 278 |  14 | Too old or Too Young |
+| 279 |  85 | Too old or Too Young |
+| 280 |  10 | Too old or Too Young |
+| 281 |  69 | Too old or Too Young |
+| 282 |  69 | Too old or Too Young |
+| 283 |  81 | Too old or Too Young |
+| 284 |  46 | Too old or Too Young |
+| 285 |  10 | Too old or Too Young |
+| 286 |  14 | Too old or Too Young |
+| 287 |  78 | Too old or Too Young |
+| 288 |  73 | Too old or Too Young |
+| 289 |  37 | Too old or Too Young |
+| 290 |  73 | Too old or Too Young |
+| 291 |  91 | Too old or Too Young |
+| 292 |  23 | Too old or Too Young |
+| 293 |  53 | Too old or Too Young |
+| 294 |  64 | Too old or Too Young |
+| 295 |  97 | Too old or Too Young |
+| 296 |  54 | Too old or Too Young |
+| 297 |  94 | Too old or Too Young |
+| 298 |  28 | Too old or Too Young |
+| 299 |  83 | Too old or Too Young |
+| 300 |  42 | Too old or Too Young |
+| 301 |  17 | Too old or Too Young |
+| 302 |  68 | Too old or Too Young |
+| 303 |  82 | Too old or Too Young |
+| 304 |  54 | Too old or Too Young |
+| 305 |  87 | Too old or Too Young |
+| 306 |  42 | Too old or Too Young |
+| 307 |  48 | Too old or Too Young |
+| 308 |  93 | Too old or Too Young |
+| 309 |  12 | Too old or Too Young |
+| 310 |  50 | Too old or Too Young |
+| 311 |  36 | Too old or Too Young |
+| 312 |  50 | Too old or Too Young |
+| 313 |  11 | Too old or Too Young |
+| 314 |  11 | Too old or Too Young |
+| 315 |  28 | Too old or Too Young |
+| 316 |  16 | Too old or Too Young |
+| 317 |  19 | Too old or Too Young |
+| 318 |  90 | Too old or Too Young |
+| 319 |  73 | Too old or Too Young |
+| 320 |  86 | Too old or Too Young |
+| 321 |  33 | Too old or Too Young |
+| 322 |  38 | Too old or Too Young |
+| 323 |  65 | Too old or Too Young |
+| 324 |  58 | Too old or Too Young |
+| 325 |  59 | Too old or Too Young |
+| 326 |  99 | Too old or Too Young |
+| 327 |  10 | Too old or Too Young |
+| 328 |  83 | Too old or Too Young |
+| 329 |  39 | Too old or Too Young |
+| 330 |  91 | Too old or Too Young |
+| 331 |  75 | Too old or Too Young |
+| 332 |  79 | Too old or Too Young |
+| 333 |  39 | Too old or Too Young |
+| 334 |  56 | Too old or Too Young |
+| 335 |  41 | Too old or Too Young |
+| 336 |  96 | Too old or Too Young |
+| 337 |  35 | Too old or Too Young |
+| 338 |  15 | Too old or Too Young |
+| 339 |  78 | Too old or Too Young |
+| 340 |  84 | Too old or Too Young |
+| 341 |  49 | Too old or Too Young |
+| 342 |  92 | Too old or Too Young |
+| 343 |  49 | Too old or Too Young |
+| 344 |  62 | Too old or Too Young |
+| 345 |  80 | Too old or Too Young |
+| 346 |  32 | Too old or Too Young |
+| 347 |  19 | Too old or Too Young |
+| 348 |  18 | border               |
+| 349 |  73 | Too old or Too Young |
+| 350 |  44 | Too old or Too Young |
+| 351 |  38 | Too old or Too Young |
+| 352 |  22 | Too old or Too Young |
+| 353 |  21 | Too old or Too Young |
+| 354 |  16 | Too old or Too Young |
+| 355 |  76 | Too old or Too Young |
+| 356 |  50 | Too old or Too Young |
+| 357 |  30 | Too old or Too Young |
+| 358 |  30 | Too old or Too Young |
+| 359 |  35 | Too old or Too Young |
+| 360 |  28 | Too old or Too Young |
+| 361 |  74 | Too old or Too Young |
+| 362 |  59 | Too old or Too Young |
+| 363 |  61 | Too old or Too Young |
+| 364 |  77 | Too old or Too Young |
++-----+-----+----------------------+
+364 rows in set (0.00 sec)
+
+mysql> SELECT id, age, IF (age > 18, 'major', 'minor') as Tag
+    -> FROM persons;
++-----+-----+-------+
+| id  | age | Tag   |
++-----+-----+-------+
+|   1 |  65 | major |
+|   2 |  70 | major |
+|   3 |  82 | major |
+|   4 |  60 | major |
+|   5 |  86 | major |
+|   6 |  26 | major |
+|   7 |  21 | major |
+|   8 |  92 | major |
+|   9 |  60 | major |
+|  10 |  48 | major |
+|  11 |  87 | major |
+|  12 |  90 | major |
+|  13 |  65 | major |
+|  14 |  40 | major |
+|  15 |  73 | major |
+|  16 |  95 | major |
+|  17 |  35 | major |
+|  18 |  75 | major |
+|  19 |  41 | major |
+|  20 |  69 | major |
+|  21 |  81 | major |
+|  22 |  46 | major |
+|  23 |  77 | major |
+|  24 |  13 | minor |
+|  25 |  88 | major |
+|  26 |  38 | major |
+|  27 |  94 | major |
+|  28 |  64 | major |
+|  29 |  91 | major |
+|  30 |  77 | major |
+|  31 |  18 | minor |
+|  32 |  74 | major |
+|  33 |  75 | major |
+|  34 |  98 | major |
+|  35 |  26 | major |
+|  36 |  58 | major |
+|  37 |  56 | major |
+|  38 |  19 | major |
+|  39 |  71 | major |
+|  40 |  81 | major |
+|  41 |  78 | major |
+|  42 |  62 | major |
+|  43 |  23 | major |
+|  44 |  35 | major |
+|  45 |  83 | major |
+|  46 |  63 | major |
+|  47 |  50 | major |
+|  48 |  25 | major |
+|  49 |  57 | major |
+|  50 |  30 | major |
+|  51 |  61 | major |
+|  52 |  21 | major |
+|  53 |  83 | major |
+|  54 |  72 | major |
+|  55 |  79 | major |
+|  56 |  27 | major |
+|  57 |  55 | major |
+|  58 |  80 | major |
+|  59 |  10 | minor |
+|  60 |  49 | major |
+|  61 |  79 | major |
+|  62 |  99 | major |
+|  63 |  65 | major |
+|  64 |  67 | major |
+|  65 |  25 | major |
+|  66 |  38 | major |
+|  67 |  39 | major |
+|  68 |  47 | major |
+|  69 |  46 | major |
+|  70 |  50 | major |
+|  71 |  71 | major |
+|  72 |  84 | major |
+|  73 |  68 | major |
+|  74 |  53 | major |
+|  75 |  17 | minor |
+|  76 |  37 | major |
+|  77 |  56 | major |
+|  78 |  51 | major |
+|  79 |  55 | major |
+|  80 |  28 | major |
+|  81 |  49 | major |
+|  82 |  97 | major |
+|  83 |  78 | major |
+|  84 |  19 | major |
+|  85 |  93 | major |
+|  86 |  78 | major |
+|  87 |  91 | major |
+|  88 |  35 | major |
+|  89 |  54 | major |
+|  90 |  33 | major |
+|  91 |  34 | major |
+|  92 |  85 | major |
+|  93 |  79 | major |
+|  94 |  83 | major |
+|  95 |  34 | major |
+|  96 |  22 | major |
+|  97 |  43 | major |
+|  98 |  11 | minor |
+|  99 |  18 | minor |
+| 100 |  82 | major |
+| 101 |  82 | major |
+| 102 |  41 | major |
+| 103 |  28 | major |
+| 104 |  26 | major |
+| 105 |  98 | major |
+| 106 |  72 | major |
+| 107 |  68 | major |
+| 108 |  32 | major |
+| 109 |  31 | major |
+| 110 |  16 | minor |
+| 111 |  88 | major |
+| 112 |  38 | major |
+| 113 |  71 | major |
+| 114 |  95 | major |
+| 115 |  63 | major |
+| 116 |  21 | major |
+| 117 |  75 | major |
+| 118 |  42 | major |
+| 119 |  71 | major |
+| 120 |  85 | major |
+| 121 |  89 | major |
+| 122 |  64 | major |
+| 123 |  43 | major |
+| 124 |  74 | major |
+| 125 |  72 | major |
+| 126 |  81 | major |
+| 127 |  90 | major |
+| 128 |  54 | major |
+| 129 |  18 | minor |
+| 130 |  62 | major |
+| 131 |  57 | major |
+| 132 |  24 | major |
+| 133 |  54 | major |
+| 134 |  16 | minor |
+| 135 |  21 | major |
+| 136 |  40 | major |
+| 137 |  87 | major |
+| 138 |  40 | major |
+| 139 |  56 | major |
+| 140 |  83 | major |
+| 141 |  23 | major |
+| 142 |  31 | major |
+| 143 |  59 | major |
+| 144 |  27 | major |
+| 145 |  60 | major |
+| 146 |  91 | major |
+| 147 |  80 | major |
+| 148 |  59 | major |
+| 149 |  13 | minor |
+| 150 |  48 | major |
+| 151 |  58 | major |
+| 152 |  75 | major |
+| 153 |  68 | major |
+| 154 |  61 | major |
+| 155 |  18 | minor |
+| 156 |  62 | major |
+| 157 |  78 | major |
+| 158 |  16 | minor |
+| 159 |  69 | major |
+| 160 |  38 | major |
+| 161 |  35 | major |
+| 162 |  98 | major |
+| 163 |  21 | major |
+| 164 |  81 | major |
+| 165 |  72 | major |
+| 166 |  28 | major |
+| 167 |  62 | major |
+| 168 |  38 | major |
+| 169 |  97 | major |
+| 170 |  19 | major |
+| 171 | 100 | major |
+| 172 |  42 | major |
+| 173 |  63 | major |
+| 174 |  94 | major |
+| 175 | 100 | major |
+| 176 |  28 | major |
+| 177 | 100 | major |
+| 178 |  98 | major |
+| 179 |  91 | major |
+| 180 |  89 | major |
+| 181 |  88 | major |
+| 182 |  79 | major |
+| 183 |  32 | major |
+| 184 |  32 | major |
+| 185 |  99 | major |
+| 186 |  66 | major |
+| 187 |  64 | major |
+| 188 |  16 | minor |
+| 189 |  43 | major |
+| 190 |  98 | major |
+| 191 |  69 | major |
+| 192 |  45 | major |
+| 193 |  83 | major |
+| 194 |  28 | major |
+| 195 |  39 | major |
+| 196 |  68 | major |
+| 197 |  94 | major |
+| 198 |  69 | major |
+| 199 |  81 | major |
+| 200 |  73 | major |
+| 201 |  65 | major |
+| 202 |  21 | major |
+| 203 |  79 | major |
+| 204 |  79 | major |
+| 205 |  20 | major |
+| 206 |  83 | major |
+| 207 |  71 | major |
+| 208 |  42 | major |
+| 209 |  71 | major |
+| 210 |  42 | major |
+| 211 |  32 | major |
+| 212 |  42 | major |
+| 213 |  36 | major |
+| 214 |  46 | major |
+| 215 |  21 | major |
+| 216 |  66 | major |
+| 217 |  66 | major |
+| 218 |  92 | major |
+| 219 |  53 | major |
+| 220 |  94 | major |
+| 221 |  14 | minor |
+| 222 |  75 | major |
+| 223 |  65 | major |
+| 224 |  63 | major |
+| 225 |  27 | major |
+| 226 |  87 | major |
+| 227 |  65 | major |
+| 228 |  78 | major |
+| 229 |  69 | major |
+| 230 |  96 | major |
+| 231 |  90 | major |
+| 232 |  51 | major |
+| 233 |  50 | major |
+| 234 |  41 | major |
+| 235 |  54 | major |
+| 236 |  12 | minor |
+| 237 |  75 | major |
+| 238 |  75 | major |
+| 239 |  74 | major |
+| 240 |  93 | major |
+| 241 |  86 | major |
+| 242 |  58 | major |
+| 243 |  80 | major |
+| 244 |  93 | major |
+| 245 |  37 | major |
+| 246 |  81 | major |
+| 247 |  49 | major |
+| 248 | 100 | major |
+| 249 |  42 | major |
+| 250 |  67 | major |
+| 251 |  34 | major |
+| 252 |  22 | major |
+| 253 |  79 | major |
+| 254 |  94 | major |
+| 255 |  66 | major |
+| 256 |  80 | major |
+| 257 |  24 | major |
+| 258 |  92 | major |
+| 259 |  77 | major |
+| 260 |  27 | major |
+| 261 |  58 | major |
+| 262 |  17 | minor |
+| 263 |  82 | major |
+| 264 |  26 | major |
+| 265 |  87 | major |
+| 266 |  91 | major |
+| 267 |  82 | major |
+| 268 |  86 | major |
+| 269 |  98 | major |
+| 270 |  75 | major |
+| 271 |  82 | major |
+| 272 |  58 | major |
+| 273 |  95 | major |
+| 274 |  37 | major |
+| 275 |  77 | major |
+| 276 |  21 | major |
+| 277 |  13 | minor |
+| 278 |  14 | minor |
+| 279 |  85 | major |
+| 280 |  10 | minor |
+| 281 |  69 | major |
+| 282 |  69 | major |
+| 283 |  81 | major |
+| 284 |  46 | major |
+| 285 |  10 | minor |
+| 286 |  14 | minor |
+| 287 |  78 | major |
+| 288 |  73 | major |
+| 289 |  37 | major |
+| 290 |  73 | major |
+| 291 |  91 | major |
+| 292 |  23 | major |
+| 293 |  53 | major |
+| 294 |  64 | major |
+| 295 |  97 | major |
+| 296 |  54 | major |
+| 297 |  94 | major |
+| 298 |  28 | major |
+| 299 |  83 | major |
+| 300 |  42 | major |
+| 301 |  17 | minor |
+| 302 |  68 | major |
+| 303 |  82 | major |
+| 304 |  54 | major |
+| 305 |  87 | major |
+| 306 |  42 | major |
+| 307 |  48 | major |
+| 308 |  93 | major |
+| 309 |  12 | minor |
+| 310 |  50 | major |
+| 311 |  36 | major |
+| 312 |  50 | major |
+| 313 |  11 | minor |
+| 314 |  11 | minor |
+| 315 |  28 | major |
+| 316 |  16 | minor |
+| 317 |  19 | major |
+| 318 |  90 | major |
+| 319 |  73 | major |
+| 320 |  86 | major |
+| 321 |  33 | major |
+| 322 |  38 | major |
+| 323 |  65 | major |
+| 324 |  58 | major |
+| 325 |  59 | major |
+| 326 |  99 | major |
+| 327 |  10 | minor |
+| 328 |  83 | major |
+| 329 |  39 | major |
+| 330 |  91 | major |
+| 331 |  75 | major |
+| 332 |  79 | major |
+| 333 |  39 | major |
+| 334 |  56 | major |
+| 335 |  41 | major |
+| 336 |  96 | major |
+| 337 |  35 | major |
+| 338 |  15 | minor |
+| 339 |  78 | major |
+| 340 |  84 | major |
+| 341 |  49 | major |
+| 342 |  92 | major |
+| 343 |  49 | major |
+| 344 |  62 | major |
+| 345 |  80 | major |
+| 346 |  32 | major |
+| 347 |  19 | major |
+| 348 |  18 | minor |
+| 349 |  73 | major |
+| 350 |  44 | major |
+| 351 |  38 | major |
+| 352 |  22 | major |
+| 353 |  21 | major |
+| 354 |  16 | minor |
+| 355 |  76 | major |
+| 356 |  50 | major |
+| 357 |  30 | major |
+| 358 |  30 | major |
+| 359 |  35 | major |
+| 360 |  28 | major |
+| 361 |  74 | major |
+| 362 |  59 | major |
+| 363 |  61 | major |
+| 364 |  77 | major |
++-----+-----+-------+
+364 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(id) as Count, gender,
+    -> IF (age >= 20 AND age <= 24, '20 - 24', IF(age >= 25 AND Age <= 29, '25 - 29', 'Others')) as Age_range
+    -> FROM persons
+    -> GROUP BY Age_range , gender;
++-------+--------+-----------+
+| Count | gender | Age_range |
++-------+--------+-----------+
+|   149 | F      | Others    |
+|   179 | M      | Others    |
+|     8 | F      | 25 - 29   |
+|    12 | M      | 20 - 24   |
+|    10 | M      | 25 - 29   |
+|     6 | F      | 20 - 24   |
++-------+--------+-----------+
+6 rows in set (0.00 sec)
+
+mysql>
+
+
+mysql> select * from persons where age = 18;
++-----+----------+--------+-----+---------+
+| id  | name     | gender | age | country |
++-----+----------+--------+-----+---------+
+|  31 | Hazel    | F      |  18 | Italy   |
+|  99 | Bennett  | M      |  18 | Brazil  |
+| 129 | Harrison | M      |  18 | India   |
+| 155 | Ayden    | M      |  18 | Chile   |
+| 348 | Amina    | F      |  18 | USA     |
++-----+----------+--------+-----+---------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT id, gender,
+    -> CASE Age
+    -> WHEN 18 THEN 'border'
+    -> WHEN < 18 THEN 'Too young'
+    -> ELSE 'Too old '
+    -> END AS Tag
+    -> FROM persons;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '< 18 THEN 'Too young'
+ELSE 'Too old '
+END AS Tag
+FROM persons' at line 4
+mysql> SELECT id, gender,
+    -> CASE
+    -> WHEN Age = 18 THEN 'border'
+    -> WHEN Age < 18 THEN 'Too young'
+    -> ELSE 'Too old '
+    -> END AS Tag
+    -> FROM persons;
++-----+--------+-----------+
+| id  | gender | Tag       |
++-----+--------+-----------+
+|   1 | F      | Too old   |
+|   2 | M      | Too old   |
+|   3 | M      | Too old   |
+|   4 | M      | Too old   |
+|   5 | F      | Too old   |
+|   6 | F      | Too old   |
+|   7 | M      | Too old   |
+|   8 | M      | Too old   |
+|   9 | F      | Too old   |
+|  10 | F      | Too old   |
+|  11 | F      | Too old   |
+|  12 | M      | Too old   |
+|  13 | F      | Too old   |
+|  14 | F      | Too old   |
+|  15 | F      | Too old   |
+|  16 | F      | Too old   |
+|  17 | M      | Too old   |
+|  18 | M      | Too old   |
+|  19 | M      | Too old   |
+|  20 | F      | Too old   |
+|  21 | F      | Too old   |
+|  22 | F      | Too old   |
+|  23 | F      | Too old   |
+|  24 | F      | Too young |
+|  25 | F      | Too old   |
+|  26 | M      | Too old   |
+|  27 | M      | Too old   |
+|  28 | M      | Too old   |
+|  29 | M      | Too old   |
+|  30 | F      | Too old   |
+|  31 | F      | border    |
+|  32 | F      | Too old   |
+|  33 | F      | Too old   |
+|  34 | F      | Too old   |
+|  35 | M      | Too old   |
+|  36 | M      | Too old   |
+|  37 | M      | Too old   |
+|  38 | F      | Too old   |
+|  39 | F      | Too old   |
+|  40 | M      | Too old   |
+|  41 | M      | Too old   |
+|  42 | M      | Too old   |
+|  43 | M      | Too old   |
+|  44 | M      | Too old   |
+|  45 | M      | Too old   |
+|  46 | M      | Too old   |
+|  47 | F      | Too old   |
+|  48 | M      | Too old   |
+|  49 | M      | Too old   |
+|  50 | F      | Too old   |
+|  51 | M      | Too old   |
+|  52 | F      | Too old   |
+|  53 | F      | Too old   |
+|  54 | F      | Too old   |
+|  55 | F      | Too old   |
+|  56 | F      | Too old   |
+|  57 | F      | Too old   |
+|  58 | M      | Too old   |
+|  59 | M      | Too young |
+|  60 | M      | Too old   |
+|  61 | M      | Too old   |
+|  62 | M      | Too old   |
+|  63 | M      | Too old   |
+|  64 | F      | Too old   |
+|  65 | F      | Too old   |
+|  66 | F      | Too old   |
+|  67 | F      | Too old   |
+|  68 | M      | Too old   |
+|  69 | M      | Too old   |
+|  70 | M      | Too old   |
+|  71 | M      | Too old   |
+|  72 | M      | Too old   |
+|  73 | M      | Too old   |
+|  74 | F      | Too old   |
+|  75 | F      | Too young |
+|  76 | F      | Too old   |
+|  77 | F      | Too old   |
+|  78 | M      | Too old   |
+|  79 | M      | Too old   |
+|  80 | M      | Too old   |
+|  81 | M      | Too old   |
+|  82 | F      | Too old   |
+|  83 | F      | Too old   |
+|  84 | F      | Too old   |
+|  85 | F      | Too old   |
+|  86 | F      | Too old   |
+|  87 | M      | Too old   |
+|  88 | M      | Too old   |
+|  89 | M      | Too old   |
+|  90 | M      | Too old   |
+|  91 | F      | Too old   |
+|  92 | F      | Too old   |
+|  93 | F      | Too old   |
+|  94 | M      | Too old   |
+|  95 | M      | Too old   |
+|  96 | F      | Too old   |
+|  97 | F      | Too old   |
+|  98 | M      | Too young |
+|  99 | M      | border    |
+| 100 | M      | Too old   |
+| 101 | M      | Too old   |
+| 102 | M      | Too old   |
+| 103 | M      | Too old   |
+| 104 | F      | Too old   |
+| 105 | F      | Too old   |
+| 106 | M      | Too old   |
+| 107 | M      | Too old   |
+| 108 | M      | Too old   |
+| 109 | F      | Too old   |
+| 110 | F      | Too young |
+| 111 | F      | Too old   |
+| 112 | M      | Too old   |
+| 113 | M      | Too old   |
+| 114 | M      | Too old   |
+| 115 | M      | Too old   |
+| 116 | F      | Too old   |
+| 117 | F      | Too old   |
+| 118 | M      | Too old   |
+| 119 | M      | Too old   |
+| 120 | M      | Too old   |
+| 121 | M      | Too old   |
+| 122 | M      | Too old   |
+| 123 | F      | Too old   |
+| 124 | F      | Too old   |
+| 125 | F      | Too old   |
+| 126 | M      | Too old   |
+| 127 | M      | Too old   |
+| 128 | M      | Too old   |
+| 129 | M      | border    |
+| 130 | F      | Too old   |
+| 131 | F      | Too old   |
+| 132 | F      | Too old   |
+| 133 | M      | Too old   |
+| 134 | M      | Too young |
+| 135 | M      | Too old   |
+| 136 | M      | Too old   |
+| 137 | M      | Too old   |
+| 138 | F      | Too old   |
+| 139 | F      | Too old   |
+| 140 | F      | Too old   |
+| 141 | M      | Too old   |
+| 142 | M      | Too old   |
+| 143 | M      | Too old   |
+| 144 | M      | Too old   |
+| 145 | F      | Too old   |
+| 146 | M      | Too old   |
+| 147 | M      | Too old   |
+| 148 | M      | Too old   |
+| 149 | F      | Too young |
+| 150 | F      | Too old   |
+| 151 | F      | Too old   |
+| 152 | M      | Too old   |
+| 153 | M      | Too old   |
+| 154 | F      | Too old   |
+| 155 | M      | border    |
+| 156 | M      | Too old   |
+| 157 | M      | Too old   |
+| 158 | M      | Too young |
+| 159 | F      | Too old   |
+| 160 | F      | Too old   |
+| 161 | M      | Too old   |
+| 162 | M      | Too old   |
+| 163 | M      | Too old   |
+| 164 | M      | Too old   |
+| 165 | F      | Too old   |
+| 166 | F      | Too old   |
+| 167 | M      | Too old   |
+| 168 | M      | Too old   |
+| 169 | M      | Too old   |
+| 170 | M      | Too old   |
+| 171 | F      | Too old   |
+| 172 | F      | Too old   |
+| 173 | M      | Too old   |
+| 174 | M      | Too old   |
+| 175 | M      | Too old   |
+| 176 | M      | Too old   |
+| 177 | F      | Too old   |
+| 178 | F      | Too old   |
+| 179 | M      | Too old   |
+| 180 | M      | Too old   |
+| 181 | M      | Too old   |
+| 182 | M      | Too old   |
+| 183 | F      | Too old   |
+| 184 | F      | Too old   |
+| 185 | F      | Too old   |
+| 186 | M      | Too old   |
+| 187 | M      | Too old   |
+| 188 | M      | Too young |
+| 189 | M      | Too old   |
+| 190 | M      | Too old   |
+| 191 | F      | Too old   |
+| 192 | F      | Too old   |
+| 193 | F      | Too old   |
+| 194 | M      | Too old   |
+| 195 | M      | Too old   |
+| 196 | M      | Too old   |
+| 197 | F      | Too old   |
+| 198 | F      | Too old   |
+| 199 | F      | Too old   |
+| 200 | M      | Too old   |
+| 201 | M      | Too old   |
+| 202 | M      | Too old   |
+| 203 | M      | Too old   |
+| 204 | M      | Too old   |
+| 205 | M      | Too old   |
+| 206 | F      | Too old   |
+| 207 | F      | Too old   |
+| 208 | F      | Too old   |
+| 209 | M      | Too old   |
+| 210 | M      | Too old   |
+| 211 | M      | Too old   |
+| 212 | M      | Too old   |
+| 213 | F      | Too old   |
+| 214 | F      | Too old   |
+| 215 | F      | Too old   |
+| 216 | M      | Too old   |
+| 217 | M      | Too old   |
+| 218 | M      | Too old   |
+| 219 | M      | Too old   |
+| 220 | M      | Too old   |
+| 221 | M      | Too young |
+| 222 | F      | Too old   |
+| 223 | F      | Too old   |
+| 224 | F      | Too old   |
+| 225 | M      | Too old   |
+| 226 | M      | Too old   |
+| 227 | M      | Too old   |
+| 228 | M      | Too old   |
+| 229 | M      | Too old   |
+| 230 | F      | Too old   |
+| 231 | F      | Too old   |
+| 232 | F      | Too old   |
+| 233 | F      | Too old   |
+| 234 | F      | Too old   |
+| 235 | F      | Too old   |
+| 236 | M      | Too young |
+| 237 | M      | Too old   |
+| 238 | M      | Too old   |
+| 239 | M      | Too old   |
+| 240 | M      | Too old   |
+| 241 | F      | Too old   |
+| 242 | F      | Too old   |
+| 243 | F      | Too old   |
+| 244 | F      | Too old   |
+| 245 | M      | Too old   |
+| 246 | M      | Too old   |
+| 247 | M      | Too old   |
+| 248 | F      | Too old   |
+| 249 | F      | Too old   |
+| 250 | F      | Too old   |
+| 251 | F      | Too old   |
+| 252 | M      | Too old   |
+| 253 | M      | Too old   |
+| 254 | M      | Too old   |
+| 255 | M      | Too old   |
+| 256 | M      | Too old   |
+| 257 | M      | Too old   |
+| 258 | F      | Too old   |
+| 259 | F      | Too old   |
+| 260 | F      | Too old   |
+| 261 | F      | Too old   |
+| 262 | F      | Too young |
+| 263 | M      | Too old   |
+| 264 | M      | Too old   |
+| 265 | M      | Too old   |
+| 266 | F      | Too old   |
+| 267 | F      | Too old   |
+| 268 | M      | Too old   |
+| 269 | M      | Too old   |
+| 270 | M      | Too old   |
+| 271 | M      | Too old   |
+| 272 | F      | Too old   |
+| 273 | F      | Too old   |
+| 274 | F      | Too old   |
+| 275 | M      | Too old   |
+| 276 | M      | Too old   |
+| 277 | M      | Too young |
+| 278 | M      | Too young |
+| 279 | F      | Too old   |
+| 280 | F      | Too young |
+| 281 | F      | Too old   |
+| 282 | F      | Too old   |
+| 283 | M      | Too old   |
+| 284 | M      | Too old   |
+| 285 | M      | Too young |
+| 286 | F      | Too young |
+| 287 | F      | Too old   |
+| 288 | F      | Too old   |
+| 289 | M      | Too old   |
+| 290 | M      | Too old   |
+| 291 | M      | Too old   |
+| 292 | M      | Too old   |
+| 293 | F      | Too old   |
+| 294 | F      | Too old   |
+| 295 | F      | Too old   |
+| 296 | M      | Too old   |
+| 297 | M      | Too old   |
+| 298 | M      | Too old   |
+| 299 | M      | Too old   |
+| 300 | M      | Too old   |
+| 301 | M      | Too young |
+| 302 | F      | Too old   |
+| 303 | F      | Too old   |
+| 304 | M      | Too old   |
+| 305 | M      | Too old   |
+| 306 | M      | Too old   |
+| 307 | M      | Too old   |
+| 308 | M      | Too old   |
+| 309 | F      | Too young |
+| 310 | F      | Too old   |
+| 311 | F      | Too old   |
+| 312 | M      | Too old   |
+| 313 | M      | Too young |
+| 314 | M      | Too young |
+| 315 | F      | Too old   |
+| 316 | F      | Too young |
+| 317 | M      | Too old   |
+| 318 | M      | Too old   |
+| 319 | F      | Too old   |
+| 320 | F      | Too old   |
+| 321 | F      | Too old   |
+| 322 | M      | Too old   |
+| 323 | M      | Too old   |
+| 324 | F      | Too old   |
+| 325 | F      | Too old   |
+| 326 | F      | Too old   |
+| 327 | M      | Too young |
+| 328 | M      | Too old   |
+| 329 | M      | Too old   |
+| 330 | F      | Too old   |
+| 331 | F      | Too old   |
+| 332 | M      | Too old   |
+| 333 | M      | Too old   |
+| 334 | M      | Too old   |
+| 335 | M      | Too old   |
+| 336 | F      | Too old   |
+| 337 | F      | Too old   |
+| 338 | M      | Too young |
+| 339 | M      | Too old   |
+| 340 | M      | Too old   |
+| 341 | F      | Too old   |
+| 342 | F      | Too old   |
+| 343 | M      | Too old   |
+| 344 | M      | Too old   |
+| 345 | M      | Too old   |
+| 346 | M      | Too old   |
+| 347 | M      | Too old   |
+| 348 | F      | border    |
+| 349 | F      | Too old   |
+| 350 | F      | Too old   |
+| 351 | F      | Too old   |
+| 352 | F      | Too old   |
+| 353 | M      | Too old   |
+| 354 | M      | Too young |
+| 355 | M      | Too old   |
+| 356 | F      | Too old   |
+| 357 | F      | Too old   |
+| 358 | F      | Too old   |
+| 359 | F      | Too old   |
+| 360 | F      | Too old   |
+| 361 | F      | Too old   |
+| 362 | F      | Too old   |
+| 363 | F      | Too old   |
+| 364 | F      | Too old   |
++-----+--------+-----------+
+364 rows in set (0.04 sec)
+
+
+mysql> SELECT id, gender,
+    -> CASE
+    -> WHEN Age = 18 THEN 'border'
+    -> WHEN Age > 18 THEN 'Too Old'
+    -> ELSE 'Too Young '
+    -> END AS Tag
+    -> FROM persons;
++-----+--------+------------+
+| id  | gender | Tag        |
++-----+--------+------------+
+|   1 | F      | Too Old    |
+|   2 | M      | Too Old    |
+|   3 | M      | Too Old    |
+|   4 | M      | Too Old    |
+|   5 | F      | Too Old    |
+|   6 | F      | Too Old    |
+|   7 | M      | Too Old    |
+|   8 | M      | Too Old    |
+|   9 | F      | Too Old    |
+|  10 | F      | Too Old    |
+|  11 | F      | Too Old    |
+|  12 | M      | Too Old    |
+|  13 | F      | Too Old    |
+|  14 | F      | Too Old    |
+|  15 | F      | Too Old    |
+|  16 | F      | Too Old    |
+|  17 | M      | Too Old    |
+|  18 | M      | Too Old    |
+|  19 | M      | Too Old    |
+|  20 | F      | Too Old    |
+|  21 | F      | Too Old    |
+|  22 | F      | Too Old    |
+|  23 | F      | Too Old    |
+|  24 | F      | Too Young  |
+|  25 | F      | Too Old    |
+|  26 | M      | Too Old    |
+|  27 | M      | Too Old    |
+|  28 | M      | Too Old    |
+|  29 | M      | Too Old    |
+|  30 | F      | Too Old    |
+|  31 | F      | border     |
+|  32 | F      | Too Old    |
+|  33 | F      | Too Old    |
+|  34 | F      | Too Old    |
+|  35 | M      | Too Old    |
+|  36 | M      | Too Old    |
+|  37 | M      | Too Old    |
+|  38 | F      | Too Old    |
+|  39 | F      | Too Old    |
+|  40 | M      | Too Old    |
+|  41 | M      | Too Old    |
+|  42 | M      | Too Old    |
+|  43 | M      | Too Old    |
+|  44 | M      | Too Old    |
+|  45 | M      | Too Old    |
+|  46 | M      | Too Old    |
+|  47 | F      | Too Old    |
+|  48 | M      | Too Old    |
+|  49 | M      | Too Old    |
+|  50 | F      | Too Old    |
+|  51 | M      | Too Old    |
+|  52 | F      | Too Old    |
+|  53 | F      | Too Old    |
+|  54 | F      | Too Old    |
+|  55 | F      | Too Old    |
+|  56 | F      | Too Old    |
+|  57 | F      | Too Old    |
+|  58 | M      | Too Old    |
+|  59 | M      | Too Young  |
+|  60 | M      | Too Old    |
+|  61 | M      | Too Old    |
+|  62 | M      | Too Old    |
+|  63 | M      | Too Old    |
+|  64 | F      | Too Old    |
+|  65 | F      | Too Old    |
+|  66 | F      | Too Old    |
+|  67 | F      | Too Old    |
+|  68 | M      | Too Old    |
+|  69 | M      | Too Old    |
+|  70 | M      | Too Old    |
+|  71 | M      | Too Old    |
+|  72 | M      | Too Old    |
+|  73 | M      | Too Old    |
+|  74 | F      | Too Old    |
+|  75 | F      | Too Young  |
+|  76 | F      | Too Old    |
+|  77 | F      | Too Old    |
+|  78 | M      | Too Old    |
+|  79 | M      | Too Old    |
+|  80 | M      | Too Old    |
+|  81 | M      | Too Old    |
+|  82 | F      | Too Old    |
+|  83 | F      | Too Old    |
+|  84 | F      | Too Old    |
+|  85 | F      | Too Old    |
+|  86 | F      | Too Old    |
+|  87 | M      | Too Old    |
+|  88 | M      | Too Old    |
+|  89 | M      | Too Old    |
+|  90 | M      | Too Old    |
+|  91 | F      | Too Old    |
+|  92 | F      | Too Old    |
+|  93 | F      | Too Old    |
+|  94 | M      | Too Old    |
+|  95 | M      | Too Old    |
+|  96 | F      | Too Old    |
+|  97 | F      | Too Old    |
+|  98 | M      | Too Young  |
+|  99 | M      | border     |
+| 100 | M      | Too Old    |
+| 101 | M      | Too Old    |
+| 102 | M      | Too Old    |
+| 103 | M      | Too Old    |
+| 104 | F      | Too Old    |
+| 105 | F      | Too Old    |
+| 106 | M      | Too Old    |
+| 107 | M      | Too Old    |
+| 108 | M      | Too Old    |
+| 109 | F      | Too Old    |
+| 110 | F      | Too Young  |
+| 111 | F      | Too Old    |
+| 112 | M      | Too Old    |
+| 113 | M      | Too Old    |
+| 114 | M      | Too Old    |
+| 115 | M      | Too Old    |
+| 116 | F      | Too Old    |
+| 117 | F      | Too Old    |
+| 118 | M      | Too Old    |
+| 119 | M      | Too Old    |
+| 120 | M      | Too Old    |
+| 121 | M      | Too Old    |
+| 122 | M      | Too Old    |
+| 123 | F      | Too Old    |
+| 124 | F      | Too Old    |
+| 125 | F      | Too Old    |
+| 126 | M      | Too Old    |
+| 127 | M      | Too Old    |
+| 128 | M      | Too Old    |
+| 129 | M      | border     |
+| 130 | F      | Too Old    |
+| 131 | F      | Too Old    |
+| 132 | F      | Too Old    |
+| 133 | M      | Too Old    |
+| 134 | M      | Too Young  |
+| 135 | M      | Too Old    |
+| 136 | M      | Too Old    |
+| 137 | M      | Too Old    |
+| 138 | F      | Too Old    |
+| 139 | F      | Too Old    |
+| 140 | F      | Too Old    |
+| 141 | M      | Too Old    |
+| 142 | M      | Too Old    |
+| 143 | M      | Too Old    |
+| 144 | M      | Too Old    |
+| 145 | F      | Too Old    |
+| 146 | M      | Too Old    |
+| 147 | M      | Too Old    |
+| 148 | M      | Too Old    |
+| 149 | F      | Too Young  |
+| 150 | F      | Too Old    |
+| 151 | F      | Too Old    |
+| 152 | M      | Too Old    |
+| 153 | M      | Too Old    |
+| 154 | F      | Too Old    |
+| 155 | M      | border     |
+| 156 | M      | Too Old    |
+| 157 | M      | Too Old    |
+| 158 | M      | Too Young  |
+| 159 | F      | Too Old    |
+| 160 | F      | Too Old    |
+| 161 | M      | Too Old    |
+| 162 | M      | Too Old    |
+| 163 | M      | Too Old    |
+| 164 | M      | Too Old    |
+| 165 | F      | Too Old    |
+| 166 | F      | Too Old    |
+| 167 | M      | Too Old    |
+| 168 | M      | Too Old    |
+| 169 | M      | Too Old    |
+| 170 | M      | Too Old    |
+| 171 | F      | Too Old    |
+| 172 | F      | Too Old    |
+| 173 | M      | Too Old    |
+| 174 | M      | Too Old    |
+| 175 | M      | Too Old    |
+| 176 | M      | Too Old    |
+| 177 | F      | Too Old    |
+| 178 | F      | Too Old    |
+| 179 | M      | Too Old    |
+| 180 | M      | Too Old    |
+| 181 | M      | Too Old    |
+| 182 | M      | Too Old    |
+| 183 | F      | Too Old    |
+| 184 | F      | Too Old    |
+| 185 | F      | Too Old    |
+| 186 | M      | Too Old    |
+| 187 | M      | Too Old    |
+| 188 | M      | Too Young  |
+| 189 | M      | Too Old    |
+| 190 | M      | Too Old    |
+| 191 | F      | Too Old    |
+| 192 | F      | Too Old    |
+| 193 | F      | Too Old    |
+| 194 | M      | Too Old    |
+| 195 | M      | Too Old    |
+| 196 | M      | Too Old    |
+| 197 | F      | Too Old    |
+| 198 | F      | Too Old    |
+| 199 | F      | Too Old    |
+| 200 | M      | Too Old    |
+| 201 | M      | Too Old    |
+| 202 | M      | Too Old    |
+| 203 | M      | Too Old    |
+| 204 | M      | Too Old    |
+| 205 | M      | Too Old    |
+| 206 | F      | Too Old    |
+| 207 | F      | Too Old    |
+| 208 | F      | Too Old    |
+| 209 | M      | Too Old    |
+| 210 | M      | Too Old    |
+| 211 | M      | Too Old    |
+| 212 | M      | Too Old    |
+| 213 | F      | Too Old    |
+| 214 | F      | Too Old    |
+| 215 | F      | Too Old    |
+| 216 | M      | Too Old    |
+| 217 | M      | Too Old    |
+| 218 | M      | Too Old    |
+| 219 | M      | Too Old    |
+| 220 | M      | Too Old    |
+| 221 | M      | Too Young  |
+| 222 | F      | Too Old    |
+| 223 | F      | Too Old    |
+| 224 | F      | Too Old    |
+| 225 | M      | Too Old    |
+| 226 | M      | Too Old    |
+| 227 | M      | Too Old    |
+| 228 | M      | Too Old    |
+| 229 | M      | Too Old    |
+| 230 | F      | Too Old    |
+| 231 | F      | Too Old    |
+| 232 | F      | Too Old    |
+| 233 | F      | Too Old    |
+| 234 | F      | Too Old    |
+| 235 | F      | Too Old    |
+| 236 | M      | Too Young  |
+| 237 | M      | Too Old    |
+| 238 | M      | Too Old    |
+| 239 | M      | Too Old    |
+| 240 | M      | Too Old    |
+| 241 | F      | Too Old    |
+| 242 | F      | Too Old    |
+| 243 | F      | Too Old    |
+| 244 | F      | Too Old    |
+| 245 | M      | Too Old    |
+| 246 | M      | Too Old    |
+| 247 | M      | Too Old    |
+| 248 | F      | Too Old    |
+| 249 | F      | Too Old    |
+| 250 | F      | Too Old    |
+| 251 | F      | Too Old    |
+| 252 | M      | Too Old    |
+| 253 | M      | Too Old    |
+| 254 | M      | Too Old    |
+| 255 | M      | Too Old    |
+| 256 | M      | Too Old    |
+| 257 | M      | Too Old    |
+| 258 | F      | Too Old    |
+| 259 | F      | Too Old    |
+| 260 | F      | Too Old    |
+| 261 | F      | Too Old    |
+| 262 | F      | Too Young  |
+| 263 | M      | Too Old    |
+| 264 | M      | Too Old    |
+| 265 | M      | Too Old    |
+| 266 | F      | Too Old    |
+| 267 | F      | Too Old    |
+| 268 | M      | Too Old    |
+| 269 | M      | Too Old    |
+| 270 | M      | Too Old    |
+| 271 | M      | Too Old    |
+| 272 | F      | Too Old    |
+| 273 | F      | Too Old    |
+| 274 | F      | Too Old    |
+| 275 | M      | Too Old    |
+| 276 | M      | Too Old    |
+| 277 | M      | Too Young  |
+| 278 | M      | Too Young  |
+| 279 | F      | Too Old    |
+| 280 | F      | Too Young  |
+| 281 | F      | Too Old    |
+| 282 | F      | Too Old    |
+| 283 | M      | Too Old    |
+| 284 | M      | Too Old    |
+| 285 | M      | Too Young  |
+| 286 | F      | Too Young  |
+| 287 | F      | Too Old    |
+| 288 | F      | Too Old    |
+| 289 | M      | Too Old    |
+| 290 | M      | Too Old    |
+| 291 | M      | Too Old    |
+| 292 | M      | Too Old    |
+| 293 | F      | Too Old    |
+| 294 | F      | Too Old    |
+| 295 | F      | Too Old    |
+| 296 | M      | Too Old    |
+| 297 | M      | Too Old    |
+| 298 | M      | Too Old    |
+| 299 | M      | Too Old    |
+| 300 | M      | Too Old    |
+| 301 | M      | Too Young  |
+| 302 | F      | Too Old    |
+| 303 | F      | Too Old    |
+| 304 | M      | Too Old    |
+| 305 | M      | Too Old    |
+| 306 | M      | Too Old    |
+| 307 | M      | Too Old    |
+| 308 | M      | Too Old    |
+| 309 | F      | Too Young  |
+| 310 | F      | Too Old    |
+| 311 | F      | Too Old    |
+| 312 | M      | Too Old    |
+| 313 | M      | Too Young  |
+| 314 | M      | Too Young  |
+| 315 | F      | Too Old    |
+| 316 | F      | Too Young  |
+| 317 | M      | Too Old    |
+| 318 | M      | Too Old    |
+| 319 | F      | Too Old    |
+| 320 | F      | Too Old    |
+| 321 | F      | Too Old    |
+| 322 | M      | Too Old    |
+| 323 | M      | Too Old    |
+| 324 | F      | Too Old    |
+| 325 | F      | Too Old    |
+| 326 | F      | Too Old    |
+| 327 | M      | Too Young  |
+| 328 | M      | Too Old    |
+| 329 | M      | Too Old    |
+| 330 | F      | Too Old    |
+| 331 | F      | Too Old    |
+| 332 | M      | Too Old    |
+| 333 | M      | Too Old    |
+| 334 | M      | Too Old    |
+| 335 | M      | Too Old    |
+| 336 | F      | Too Old    |
+| 337 | F      | Too Old    |
+| 338 | M      | Too Young  |
+| 339 | M      | Too Old    |
+| 340 | M      | Too Old    |
+| 341 | F      | Too Old    |
+| 342 | F      | Too Old    |
+| 343 | M      | Too Old    |
+| 344 | M      | Too Old    |
+| 345 | M      | Too Old    |
+| 346 | M      | Too Old    |
+| 347 | M      | Too Old    |
+| 348 | F      | border     |
+| 349 | F      | Too Old    |
+| 350 | F      | Too Old    |
+| 351 | F      | Too Old    |
+| 352 | F      | Too Old    |
+| 353 | M      | Too Old    |
+| 354 | M      | Too Young  |
+| 355 | M      | Too Old    |
+| 356 | F      | Too Old    |
+| 357 | F      | Too Old    |
+| 358 | F      | Too Old    |
+| 359 | F      | Too Old    |
+| 360 | F      | Too Old    |
+| 361 | F      | Too Old    |
+| 362 | F      | Too Old    |
+| 363 | F      | Too Old    |
+| 364 | F      | Too Old    |
++-----+--------+------------+
+364 rows in set (0.02 sec)
