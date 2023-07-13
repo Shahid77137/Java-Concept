@@ -1,0 +1,258 @@
+
+
+In JRE we get thre things JVM+Libraries+Other Components
+In JVM it is a Java Virtual Machine that runs the bytecode,and it is also portable
+
+jvm provide run time environment to execute the bytecode
+jre provides jvm and library(runtime environment)
+             
+source code ------------> Bytecodeode --------------------> Machine code 1/0 ------------------> output
+              javac                       jvm / interpreter                    jre
+
+
+Assignments are when we assign a value to data type/variable
+for eg -> int num;
+num = 10;
+Declaration is setting the data type of declaring variable
+for eg -> double x = 12 ;  int y =2;
+
+
+int  ans =  ++x - y++ * x-- / y++ + x++; / x-- ; =5; //it is compilation error.   right ans = downcasting   = (int)++x - y++ * x-- / y++ + x++ / x-- ;
+
+double ans =++x - y++ * x-- / y++ + x++ / x-- ; = 5.3333;
+
+
+double a = 7/22 * (3.14 +2) * 3/5;
+		int = 0
+double = 	 0.96
+
+For eg -> class{
+         
+private int roll; //instance var // *** This keyword always refers to the instance variable of class. Local vaiable can not change instance variable even if they have
+private string name;
+
+int change(int roll){
+roll = roll +10;
+return roll;
+
+   
+}
+
+}
+
+main{
+
+C c = new C();
+ int ans = c.change(30);   // error  // error .... void can not convert into int  ***** Always check the return type of function.
+
+print(c.roll);
+ 
+}
+
+Programming paradigm and programming language
+
+bengali  /// Ami java language sikchi
+hindi..  /// mai java language seekh rha hun
+
+Class vs Object
+
+Class is a encapsulated thing inside which we define our functions and variables;
+Object is the reference of any class that we use by making a object of a class with the help of new keyword 
+
+class is the kind of templete(blue print)
+object is the intance variable of any class by which we can call any method of that class
+
+int add(x,y){     pure .......
+return x +y;
+}
+void add(x,y){
+print ("hahaha");
+return x +y;
+}
+
+public class A {
+int y;
+public A( int x){
+this.x = x; 
+
+}
+int getPrblemnumberer1(){
+return y;
+}
+
+Does Constructor have any return type andy why?
+No. constructor always refer to class it self.
+class variables.
+
+Static... Memory management
+
+metaspace  = change ( fixed); 1kb .......)
+
+class Employee{
+ int id;
+ String name;
+static string company = google;
+static string company2 = facebook;
+string compnay3;
+public A(int id, String name){
+this.id =id;
+this.name = name;
+
+}
+
+void display(){
+print(id+" "+name+" "+company);
+}
+void display2(){
+print(id+""+name+""+company2);
+}
+class main{
+main{
+Emplyee a1 = new A(10,Shahid);
+a.display(); // 10 soumit google;
+
+}
+}
+__________________________________
+
+print(30+50+" hello"); // 80 hello
+
+print("Hello"+50+80);// Hello5080........   
+
+class A{
+int a;
+int b;
+int c;
+A(int soumit, int b, int c){
+this.a = soumit*10;
+this.b =b;
+this.c=c;
+
+}
+
+It will never call to print
+
+}
+
+main{
+main(){
+A a = new A(10,20,30);
+ print(a.a);  //100
+/ 
+
+}
+
+}
+
+OOPS.........................................
+
+
+object orianted programes totally based on object only
+Encapsulation, Inheritance, Interface, Abstract class, polymorphism,  
+Object, Class, Encap, abstraction, polymorphism , inheritance.
+
+Polymorphism -   
+ public int add(int a, int b){
+ return a+b;
+}
+
+public double add(double a, double b){
+return a +b;
+}
+many forms...... one method many behaviors................
+
+1 - compile time
+2 - run time
+
+compile time - compiler will decide which method should work..
+run time - it will decided at run .
+
+compile time - Method overloading.
+run time - method overriding.. dynamic dispatch.dynamic binding...
+
+Method overloading - .......   name will same parameter and return type will different body will also same..
+
+method overriding - name same parameter same return type same body different.
+
+public int add(a,b);
+
+@Override
+public int add(a,b){
+if(a%2===0){
+return a+b;
+}
+}
+
+@Override
+public int add(a,b){
+
+if(a%2 == 1){
+return a + b;
+}
+}
+
+write difference b/w abstract class and concrete class
+
+	Abstract             |        Concrete / Normal Class
+		
+Abstract class may have 
+or not abstract method		  It does not have abstract method
+
+Abstract class must be
+extends by any subclass		  This class is independent so no need to be implemented
+
+The abstract method of 
+this class must be implemented	  this class method can be implement in same class.
+in sub class	
+
+Object can not be created	  Object can be created directly becuase it is independent.
+for this class . Instread
+refence can be created
+
+How many ways you can overload method?
+There are 3 ways we can overload method...
+1 - changing number of arguments.
+2 - changing return type.
+3 - changing the sequence of datatype.
+1- add(int I , int j);   add(int I, int j, int k);
+
+What is difference instance variable and local variable?
+
+instance variable are instance of class. which scope is any where in the class.
+
+local variable are declared inside a block . and the scope of local variable is limited to that particular block.
+
+
+What is the difference between program and process?
+
+A programme is a non-active entity that includes the collection of codes necessary 
+to carry out a specific operation. When a programme is run, an active instance of the 
+programme called a process is launched. A process is begun by a programme once it has 
+been run. The process carries out the program's specified instructions.
+
+What are the differences between constructor and method of a class in Java?
+
+Initializing the state of the object is done by constructors. A  like methods,
+contains a group of statements (or instructions) that are carried out when an object
+is created. A method is a group of statements that work together to complete 
+a certain task.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
