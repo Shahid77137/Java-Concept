@@ -1,0 +1,341 @@
+Encapsulation - 
+
+Encapsulation refers to wrapping of objects and methods inside a class and it is also 
+used for data hiding by using private keyword in simple words it is like a package
+inside which we have varaiables and methods etc like we have inside a class.
+
+1 - class must be public.
+2 - all fields should be private.
+3 - for every field there should be getter and setter.
+4 - should have no args constructor.
+
+public class Employee{
+
+private String empId;
+private String empName;
+public Employee(){}
+public void SetempId(empId){
+this.empId = empId;
+}
+public void  SetempName(empName){
+this.empNmae = empName;
+}
+public String GetempId(){
+return  empId;
+}
+public String GetempName(){
+return  empName;
+}
+}
+
+1-public class A{
+2-private int id;
+3-private String name;
+
+4-public A(int id, String name){
+5-this.id = id;
+6-this.name = name;
+7-}
+8-public void setId(int id){
+9-this.id = id;
+10-}
+11-public void setName(String name){
+this.name = name;
+13-
+}
+15-
+public int getId(){
+return id;
+}
+public String getName(){
+return name;
+}
+}
+23
+public class B{
+public static void main(String...args){
+A a  = new A(); //error ..............no args const... is not available
+a.setId(5);
+a.setName("Sahid");
+29-
+System.out.println(a.getName());    /// Shahid.....  /// Error...................
+}
+}
+
+class A{
+private int id;
+private string name;
+8-public void setId(int id){
+9-this.id = id;
+10-}
+11-public void setName(String name){
+this.name = name;
+13-
+}
+15-
+public int getId(){
+return id;
+}
+public String getName(){
+return name;
+}
+
+private void show(){
+ System.out.println(this.id+" "+this.name+" are favoruite");
+}
+
+public void print(){
+System.out.println(" hello");
+show();
+}
+
+
+
+}
+class Main{
+
+public static void main(String ...args){
+A a  = new A();
+
+
+a.print();// hello 5 Shahid are faavour.
+}
+}
+
+
+Abstraction - hiding internal implementations and shwoing only functionality to the user.
+ abstract class.
+abstract class A{
+public abstract void fire();
+}
+class gun1 extends A{
+@Override
+public void fire(){
+print("double lazor");
+}
+}
+class gun2 extends A{
+public void fire(){
+print("single lazor");
+}
+}
+
+class main{
+  
+A b = new gun1();
+b.show(); //double lazor
+A a = new C();
+a.show();// java	
+}
+
+Inheritance - ..
+
+
+Inheritence is a concept in OOPs where a class can inherit the properties of another
+class.It promotes hiracheal relationship between classes.
+Inheritance is a mechanism by which one object aquire the property of another object . IS-A relationship.
+eg :- Student is the Human it does not mean every human is student.(  inheritance in java is uni directional)
+
+
+Use Inheritance... 
+
+class Human{
+String name;
+String address;
+public Human(String name, String address){
+this.name =name;
+this.address = address;
+}
+
+public void print(){
+print(name+" "+ address);
+}
+public void mor(){
+soumit is more;
+}
+
+}
+class Student extends Human{
+int rollno;
+String section;
+
+public Student( String address,int rollno, String section){
+super(address); super keyword will be the first argument intialization.
+this.rollno = rollno;
+this.section  = section;
+
+}
+
+public void print(){
+print(name+" "+ address+ );
+}
+
+
+}
+
+class Employee{
+int id;
+String company;
+
+}
+
+
+}
+}
+
+
+...
+Array - Collections of similar dataype.
+
+1D
+2D
+3D.    Asymatric  
+int arr []= new int[5]; 
+
+
+	Array of objects. -----------------------------------------
+
+
+
+
+class Student{
+int id;
+STring name;
+public Student(int i, STring n){
+this.id = i;
+this.name = n;
+}
+}
+
+class Main{
+public static void main(String...args){
+
+
+create an array of objects which can hold 4 students.
+
+Array.push(new Student(1,"Shahid")); //error
+Array.push(new Student(2,"afridi"));  error
+Array.push(new Student(3,"Madhu"));  error
+Array.push(new Student(4,"Soumit"));  error
+
+java does not have facility of push();
+
+array[0]= new student(1,"ankit");
+
+ Student s1 = new Student(1, "s1");
+ Student s2 = new Student(1, "s1");
+ Student s3 = new Student(1, "s1");
+ Student s4 = new Student(1, "s1");
+Student []array = new Student[10]
+ array = {s1,s2,s3,s4}; 
+
+
+Student[] array = {new Student(1,"an"), new Student(2,"bk"), new Student(3,"ck") };
+
+public view studentdetail(int id){
+for(Student st: array){
+if(st.getId()==id){
+print(st.getID()+" "+st.getName());
+}
+}
+print("student does not exist with this id");
+}
+
+}
+}
+
+
+Has -A relationship.----------------------------------
+
+If we want to get the properties of another class without using extends keyword 
+then we can make a object inside that class of the other class
+then we can access the properties of that class
+
+when we have a reference variable of another class.  
+by which we can acquire the property of that class.
+
+
+
+class Address{
+
+ String city;
+String state;
+String country;
+
+
+void show(){
+
+ print city , state, country, pincode;
+}
+
+}
+
+
+class Student {
+String name;
+int id;
+String phone;
+//Address add;
+
+public Student(String name,int id,String phone,Address add){
+this.name = name;
+this.id = id;
+this.add = add;
+this.phone = phone;
+}
+
+public void setName(String name){
+this.name = name;
+}
+public void setId(int id){
+this.id = id;
+}
+public void setAdd(Address add){
+this.add = add;
+}
+
+public String getName(){
+return name;
+}
+
+public int getId(){
+return id;
+}
+
+public Address setAdd(Address add){
+return add;
+}
+
+}
+}
+
+Student Emplyee{
+Address add;
+}
+
+class Main{
+public main(){
+	
+Student stu = new Student("ankit", 1, "123234", new Address("haridwar","uttarakhand", "india", "23413");
+Address add2 = new Address("Delhi","Delhi","India","4324");
+Student stu2 = new Student("shahid",3,"232131", add2);
+
+Has - a relationship Disadvantage - ......Tight Coupling...................
+
+}
+}
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=Remove Duplicate-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
+
+
+
+
+
+
+
+
