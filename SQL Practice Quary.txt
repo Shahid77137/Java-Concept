@@ -1,4 +1,4 @@
-
+// This Student table
 	CREATE TABLE STUDENT(
 	id int primary key,
 	Name varchar(25) not null,
@@ -9,7 +9,7 @@
 	Science int not null,
 	english int not null
 	);
-
+// Here values are adding to the table
 	INSERT INTO STUDENT VALUES
 	(1,"Olivia","F",9,"C",34,48,46),
 	(2,"Liam","M",8,"D",53,44,68),
