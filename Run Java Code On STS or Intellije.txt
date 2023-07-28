@@ -1,0 +1,14 @@
+
+// Without creating of class and main method inside it we can't print...
+// Here we create a class
+public class hello {
+// This is the main method
+// main method always be static 
+	public static void main(String[] args) {
+
+                System.out.print("Print Inside main method");
+		System.out.print("Hello World");
+
+	}
+
+}
