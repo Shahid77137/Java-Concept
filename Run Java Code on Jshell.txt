@@ -1,0 +1,31 @@
+|  Welcome to JShell -- Version 19.0.1
+|  For an introduction type: /help intro
+
+jshell> ▬ Shahid Afridi, Masai School
+|  Error:
+|  ';' expected
+|  Shahid Afridi, Masai School;
+|                      ^
+
+jshell> System.out.println("Hello World")
+Hello World
+
+jshell> System.out.println("Hello Fehmida Shahid")
+Hello Fehmida Shahid
+
+jshell> System.out.println("Shahid Afridi, Masai School")
+Shahid Afridi, Masai School
+
+jshell> 9+3+7-6*2
+$3 ==> 7
+
+jshell> 7(8*5)/4
+|  Error:
+|  ';' expected
+|  7(8*5)/4
+|   ^
+
+jshell> 7+(8*5)/4
+$4 ==> 17
+
+jshell>
