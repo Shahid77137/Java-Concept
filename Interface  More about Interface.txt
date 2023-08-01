@@ -1,4 +1,7 @@
 
+*** If we keep any varyable inside an Interface then that variable by default public static final
+    Either we mention or not it will be public static final always. 
+
 interface Abc
 {
 	void show();
