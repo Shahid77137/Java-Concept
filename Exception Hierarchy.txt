@@ -6,6 +6,8 @@ Error is divided into :-
 2. Virtual Machine error ( Out of memory)
 3. IO Error
 
+// Compiler will not check 
+// If some how code has some issue then it will be detected at Runtime
 Exception is divided into:-
 1. Runtime Exception  (Unchecked Exception)
 	- Arithmetic 
@@ -13,6 +15,7 @@ Exception is divided into:-
 	- Null POinter
 - It is your choose to handle or not
 
+// Compiler will check while writting code 
 2. SQL Exception   (Checked Exception)
 - It is necessary to handle
 
