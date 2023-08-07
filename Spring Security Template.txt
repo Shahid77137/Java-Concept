@@ -1,0 +1,497 @@
+
+
+Step 1:
+
+
+1. Add this SpringSecurity dependencies
+
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+
+
+2. Add JWT related dependencies
+
+
+<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api -->
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-api</artifactId>
+    <version>0.11.5</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl -->
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-impl</artifactId>
+    <version>0.11.5</version>
+    <scope>runtime</scope>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson -->
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-jackson</artifactId>
+    <version>0.11.5</version>
+    <scope>runtime</scope>
+</dependency>
+
+
+
+------------------------------------------------------------Step 1 (adding dependenciesies completed)----------------------------------------------------------------
+
+Step 2: Make CsrfCookieFilter class inside config package
+
+
+
+import java.io.IOException;
+
+import org.springframework.security.web.csrf.CsrfToken;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class CsrfCookieFilter extends OncePerRequestFilter{
+
+	@Override
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+			throws ServletException, IOException {
+		
+		
+		CsrfToken csrfToken= (CsrfToken)request.getAttribute(CsrfToken.class.getName());
+		if(csrfToken.getHeaderName() != null) {
+		response.setHeader(csrfToken.getHeaderName(), csrfToken.getToken());
+		}
+		filterChain.doFilter(request, response);
+		
+	}
+
+}
+
+------------------------------------------------------------Step 2 (CsrfCookieFilter class completed)----------------------------------------------------------------
+
+
+Step 3: Make JwtTokenGeneratorFilter class inside config package
+
+
+
+import java.io.IOException;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.crypto.SecretKey;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+
+
+public class JwtTokenGeneratorFilter extends OncePerRequestFilter{
+
+	//This JwtTokenGeneratorFilter will be placed after the BasicAutehntication filter bcz only after the giving correct password and username Basic Auth can be done so if the user gives correct credentials then only a jwt token will be generated
+	
+	@Override
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+	throws ServletException, IOException {
+		
+	System.out.println("inside doFilter....");
+	
+	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	
+	
+	if (null != authentication) {
+		
+	System.out.println("auth.getAuthorities "+authentication.getAuthorities());
+	
+	SecretKey key = Keys.hmacShaKeyFor(SecurityConstants.JWT_KEY.getBytes()); // This will take a secret key and encode your jwt key stored in SecurityConstraints ineterface
+	
+	String jwt = Jwts.builder()
+	.setIssuer("Soumit")
+	.setSubject("JWT Token")
+	.claim("username", authentication.getName())
+	.claim("authorities", populateAuthorities(authentication.getAuthorities()))
+	.setIssuedAt(new Date()) // here we are taking issued date here LocalDate will not work
+	.setExpiration(new Date(new Date().getTime()+ 30000000)) // millisecond expiration time of around 8 hours
+	.signWith(key).compact();
+	
+	response.setHeader(SecurityConstants.JWT_HEADER, jwt);
+	}
+	filterChain.doFilter(request, response);
+	}
+	
+	
+	private String populateAuthorities(Collection<? extends GrantedAuthority> collection) { // this method will take all the granted authorities and arrange them in acomma seperated value
+	Set<String> authoritiesSet = new HashSet<>();
+	for (GrantedAuthority authority : collection) {
+		authoritiesSet.add(authority.getAuthority());
+		}
+		return String.join(",", authoritiesSet);
+		}
+		//this make sure that this filter will execute only for first time when client call the api /signIn at first time
+		@Override
+		protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
+		return !request.getServletPath().equals("/signIn");
+		}
+
+}
+
+
+
+------------------------------------------------------Step 3 (JwtTokenGeneratorFilter class completed)---------------------------------------------------------------
+
+
+
+Step 4: Step 3: Make JwtTokenValidatorFilter class inside config package
+
+
+import java.io.IOException;
+
+import javax.crypto.SecretKey;
+
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+
+
+public class JwtTokenValidatorFilter extends OncePerRequestFilter{
+
+	
+	@Override
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+	throws ServletException, IOException {
+	String jwt= request.getHeader(SecurityConstants.JWT_HEADER);
+	if(jwt != null) {
+	try {
+	//extracting the word Bearer
+	jwt = jwt.substring(7);
+	SecretKey key= Keys.hmacShaKeyFor(SecurityConstants.JWT_KEY.getBytes());
+	Claims claims= Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(jwt).getBody();
+	String username= String.valueOf(claims.get("username"));
+	String authorities= (String)claims.get("authorities");
+	Authentication auth = new UsernamePasswordAuthenticationToken(username, null, AuthorityUtils.commaSeparatedStringToAuthorityList(authorities));
+	SecurityContextHolder.getContext().setAuthentication(auth);
+	} catch (Exception e) {
+	throw new BadCredentialsException("Invalid Token received..");
+	}
+	}
+	filterChain.doFilter(request, response);
+	}
+	//this time this validation filter has to be executed for all the apis except the /signIn api
+	@Override
+	protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
+	return request.getServletPath().equals("/signIn");
+	}
+	
+	
+}
+
+
+
+------------------------------------------------------Step 4 (JwtTokenValidatorFilter class completed)---------------------------------------------------------------
+
+
+
+Step 5: Store security related constants inside 
+
+
+
+public interface SecurityConstants {
+
+	public static final String JWT_KEY ="secretsfhsfjhdkjngdfjkgfgjdlkfjsdkfjsd";
+	public static final String JWT_HEADER = "Authorization";
+	
+}
+
+
+
+------------------------------------------------------Step 5 (SecurityConstants interface completed)-----------------------------------------------------------------
+
+
+
+Step 6: Make AppConfig class 
+
+
+
+
+import java.util.Arrays;
+import java.util.Collections;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
+import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+@Configuration
+public class AppConfig {
+
+	@Bean
+	public SecurityFilterChain UserSecurity(HttpSecurity http)throws Exception{
+		
+		CsrfTokenRequestAttributeHandler requestHandler = new CsrfTokenRequestAttributeHandler();
+		
+		
+		http.sessionManagement(sessionManagement -> sessionManagement.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+		
+		.cors(cors -> {
+			cors.configurationSource(new CorsConfigurationSource() {
+				
+				@Override
+				public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
+					
+					CorsConfiguration cfg = new CorsConfiguration();
+					cfg.setAllowedOriginPatterns(Collections.singletonList("*"));
+					cfg.setAllowedMethods(Collections.singletonList("*"));
+					cfg.setAllowCredentials(true);
+					cfg.setAllowedHeaders(Collections.singletonList("*"));
+					cfg.setExposedHeaders(Arrays.asList("Authorization")); //you need to expose the headers if you are using javascript
+					
+					return cfg;
+				}
+			});
+		})
+		.authorizeHttpRequests(auth -> {
+			auth.requestMatchers(HttpMethod.POST,"/customers").permitAll() 
+//			.requestMatchers("/swagger-ui*/**","/v3/api-docs/**").permitAll()  it is used for swagger if you are using swagger then this line of code is required
+			.requestMatchers(HttpMethod.GET,"/customers").hasRole("ADMIN")	
+            .requestMatchers(HttpMethod.GET,"/customers/**").hasAnyRole("ADMIN","USER") 
+			.anyRequest().authenticated();
+		}).csrf(csrf -> csrf.csrfTokenRequestHandler(requestHandler).ignoringRequestMatchers("/notice","/contact","/customers")
+				.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()))
+		.addFilterAfter(new CsrfCookieFilter(), BasicAuthenticationFilter.class) 
+		.addFilterAfter(new JwtTokenGeneratorFilter(), BasicAuthenticationFilter.class)
+		.addFilterBefore(new JwtTokenValidatorFilter(), BasicAuthenticationFilter.class)
+		.formLogin(Customizer.withDefaults())
+		.httpBasic(Customizer.withDefaults());
+		
+		return http.build();
+	}
+	
+	
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		
+		return new BCryptPasswordEncoder();
+		
+	}
+	
+	
+}
+
+
+
+------------------------------------------------------------------Step 6 (AppConfig class completed)-----------------------------------------------------------------
+
+
+
+Step 7: Make the SignIn method in controller and add a role feild in customer or user entity class
+
+@Autowired
+	private PasswordEncoder passwordEncoder;
+
+@GetMapping("/signIn")
+	public ResponseEntity<String> getLoggedInCustomerDetailsHandler(Authentication auth){
+	System.out.println(auth); // this Authentication object having Principle object details
+	Customer customer = customerService.getCustomerDetailsByEmail(auth.getName());
+	return new ResponseEntity<>(customer.getName()+" Logged In Successfully", HttpStatus.ACCEPTED);
+	}
+	
+	
+below is the method to add customer or user
+
+
+
+@PostMapping("/customers")
+	public ResponseEntity<Customer> saveCustomerHandler(@RequestBody Customer customer){
+	customer.setPassword(passwordEncoder.encode(customer.getPassword())); //This will encode the password of customer
+	customer.setRole("ROLE_"+customer.getRole().toUpperCase());
+	Customer registeredCustomer= customerService.registerCustomer(customer);
+	return new ResponseEntity<>(registeredCustomer,HttpStatus.ACCEPTED);
+	}	
+	
+	
+
+This is the sample customer class
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import lombok.Data;
+
+@Entity
+@Data
+public class Customer {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer custId;
+	private String name;
+	
+	@Column(unique = true)
+	private String email;
+	
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY) // By doing this you won't be able to access the password by you can write the password which will be discret for example when you load the customerdetails with getCustomerdetails uri then everything except the password will be shown
+	private String password;
+	private String address;
+	//getters and setters
+	
+    private String role;
+	
+}	
+	
+	
+
+-------------------------------------------------------------Step 7 (Controller methods completed)------------------------------------------------------------------
+
+
+Step 7: Make the CustomerUserDetailsService class inside Service package
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+
+import com.masai.model.Customer;
+import com.masai.repository.CustomerRepository;
+
+
+@Service
+public class CustomerUserDetailsService implements UserDetailsService{
+
+	@Autowired
+	private CustomerRepository customerRepository;
+	
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+	
+		Optional<Customer> opt = customerRepository.findByEmail(username);
+		
+		if(opt.isPresent()) {
+			
+			Customer customer = opt.get();
+			
+			List<GrantedAuthority> authorities = new ArrayList<>();
+			
+				SimpleGrantedAuthority sga = new SimpleGrantedAuthority(customer.getRole());
+				authorities.add(sga);
+			
+			
+			return new User(customer.getEmail(), customer.getPassword(), authorities);
+			
+			
+		}else {
+			throw new UsernameNotFoundException("No user found with this username "+username);
+		}
+
+	}
+
+}
+
+
+
+------------------------------------------------Step 7 (CustomerUserDetailsService class completed)------------------------------------------------------------------
+
+
+Step 8: Modify the main class 
+
+
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
+import io.swagger.v3.oas.annotations.security.SecuritySchemes;
+import io.swagger.v3.oas.annotations.servers.Server;
+
+
+
+@SpringBootApplication
+@OpenAPIDefinition(info = @Info(title = "REST API",version = "1.1"),
+security = {
+		@SecurityRequirement(name = "basicAuth"),
+		@SecurityRequirement(name = "bearerToken")
+},
+servers = {
+		@Server(url = "/",description = "Default Server URL")
+}
+)
+@SecuritySchemes({
+	@SecurityScheme(name = "basicAuth",type = SecuritySchemeType.HTTP,scheme = "basic"),
+	@SecurityScheme(name = "bearerToken",type= SecuritySchemeType.HTTP,scheme = "bearer",bearerFormat = "JWT")
+})
+@EnableWebSecurity(debug = true)
+public class SpringSecurityDbApp1Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringSecurityDbApp1Application.class, args);
+		System.out.println("");
+		System.out.println("                                  ===============================  Completed  ==============================");
+	}
+
+}

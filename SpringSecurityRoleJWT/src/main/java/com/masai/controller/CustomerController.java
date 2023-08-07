@@ -32,21 +32,6 @@ public class CustomerController {
 		return "Welcome to Spring Security";
 	}
 	
-	/*
-	 
-	  {
-        "name": "ram",
-        "email": "ram@gmail.com",
-        "password": "1234",
-        "address": "delhi",
-        "role": "admin"
-    }
-	 
-	 
-	 
-	 
-	 
-	 */
 	
 	// add another Customer with only the role "user"
 	
