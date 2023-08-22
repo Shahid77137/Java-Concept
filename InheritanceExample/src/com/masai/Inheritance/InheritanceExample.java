@@ -4,6 +4,7 @@ package com.masai.Inheritance;
 class Animal {
  String name;
 
+// constructor
  Animal(String name) {
      this.name = name;
  }
@@ -20,7 +21,7 @@ class Animal {
 //Subclass (Derived class)
 class Dog extends Animal {
  Dog(String name) {
-     super(name); // Call the constructor of the superclass
+     super(name); // Call the constructor of the superclass because Constructor doesn't inherited
  }
 
  void bark() {
@@ -31,7 +32,7 @@ class Dog extends Animal {
 //Subclass (Derived class)
 class Cat extends Animal {
  Cat(String name) {
-     super(name); // Call the constructor of the superclass
+     super(name); // Call the constructor of the superclass because Constructor doesn't inherited
  }
 
  void meow() {

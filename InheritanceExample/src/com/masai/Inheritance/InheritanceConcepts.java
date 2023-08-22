@@ -13,5 +13,8 @@ public class InheritanceConcepts {
  * the subclasses it will not available in superclass so vice versa is not true. Inheritance is completely unidirectional
  * In java Programming single and hirerchial level of inheritance is supported. But multiple Inheritance is not possible or supported.
  * It is wrong that private methods are not inheritate.It is inheritate but not accessible out of the class.
+ * Whatever br written in the superclass it will be inherited to subclass but the only thing that constructor is not inherited to subclass.
+ * private variable accessible only to their own class.
+ *  
 **/
 }
