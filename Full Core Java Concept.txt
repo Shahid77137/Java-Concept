@@ -816,10 +816,14 @@ In Treeset arranges the data in order and hashset doesn't arrange data in order
 
 
 
-Why primitive datatype are not dynamic?
--> Java is Ob
+Why primitive datatype are not dynamic??
+-> Java is Object Oriented Language and according ti object oriented paradigm everything must be object.Primitive datatypes are not object there allocation is compile type.
+Gosllin replied primitive datatype are static memory allocation due to performance.
+Static memory allocation is faster tahn dynamic memory allocation with handsome margine.
+If you are creating a big programin which lots of loacla varible would be present then if you are going for dynamic memory allocation it will become very slow. So performance is the reason thats why it is implemented in static memory allocation.
+
+But Why it is not supported in term of object??
+Java actually provide object representation of premative datatype also and the representation with the help of wrapper class
+ 
 
 
-Today's target
-
-We will complete colletions before dinner
