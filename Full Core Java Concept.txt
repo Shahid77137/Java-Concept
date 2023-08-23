@@ -794,7 +794,50 @@ Points to remember:
 
 
 
+HashMap  vs	Hashtable
 
+1) HashMap is non synchronized. It is not-thread safe and can't be shared between many threads without proper synchronization code.	
+
+1) Hashtable is synchronized. It is thread-safe and can be shared with many threads.
+
+
+
+2) HashMap allows one null key and multiple null values.	
+
+2) Hashtable doesn't allow any null key or value.
+
+
+3) HashMap is a new class introduced in JDK 1.2.	
+
+3)Hashtable is a legacy class.
+
+
+4) HashMap is fast.	
+
+4)Hashtable is slow.
+
+
+5) We can make the HashMap as synchronized by calling this code
+Map m = Collections.synchronizedMap(hashMap);	
+
+5) Hashtable is internally synchronized and can't be unsynchronized.
+
+
+
+6) HashMap is traversed by Iterator.	
+
+6) Hashtable is traversed by Enumerator and Iterator.
+
+
+7) Iterator in HashMap is fail-fast.	
+
+7) Enumerator in Hashtable is not fail-fast.
+
+
+
+8) HashMap inherits AbstractMap class.	
+
+8) Hashtable inherits Dictionary class.
 
 
 
@@ -825,5 +868,7 @@ If you are creating a big programin which lots of loacla varible would be presen
 But Why it is not supported in term of object??
 Java actually provide object representation of premative datatype also and the representation with the help of wrapper class
  
+
+
 
 
