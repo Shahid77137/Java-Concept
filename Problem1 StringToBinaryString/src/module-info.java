@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author PrinceWolf
+ *
+ */
+module StringToBinaryString {
+}
