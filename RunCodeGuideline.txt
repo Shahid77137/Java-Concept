@@ -1,0 +1,41 @@
+                     Adding instructions on how to run the code.
+
+Problem1 -: RollingDice_FlippingCoin
+
+Step1 -: Import the application to any java supporting IDE’s.
+
+Step2 -: Go to the RollingDice_FlippingCoin project then go to src>main>java then open the com.onlinesales package then open the EventSimulation class and there you have all the code with the main method.
+
+Step3 -: Run the application from that class.
+
+Step4 -: For the Unit testing go to the src>test>java then open the com.onlinesales package then go to EventSimulationTest class and run the Junit tests.
+
+
+                                                         __OR__
+
+Otherwise we can run our project by Command prompt also for that we have to go directly inside the project and open Command Prompt from there. Then run this command “maven package”.
+
+Problem2 -: WebApiGenerator
+
+Step1 -: Import the application to any java supporting IDE’s.
+
+Step2 -:  Go to the WebApiGenerator project then go to src>main>java then open the com.onlinesales package then open the ExpressionEvaluator class and there you have all the code with the main method
+
+Step3 -: Run the application from that class. 
+
+Step4 -: For the Unit testing go to the src>test>java then open the com.onlinesales package then go to ExpressionEvaluatorTest class and run the Junit tests.
+
+
+                                                         __OR__
+
+Otherwise we can run our project by Command prompt also for that we have to go directly inside the project and open Command Prompt from there. Then run this command “maven package”.
+
+Problem3 -: DebuggingCode
+
+Step1 -: Import the python application to any IDE’s
+
+Step2 -: Go to the main.py file and run the python code
+
+Step3 -: And for the unit testing go to the test.py and run the application with command pytest ./test.py
+
+
