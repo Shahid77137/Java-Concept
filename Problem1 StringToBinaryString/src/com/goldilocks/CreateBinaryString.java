@@ -13,6 +13,7 @@ public class CreateBinaryString {
 			System.out.println("Please provide Valid input");
 		}
 		System.out.println(Integer.toBinaryString(value));
+		sc.close();
 	}
 	
 	
