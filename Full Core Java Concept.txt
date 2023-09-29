@@ -37,7 +37,7 @@ No , constructor always refer to class itself
 
 What is the difference between abstract class and normal class?
 
--> Abstract class must be implemented by classes as you cannot make object of abstract class 
+-> Abstract class must be implemented by other classes as you cannot make object of abstract class 
 
 diff btwn static and final
 

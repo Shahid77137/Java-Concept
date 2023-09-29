@@ -1,0 +1,117 @@
+=-==-=-=-=-=-=-=-=-=-=-=-=-=--==-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-How to Iterate a each element of string-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=--==
+
+In Java, you can iterate over each character of a string using various methods. Here are three common approaches:
+
+1. Using a for loop with charAt():
+   You can use a for loop to iterate over each character in a string by using the `charAt(index)` method. Here's an example:
+
+```java
+String str = "Hello, World!";
+for (int i = 0; i < str.length(); i++) {
+    char character = str.charAt(i);
+    System.out.println(character);
+}
+```
+
+2. Using a for-each loop (Enhanced for loop):
+   Java provides an enhanced for loop, also known as a for-each loop, which simplifies iterating over elements in an array or iterable, including characters in a string:
+
+```java
+String str = "Hello, World!";
+for (char character : str.toCharArray()) {
+    System.out.println(character);
+}
+```
+
+3. Using Java Streams:
+   If you're using Java 8 or later, you can use Java Streams to iterate over characters in a string:
+
+```java
+String str = "Hello, World!";
+str.chars().forEach(character -> {
+    System.out.println((char) character);
+});
+```
+=-==-=-=-=-=-=-=-=-=-=-=-=-=--==-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-How to Reverse a string-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=--==
+
+********Using For loop
+
+public class ReverseString {
+    public static void main(String[] args) {
+        String input = "Hello, World!";
+        String reversedString = reverseUsingForLoop(input);
+        System.out.println(reversedString);
+    }
+
+    public static String reverseUsingForLoop(String input) {
+        int length = input.length();
+        StringBuilder reversed = new StringBuilder(length);
+
+        for (int i = length - 1; i >= 0; i--) {
+            reversed.append(input.charAt(i));
+        }
+
+        return reversed.toString();
+    }
+}
+
+To reverse a string in Java, you can use various methods. Here are three common approaches:
+
+1. Using a StringBuilder or StringBuffer:
+
+   ```java
+   String input = "Hello, World!";
+   StringBuilder reversed = new StringBuilder(input).reverse();
+   String reversedString = reversed.toString();
+   System.out.println(reversedString);
+   ```
+
+   This approach uses a `StringBuilder` (or `StringBuffer` for thread safety) to efficiently reverse the string by appending characters in reverse order.
+
+2. Using a loop:
+
+   ```java
+   String input = "Hello, World!";
+   char[] chars = input.toCharArray();
+   int left = 0;
+   int right = chars.length - 1;
+
+   while (left < right) {
+       // Swap characters at left and right indices
+       char temp = chars[left];
+       chars[left] = chars[right];
+       chars[right] = temp;
+
+       left++;
+       right--;
+   }
+
+   String reversedString = new String(chars);
+   System.out.println(reversedString);
+   ```
+
+   This approach iterates through the characters of the string and swaps them to reverse the string.
+
+3. Using recursion:
+
+   ```java
+   public static String reverseString(String input) {
+       if (input == null || input.isEmpty()) {
+           return input;
+       }
+       return reverseString(input.substring(1)) + input.charAt(0);
+   }
+
+   public static void main(String[] args) {
+       String input = "Hello, World!";
+       String reversedString = reverseString(input);
+       System.out.println(reversedString);
+   }
+   ```
+
+
+
+
+
+
+
