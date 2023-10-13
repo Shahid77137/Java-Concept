@@ -14,9 +14,13 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy =  GenerationType.AUTO)
 	private Integer customerId;
+
 	private String name;
+
 	private String mobileNo;
+
 	private String password;
+	
 	private String email;
 	
 

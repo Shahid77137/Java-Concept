@@ -6,24 +6,36 @@ public class InputTaking {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Write the values");
-
+        
+        System.out.println("Take value in Long");
+        long value = Long.parseLong(sc.nextLine());
+        
         System.out.println("Write the byte value");
         byte value1 = sc.nextByte();
+
         System.out.println("Write the short value");
         short value2 = sc.nextShort();
+
         System.out.println("Write the int value");
         int value3 = sc.nextInt();
+
         System.out.println("Write the long value");
         long value4 = sc.nextLong();
+
         System.out.println("Write the float value");
         float value5 = sc.nextFloat();
+
         System.out.println("Write the double value");
         double value6 = sc.nextDouble();
+
         System.out.println("Write the boolean value");
         boolean value7 = sc.nextBoolean();
 
-//        long value = Long.parseLong(sc.nextLine());
+        Integer value8 = Integer.parseInt(sc.next());
 
+        double value9 = Double.parseDouble(sc.next());
+
+        System.out.println(value);
         System.out.println(value1);
         System.out.println(value2);
         System.out.println(value3);
@@ -31,5 +43,8 @@ public class InputTaking {
         System.out.println(value5);
         System.out.println(value6);
         System.out.println(value7);
+        System.out.println(value8);
+        System.out.println(value9);
+        sc.close();
     }
 }
